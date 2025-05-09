@@ -5,7 +5,7 @@ Welcome to the world of web development! Here, you will learn the art of creatin
 
 These exercises are an introduction to web development using HTML. There is far more to web development than we will cover 
 in these exercises, but they will give you a good start. You will learn how to create web pages using HTML, and how to add images, 
-lists, tables, and hyperlinks to your pages. You will also change how web pages look using syles and allow people to interact with your pages using JavaScript.
+lists, tables, and hyperlinks to your pages. You will also change how web pages look using styles and allow people to interact with your pages using JavaScript.
 
 These exercises are designed to be done in a web browser and a text editor. You will need to download the files from GitHub and open them in your web browser.
 You will also need to open the files in a text editor so you can edit them. You can use any web browser and any text editor you like, but we recommend using 
