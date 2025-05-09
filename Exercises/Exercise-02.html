@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- Copyright 2025 Edmund Mulligan -->
+<!-- This file is part of the Witchcraft and Wizardry course. -->
+<!-- This file is licensed under the MIT License. -->
+<!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
+<!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+<html lang="en">
+<head>
+    <title>Witchcraft and Wizardry Exercise 02</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>Witchcraft and Wizardry Exercise 02</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome to Exercise 02</h2>
+            <p>In this exercise we will look at lists and images.</p>
+            <ul>
+                <li>Unnumbered lists</li>
+                <li>Ordered lists</li>
+                <li>Images</li>
+            </ul>
+            <ol>
+                <li>Ordered lists</li>
+                <li>Are like unnumbered lists</li>
+                <li>Except they have numbers instead of bullet points</li>
+            </ol>
+            <img src="../Images/witch-and-wizard.jpg" alt="Witch and Wizard" style="width:300px;height:auto;">
+        </section>
+        <section>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;!-- Copyright 2025 Edmund Mulligan --&gt;
+    &lt;!-- This file is part of the Witchcraft and Wizardry course. --&gt;
+    &lt;!-- This file is licensed under the MIT License. --&gt;
+    &lt;!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. --&gt;
+    &lt;!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. --&gt;
+    &lt;head&gt;
+        &lt;title&gt;Witchcraft and Wizardry Exercise 02&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;h1&gt;Witchcraft and Wizardry Exercise 02&lt;/h1&gt;
+        &lt;/header&gt;
+        &lt;main&gt;
+            &lt;section&gt;
+                &lt;h2&gt;Welcome to Exercise 02&lt;/h2&gt;
+                &lt;p&gt;In this exercise we will look at lists and images.&lt;/p&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Unnumbered lists&lt;/li&gt;
+                    &lt;li&gt;Ordered lists&lt;/li&gt;
+                    &lt;li&gt;Images&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ol&gt;
+                    &lt;li&gt;Ordered lists&lt;/li&gt;
+                    &lt;li&gt;Are like unnumbered lists&lt;/li&gt;
+                    &lt;li&gt;Except they have numbers instead of bullet points&lt;/li&gt;
+                &lt;/ol&gt;
+                &lt;img src="../Images/witch-and-wizard.jpg" alt="Witch and Wizard" style="width:300px;height:auto;"&gt;
+            &lt;/section&gt;
+        &lt;/main&gt;
+        &lt;footer&gt;
+            &lt;p&gt;&amp;copy; 2025 Edmund Mulligan&lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </section>
+        <section>
+            <p>Note the structure of this document.</p>
+            <ul>
+                <li>Unnumbered lists display as bullet points in the browser. A list starts with the <code>&lt;ul&gt;</code> tag and finishes, as always with a <code>&lt;/ul&gt;</code> tag.</li>
+                <li>Each iten in the list is enclosed in <code>&lt;li&gt;</code> and <code>&lt;/li&gt;</code> tags. You can have as many items in the list as you like.</li>
+                <li>Ordered lists display as numbers in the browser. They work in the same way as unnumbered lists, but they use with the <code>&lt;ol&gt;</code> tag instead of 
+                    the <code>&lt;ul&gt;</code> tag.</li>
+                <li>You can nest lists inside other lists. For example, you can have an unnumbered list inside an ordered list or an ordered list inside an unnumbered list. 
+                     This is done by putting the <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> tags inside the <code>&lt;li&gt;</code> tags. It is very important that if you do this,
+                    you have a closing tag for each of the lists and you put them in the correct order. If you don't, the browser will not display the page correctly.</li>
+                <li>Images are added to the page using the <code>&lt;img&gt;</code> tag. This tag does not have a closing tag. The <code>src</code> attribute is used to specify the
+                    location of the image file. The <code>alt</code> attribute is used to specify an alternative text for the image. This text is displayed if the image cannot be loaded. 
+                    The <code>style</code> attribute is used to specify the size of the image. In this case, the image is 300 pixels wide and the height is set to auto, which means it will 
+                    be scaled to maintain the aspect ratio of the image.</li>
+                <li>In this example the image being displayed is on your computer in the <code>Images</code> directory. The <code>src</code> attribute is set to <code>../Images/witch-and-wizard.jpg</code>.
+                    The two dots in the <code>src</code> attribute mean that the image is in the parent directory of the current directory. The <code>..</code> means "go up one directory". 
+                    So, if you are in the <code>Exercises</code> directory, the image is in the <code>Images</code> directory. You can also show pictures that are on the internet by using a full URL 
+                    in the <code>src</code> attribute. For example, <code>src="https://example.com/image.jpg"</code>. This will display the image from the internet instead of from your computer. This 
+                    can be a bit risky as the image may get changed or deleted from the internet and then your page will be broken and you have no control over it. So, it is safest to use images that are on 
+                    your computer.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Exercise 02</h2>
+            <p>In this exercise you will create a simple HTML document using the tags we have covered in this lesson. 
+                You will use the &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, and &lt;img&gt; tags as well as the ones we used in exercise 1.
+            </p>
+            <p>In your editor create a new file called MyExercise-02.html. Eithr create a new empty file or copy MyExercise-Template.html. 
+                Edit the file and add the following tags to the document:
+                <ul>
+                    <li>&lt;!DOCTYPE html&gt;</li>
+                    <li>&lt;html lang="en"&gt;</li>
+                    <li>&lt;head&gt;</li>
+                    <li>&lt;title&gt;</li>
+                    <li>&lt;body&gt;</li>
+                </ul>
+            </p>
+            <p>You can use these extra tags if you like to create a structure for your document, but you can leave them out if you want to.
+                <ul>
+                    <li>&lt;header&gt;</li>
+                    <li>&lt;main&gt;</li>
+                    <li>&lt;section&gt;</li>
+                    <li>&lt;footer&gt;</li>
+                </ul>
+            </p>
+            <p>Create a heading for the page using the &lt;h1&gt; tag. This should be the title of your page. 
+                You can use any text you like, but it should be something that describes what the page is about. If you are stuck for ideas, call it "Witches and Wizards".</p>
+            <p>Create a subheading using the &lt;h2&gt; tag. You can call it "Witches"</p>
+            <p>After the sub heading, create a paragraph with the &lt;p&gt; tag and write a short description of what a witch is.</p>
+            <p>Now include a picture of a witch using the &lt;img&gt; tag. You can use search for a picture of a witch on the internet or use <code>young-witch.jpg</code> from the <code>Images</code> 
+                directory. Make sure you use the correct path to the image file. You can use the <code>style</code> attribute to set the size of the image. Also make sure you use the <code>alt</code> attribute 
+                to set the alternative text for the image.</p>
+            <p>Next create an unnumbered list using the &lt;ul&gt; tag. This should be a list of things that witches do. You can use the following items in the list:</p>
+            <ul>
+                <li>Cast spells</li>
+                <li>Make potions</li>
+                <li>Fly on broomsticks</li>
+                <li>Talk to animals</li>
+            </ul>
+            <p>Now do the same for wizards. Create a subheading using the &lt;h2&gt; tag. You can call it "Wizards". Create a paragraph that describes what a wizard is. There is an image you can use 
+                called <code>young-wizard.jpg</code> in the <code>Images</code> directory if you don't want to search the internet for your own.</p>
+            <p>This time create an ordered list using the &lt;ol&gt; tag. This should be a list of things that wizards do. You can use the following items in the list:</p>
+            <ol>
+                <li>Cast spells</li>
+                <li>Wears a pointy hat</li>
+                <li>Uses a magic staff</li>
+                <li>Has a spell book</li>
+            </ol>
+            <p>If you want a stretch, try creating a list inside a list. Experiment with an unnumbered list inside an unnumbered list and see how your browser changed the bullet points for the inner list. Also 
+                try an ordered list inside an ordered list and try an unnumbered list inside an ordered list. Make sure you get the closing tags in the right order. If you get 
+            these wrong, the browser will make a best guess to show you what you intended, but the results will be unpredictable and may display either rubbish or nothing.</p>
+            <ul>
+                <li>Witches</li>
+                <ul>
+                    <li>Cast Spells</li>
+                    <li>Make Potions</li>
+                    <li>Fly on broomsticks</li>
+                    <li>Talk to animals</li>
+                </ul>
+                <li>Wizards</li>
+                <ul>
+                    <li>Cast spells</li>
+                    <li>Wears a pointy hat</li>
+                    <li>Uses a magic staff</li>
+                    <li>Has a spell book</li>
+                </ul>
+            </ul>
+            <ol>
+                <li>Witches</li>
+                <ol>
+                    <li>Cast Spells</li>
+                    <li>Make Potions</li>
+                    <li>Fly on broomsticks</li>
+                    <li>Talk to animals</li>
+                </ol>
+                <li>Wizards</li>
+                <ol>
+                    <li>Cast spells</li>
+                    <li>Wears a pointy hat</li>
+                    <li>Uses a magic staff</li>
+                    <li>Has a spell book</li>
+                </ol>
+            </ol>
+            <ol>
+                <li>Witches</li>
+                <ul>
+                    <li>Cast Spells</li>
+                    <li>Make Potions</li>
+                    <li>Fly on broomsticks</li>
+                    <li>Talk to animals</li>
+                </ul>
+                <li>Wizards</li>
+                <ul>
+                    <li>Cast spells</li>
+                    <li>Wears a pointy hat</li>
+                    <li>Uses a magic staff</li>
+                    <li>Has a spell book</li>
+                </ul>
+            </ol>
+            <p>When you have finished, save the file and open it in your browser. You should see a page that looks like this one, but with your own text and images.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Edmund Mulligan</p>
+    </footer>
+</html>

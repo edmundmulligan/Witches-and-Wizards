@@ -1,0 +1,50 @@
+/* This CSS file is used to style the HTML content of the documentation. */
+
+/* 
+ * This is a comment in CSS.
+ * Comments in a style sheet are different to those in an HTML document. 
+ * Comments begin with a slash followed by a star and end with a star dollowed by a slash
+ * Your browser will ignore everything in the comments section so you use comments to
+ * make a note of what you have done or as a reminder of what you still need to do.
+ */
+
+body {
+    background-color: black;
+    color: lightblue;
+    font-family: Times, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background-color: darkgreen;
+    padding: 10px 20px;
+    text-align: center;
+}
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 20px;
+}
+pre {
+    background-color: darkblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+.title, .standout{
+    font-weight: bold;
+    color: red;
+}
+.highlight {
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+.large {
+    font-size: 5em;
+}
+.small {
+    font-size: 0.3em;
+}

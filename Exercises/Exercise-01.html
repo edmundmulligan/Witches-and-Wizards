@@ -8,6 +8,8 @@
 <html lang="en">
 <head>
     <title>Witchcraft and Wizardry Exercise 01</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header>
@@ -17,33 +19,37 @@
         <section>
             <h2>Welcome to Exercise 01</h2>
             <p>This is a simple HTML document for exercise purposes.</p>
-            <code>
-                &lt;!DOCTYPE html&gt;<br>
-                &lt;html lang="en"&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Copyright 2025 Edmund Mulligan --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- This file is part of the Witchcraft and Wizardry course. --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- This file is licensed under the MIT License. --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. --&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Witchcraft and Wizardry Exercise 01&lt;/title&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Witchcraft and Wizardry Exercise 01&lt;/h1&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;main&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;section&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Welcome to Exercise 01&lt;/h2&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a simple HTML document for exercise purposes.&lt;/p&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/section&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/main&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;&amp;copy; 2025 Edmund Mulligan&lt;/p&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/footer&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
-                &lt;/html&gt;<br>
-            </code>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;!-- Copyright 2025 Edmund Mulligan --&gt; 
+    &lt;!-- This file is part of the Witchcraft and Wizardry course. --&gt; 
+    &lt;!-- This file is licensed under the MIT License. --&gt; 
+    &lt;!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. --&gt; 
+    &lt;!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. --&gt; 
+    &lt;head&gt; 
+        &lt;title&gt;Witchcraft and Wizardry Exercise 01&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt; 
+    &lt;body&gt; 
+        &lt;header&gt; 
+            &lt;h1&gt;Witchcraft and Wizardry Exercise 01&lt;/h1&gt; 
+        &lt;/header&gt; 
+            &lt;main&gt; 
+            &lt;section&gt; 
+                &lt;h2&gt;Welcome to Exercise 01&lt;/h2&gt; 
+                &lt;p&gt;This is a simple HTML document for exercise purposes.&lt;/p&gt; 
+            &lt;/section&gt; 
+        &lt;/main&gt; 
+        &lt;footer&gt; 
+            &lt;p&gt;&amp;copy; 2025 Edmund Mulligan&lt;/p&gt; 
+        &lt;/footer&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt; 
+            </pre>
+        </section>
+        <section>
             <p>Note the structure of this document.</p>
             <ul>
                 <li>The first line is <code>&lt;!DOCTYPE html&gt;</code> This tells your browser that this is a web page written using the HTML language. All web pages need to 
@@ -58,6 +64,10 @@
                 <li>HTML describes the structure of a web page. It is not a programming language, but a markup language. HTML uses tags to define elements on the page. Tags are 
                     enclosed in angle brackets, e.g., <code>&lt;tagname&gt;content&lt;/tagname&gt;</code> and note that (almost) every tag has a corresponding closing tag (that is 
                     the same as the opening tag but with a forward slash before the tag name).</li>
+                    <li>If you are using <code>Visual Studio Code</code> to edit your web pages, the tool will help you by automatically adding the closing tag when you type the 
+                    opening tag. If you delete the closing tag then when you type <code>&lt;/</code> the editor will automatically add the closing tag for you. This is very 
+                    helpful, provided you remember this is happening. If you forget and write the whole of the closing tag, you will end up with a bit of HTML nonsense that will 
+                    show up in the broser and you will need to go back and delete. So be careful when you are editing your HTML code.</li>
                 <li>Tags can also have attributes, which are additional information about the tag. For example, the <code>&lt;html&gt;</code> tag has a <code>lang</code> attribute 
                     that indicates the language of the document. Don't forget to look for the closing <code>&lt;/html&gt;</code> tag at the end of the document.</li>
                 <li>Every html document has two sections between the <code>&lt;html&gt;</code> and <code>&lt;/html&gt;</code> tags: the <code>&lt;head&gt;</code> and 
@@ -67,6 +77,9 @@
                     document, which is displayed in the browser's title bar or tab. The title should be a short and descriptive name for the document. The title is not displayed on 
                     the page itself, but it is important for search engines and bookmarks. We will cover other tags that go in the header section in later lessions. As always 
                     you must have a closing tag for the title tag and a closing tag for the head section.</li>
+                <li><code>&lt;meta&gt;</code> tags in the head section are used to define the information the browser needs to display the page correctly. The <code>charset</code> attribute 
+                    defines the character set used in the document. The <code>viewport</code> attribute defines how the page should be displayed on different devices. This is important 
+                    for responsive design, which is a way of making web pages look good on all devices.</li>
                 <li>After the <code>&lt;head&gt;</code> section is the <code>&lt;body&gt;</code> section. This is where the content of the document goes. The content can be text, 
                     images, links, and other elements, even videos and sound clips.</li>
                 <li>Evey web page will have different content in the body section but good practice is to have a header section, a main section, and a footer section. If you leve 
@@ -100,7 +113,8 @@
             <p>In this exercise you will create a simple HTML document using the tags we have covered in this lesson. 
                 You will use the &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;h1&gt;, &lt;h2&gt;, and &lt;p&gt; tags.
             </p>
-            <p>In your editor create a new file called MyExercise-01.html. Edit the file and add the following tags to the document:
+            <p>In your editor create a new file called MyExercise-01.html. Eithr create a new empty file or copy MyExercise-Template.html. 
+                Edit the file and add the following tags to the document:
                 <ul>
                     <li>&lt;!DOCTYPE html&gt;</li>
                     <li>&lt;html lang="en"&gt;</li>

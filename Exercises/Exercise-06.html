@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- Copyright 2025 Edmund Mulligan -->
+<!-- This file is part of the Witchcraft and Wizardry course. -->
+<!-- This file is licensed under the MIT License. -->
+<!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
+<!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+<html lang="en">
+<head>
+    <title>Witchcraft and Wizardry Exercise 06</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Resources/styles-1.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Witchcraft and Wizardry Exercise 06</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome to Exercise 06</h2>
+            <p>
+                In the last exercise we introduced styles. The styles in a document can get quite long so sometimes we put the styles into a seperate 
+                file, called a stylesheet, and link to it from the HTML document. This is a good idea because it makes the HTML document easier to read and edit.
+                It also means that we can use the same stylesheet for multiple HTML documents. This is good because it means we can change the styles in one 
+                place and all the documents will be updated. We can also quickly change the look of a whole website by changing the stylesheet.
+            </p>
+            <p>
+                You can change the style of <span class="highlight">just a bit of text</span> by incorporaing it within a <code>&lt;span&gt;</code> block. You can also do things 
+                like <span class="large">make text larger</span> or <span class="small">smaller</span> with suitable CSS classes.
+            </p>
+            <div class="standout">
+                <p>
+                     You can also change the style of a whole block of text by using a <code>&lt;div&gt;</code> tag. This is useful if you want to change the style of a whole section of your web page.
+                </p>
+            </div>
+        </section>
+        <section>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;!-- Copyright 2025 Edmund Mulligan --&gt; 
+    &lt;!-- This file is part of the Witchcraft and Wizardry course. --&gt; 
+    &lt;!-- This file is licensed under the MIT License. --&gt; 
+    &lt;!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. --&gt; 
+    &lt;!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. --&gt; 
+    &lt;head&gt; 
+        &lt;title&gt;Witchcraft and Wizardry Exercise 01&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link rel="stylesheet" type="text/css" href="../Resources/styles-1.css"&gt;
+    &lt;/head&gt; 
+    &lt;body&gt; 
+        &lt;header&gt; 
+            &lt;h1&gt;Witchcraft and Wizardry Exercise 01&lt;/h1&gt; 
+        &lt;/header&gt; 
+            &lt;main&gt; 
+            &lt;section&gt;
+                &lt;h2&gt;Welcome to Exercise 06&lt;/h2&gt;
+                &lt;p&gt;
+                    In the last exercise we introduced styles. The styles in a document can get quite long so sometimes we put the styles into a seperate 
+                    file, called a stylesheet, and link to it from the HTML document. This is a good idea because it makes the HTML document easier to read and edit.
+                    It also means that we can use the same stylesheet for multiple HTML documents. This is good because it means we can change the styles in one 
+                    place and all the documents will be updated. We can also quickly change the look of a whole website by changing the stylesheet.
+                &lt;/p&gt;
+                &lt;p&gt;
+                    You can change the style of &lt;span class="highlight"&gt;just a bit of text&lt;/span&gt; by incorporaing it within a &lt;code&gt;&lt;span&gt;&lt;/code&gt; block. You can also do things 
+                    like &lt;span class="large"&gt;make text larger&lt;/span&gt; or &lt;span class="small"&gt;smaller&lt;/span&gt; with suitable CSS classes.
+                &lt;/p&gt;
+                &lt;div class="standout"&gt;
+                    &lt;p&gt;
+                         You can also change the style of a whole block of text by using a &lt;code&gt;&lt;div&gt;&lt;/code&gt; tag. This is useful if you want to change the style of a whole section of your web page.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+            &lt;/main&gt; 
+        &lt;footer&gt; 
+            &lt;p&gt;&amp;copy; 2025 Edmund Mulligan&lt;/p&gt; 
+        &lt;/footer&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt; 
+            </pre>
+        </section>
+        <section>
+            <p>Note the structure of this document.</p>
+            <ul>
+                <li>The stylesheet is linked to the HTML document using the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> section. The <code>rel</code> 
+                attribute specifies the relationship between the HTML document and the stylesheet. The <code>type</code> attribute specifies the type of the stylesheet. The 
+                <code>href</code> attribute specifies the location of the stylesheet.</li>
+                <li>The stylesheet is a CSS file. The file name is <code>styles-1.css</code>. The file is in the <code>Resources</code> folder. The <code>href</code> attribute 
+                    specifies the location of the stylesheet. You can change tle look of this page by changing the file name to <code>styles-2.css</code></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Exercise 06</h2>
+            <p>In this exercise you will create a HTML document and a stylesheet. 
+                You can use everything you have learned so far.
+            </p>
+            <p>In your editor create a new file called MyExercise-06.html. Eithr create a new empty file or copy MyExercise-Template.html. 
+                Edit the file and add the following tags to the document:
+                <ul>
+                    <li>&lt;!DOCTYPE html&gt;</li>
+                    <li>&lt;html lang="en"&gt;</li>
+                    <li>&lt;head&gt;</li>
+                    <li>&lt;title&gt;</li>
+                    <li>&lt;body&gt;</li>
+                    <li>&lt;h1&gt;</li>
+                    <li>&lt;h2&gt;</li>
+                    <li>&lt;p&gt;</li>
+                </ul>
+            </p>
+            <p>You can use these extra tags if you like to create a structure for your document, but you can leave them out if you want to.
+                <ul>
+                    <li>&lt;header&gt;</li>
+                    <li>&lt;main&gt;</li>
+                    <li>&lt;section&gt;</li>
+                    <li>&lt;footer&gt;</li>
+                </ul>
+            </p>
+            <p>Make sure you have a closing tag for each of the tags you add. You can also add some comments using the &lt;!-- and --&gt; tags. 
+                You can use the comments to explain what you are doing or to remind yourself what you need to do.</p>
+            <p>Try to include several &lt;h2&gt; and &lt;p&gt; tags in your document. You can use the &lt;h2&gt; tags for subheadings and the &lt;p&gt; tags for
+                paragraphs of text. You can write about anything you find intersting. If you are stuck for ideas use a heading of "Witches and Wizards" and have subheadings
+                of "Witches" and "Wizards" then write some intersting paragraphs about witches and wizards under each subheading. And if you don't know anything 
+                intersting, just make someting up!</p>
+            <p>Add a <code>&lt;link&gt;</code> tag in your <code>head</code> section to point to a stylesheet. You can use either <code>style-1.css</code> or <code>style-2.css</code>. 
+                Notice how the look of the page changes when you change the style sheet.</p>
+            <p>In the <code>Resources</code> folder create a new file called <code>MyExercise-06.css</code>. This is your stylesheet. You can either create an empty file 
+                or copy copy <code>style-template.css</code> to get started. Edit the link in your HTML page to use the new stylesheet. Edit the stylesheet and see how it 
+                changes the layout of your HTML page. Don't forget, if you make a mistake in the stylesheet you will find that your html page does not display correctly. 
+                Tracking down these sorts of mistakes can be quite frustrating but is what real programmers have to do all the time. It is called debugging your code and you will 
+                learn a lot more about HTML and CSS if you can find and fix bugs in your code than if it always works perfectly first time.</p>
+            <p>When you are finished save your document then open it up in your browser to see what it looks like. If you make any changes to the document,
+                you will need to save the document again and refresh the page in your browser to see the changes.</p>
+        </section>
+        <section class="highlight">
+            <h2 class="standout">Congratualtions</h2>
+            You now know enough about HTML and CSS to create a simple web page. You can use the skills you have learned in the exercises to create your own web pages. In the next 
+            exercise you will learn how to add some interactivity to your web pages using JavaScript. You will learn how to make your web pages more dynamic and responsive to user input.
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Edmund Mulligan</p>
+    </footer>
+</html>
