@@ -1,0 +1,1 @@
+This file is simply to ensure that git does not ignore the backups folder. It serves no useful purpose, but do not delete it as git dislikes empty folders.
