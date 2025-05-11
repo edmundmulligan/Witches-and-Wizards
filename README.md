@@ -38,7 +38,7 @@ you should see a list of files and folders in the left-hand pane.
 3. In Visual Studio Code go to the menu at the top of the window, click on Terminal and select New Terminal. This will open a terminal window at the bottom of the screen.
 4. In the terminal window start the local server by typing  python -m http.server and pressing enter.
 5. You should see Serving HTTP on :: port 8000 (http://[::]:8000/) ... which tells you everything is working fine.
-6. Do *not* close the terminal window as that will stop the local server from running. You can minimise, hide or ignore the terminal window. You won't need it for anything else tn these exercises.
+6. Do *not* close the terminal window as that will stop the local server from running. You can minimise, hide or ignore the terminal window. You won't need it for anything else in these exercises.
 7. Open your browser and browse to http://localhost:8000 You should see the Web Witchcraft and Wizardry home page, including all the instructions in this README file.
 8. You can now switch between Visual Studio Code (where you will be writing your web pages) and your browser where you will be viewing them.
 
