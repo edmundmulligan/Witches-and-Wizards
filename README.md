@@ -3,7 +3,7 @@
 Welcome *Web Witch or Wizard* to the world of web development! Here, you will learn the art of creating stunning websites and applications. For a certain value of stunning, especially if you are easily stunned. What I'm saying is this will get you started but there is a lot more to the World Wide Web than you will cover in this introduction. But I'll give you enough to start exploring on your own, if you are curious. And witches and wizards are always curious. So you are in the right place.
 
 ## What you need
-- A computer with an internet connection. If you are at a Code Dojo, plase ask one of the mentors for the internet password if you need it.
+- A computer with an internet connection. If you are at a Code Dojo, please ask one of the mentors for the internet password if you need it.
 - A web browser (e.g. https://www.mozilla.org/en-US/firefox/new/)
 - A text editor (e.g.,  https://code.visualstudio.com/)
 - Python (https://www.python.org/downloads/)
