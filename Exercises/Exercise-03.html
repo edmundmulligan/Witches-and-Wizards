@@ -7,18 +7,19 @@
 
 <html lang="en">
 <head>
-    <title>Witchcraft and Wizardry Exercise 03</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Witchcraft and Wizardry Exercise 03</title>
+    <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
+    <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Witchcraft and Wizardry Exercise 03</h1>
-    </header>
+    <div id="header"></div>
     <main>
+        <h1>Witchcraft and Wizardry Exercise 03</h1>
         <section>
             <h2>Welcome to Exercise 03</h2>
-            <p>In this exercise will introduce tables and hyperlinks.</p>
+            <p>In this exercise you will discover tables and hyperlinks.</p>
             <table border="1">
                 <caption>Witches and Wizards</caption>
                 <thead>
@@ -30,24 +31,24 @@
                 <tbody>
                     <tr>
                         <td>
-                            <img src="../Images/young-witch.jpg" alt="Witch" style="width:100px;height:auto;">
+                            <img src="/resources/images/young-witch.jpg" alt="Witch" style="width:100px;height:auto;">
                         </td>
                         <td>
-                            <img src="../Images/young-wizard.jpg" alt="Wizard" style="width:100px;height:auto;">
+                            <img src="/resources/images/young-wizard.jpg" alt="Wizard" style="width:100px;height:auto;">
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <ul>
-                                <li>Cast Spells</li>
-                                <li>Make Potions</li>
-                                <li>Fly on broomsticks</li>
-                                <li>Talk to animals</li>
+                                <li>Casts Spells</li>
+                                <li>Makes potions</li>
+                                <li>Flies on a broomstick</li>
+                                <li>Talks to animals</li>
                             </ul>
                         </td>
                         <td>
                             <ul>
-                                <li>Cast spells</li>
+                                <li>Casts spells</li>
                                 <li>Wears a pointy hat</li>
                                 <li>Uses a magic staff</li>
                                 <li>Has a spell book</li>
@@ -86,7 +87,7 @@
         &lt;main&gt;
             &lt;section&gt;
                 &lt;h2&gt;Welcome to Exercise 03&lt;/h2&gt;
-                &lt;p&gt;In this exercise will introduce tables and hperlinks.&lt;/p&gt;
+                &lt;p&gt;In this exercise you will discover tables and hyperlinks.&lt;/p&gt;
                 &lt;table border="1"&gt;
                     &lt;caption&gt;Witches and Wizards&lt;/caption&gt;
                     &lt;thead&gt;
@@ -98,24 +99,24 @@
                     &lt;tbody&gt;
                         &lt;tr&gt;
                             &lt;td&gt;
-                                &lt;img src="../Images/young-witch.jpg" alt="Witch" style="width:100px;height:auto;"&gt;
+                                &lt;img src="/resources/images/young-witch.jpg" alt="Witch" style="width:100px;height:auto;"&gt;
                             &lt;/td&gt;
                             &lt;td&gt;
-                                &lt;img src="../Images/young-wizard.jpg" alt="Wizard" style="width:100px;height:auto;"&gt;
+                                &lt;img src="/resources/images/young-wizard.jpg" alt="Wizard" style="width:100px;height:auto;"&gt;
                             &lt;/td&gt;
                         &lt;/tr&gt;
                         &lt;tr&gt;
                             &lt;td&gt;
                                 &lt;ul&gt;
-                                    &lt;li&gt;Cast Spells&lt;/li&gt;
-                                    &lt;li&gt;Make Potions&lt;/li&gt;
-                                    &lt;li&gt;Fly on broomsticks&lt;/li&gt;
-                                    &lt;li&gt;Talk to animals&lt;/li&gt;
+                                    &lt;li&gt;Casts spells&lt;/li&gt;
+                                    &lt;li&gt;Makes potions&lt;/li&gt;
+                                    &lt;li&gt;Flies on a broomstick&lt;/li&gt;
+                                    &lt;li&gt;Talks to animals&lt;/li&gt;
                                 &lt;/ul&gt;
                             &lt;/td&gt;
                             &lt;td&gt;
                                 &lt;ul&gt;
-                                    &lt;li&gt;Cast Spells&lt;/li&gt;
+                                    &lt;li&gt;Casts spells&lt;/li&gt;
                                     &lt;li&gt;Wears a pointy hat&lt;/li&gt;
                                     &lt;li&gt;Uses a magic staff&lt;/li&gt;
                                     &lt;li&gt;Has a spell book&lt;/li&gt;
@@ -142,65 +143,58 @@
             </pre>
         </section>
         <section>
-            <p>Note the structure of this document.</p>
+            <h2>What you need to know</h2>
+            <h3>Tables</h3>
             <ul>
                 <li>Tables and hyperlinks are more complicated than the tags we have already used, but they follow the same rules about needing closing tags that match the opening tags.</li>
-                <li>Note the indentations in this code. Indentation is not necessary - your web page will display in the broswer just fine without uning indentations but if you 
+
+                <li>Note the indentations in this code. Indentation is not necessary - your web page will display in the broswer just fine without using indentations but if you 
                     use indentations it makes the code easier to read and understand. The biggest advantage is that consistent indentation helps you spot mismatched opening and closing tags.</li>
+
                 <li>Indentation is not part of the HTML standard, but it is a good practice to use it. You can use spaces or tabs for indentation, but be consistent.</li>
+
                 <li>A table is a grid of rows and colums - within the <code>&lt;table&gt;</code> and <code>&lt;/table&gt;</code> tags you define the structure of the table.</li>
+
                 <li>In this example we are using the <code>border="1"</code> attribute in the <code>&lt;table&gt;</code> attribute to draw an outline of the table. This is not 
                 normally used any more - you can draw borders around tables in much more flexible ways using CSS which we will look at in later lessons.</li>
+
                 <li>The <code>&lt;caption&gt;</code> tag is optional and is used to add a title to the table. The caption is displayed above the table.</li>
+
                 <li>After the <code>&lt;caption&gt;</code> tag we have three blocks <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>. These are used to define 
                     the header, body, and footer of the table. The header is displayed at the top of the table, the body is displayed in the middle, and the footer is displayed at the bottom.
                     These blocks are optional, but they are useful for structuring the table and making it easier to read. If you omit them, the table will still work and the browser will treat
                     the first row as the header, the last row as the footer, and the rest as the body.</li>
+
                 <li>Within each block we have rows, which are defined by the <code>&lt;tr&gt;</code> and <code>&lt;/tr&gt;</code> tags. Each row can contain one or more cells, which are defined 
                     by the <code>&lt;td&gt;</code> and <code>&lt;/td&gt;</code> tags.. Rows in the header usually use the <code>&lt;th&gt;</code> and <code>&lt;/th&gt;</code> tags instead of the 
                     <code>&lt;td&gt;</code> and <code>&lt;/td&gt;</code> tags. The <code>&lt;th&gt;</code> tag is used to define a header cell, which is usually displayed in bold.</li>
+
                 <li>Within the individual <code>&lt;td&gt;</code> cells you can put whatever you like: text, images or lists. Your browser will work out the sizes of the cells and rows and 
                     columns for you. It is imprtant that you put the same number of cells in each row - if you don't the browser will still display the table but it will look funny.</li>
+               
                 <li>If you do want to change the number of cells in a row you can use the <code>colspan="2"</code> attribute in the <code>&lt;td&gt;</code> tag to make a cell span two or more columns.</li>
+            </ul>
+            <h3>Hyperlinks</h3>
+            <ul>
                 <li>Hyperlinks are defined by the <code>&lt;a&gt;</code> and <code>&lt;/a&gt;</code> tags. Everything between these tags will displayed as a clickable link. If it is text it will be 
                     underlined and blue, but you can also use images or other HTML elements as links.</li>
-                <li>You must use the <code>href="https://www.example.com"</code> attribute in the <code>&lt;a&gt;</code> tag to specify the URL of the link. You can also use the <code>target="_blank"</code> 
+
+                    <li>You must use the <code>href="https://www.example.com"</code> attribute in the <code>&lt;a&gt;</code> tag to specify the URL of the link. You can also use the <code>target="_blank"</code> 
                     attribute to open the link in a new tab or window. If you miss out the <code>target="_blank"</code> attribute the link will open in the same tab or window and will replace the page you are on.</li>
             </ul>
         </section>
         <section>
             <h2>Exercise 03</h2>
-            <p>In this exercise you will create a simple HTML document using the tags we have covered in this lesson. 
-                You will use the &lt;table&gt;, &lt;thead&gt;, &lt;btody&gt;, &lt;tfoot&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;, and &lt;a&gt; tags.
-            </p>
-            <p>In your editor create a new file called MyExercise-03.html. Eithr create a new empty file or copy MyExercise-Template.html. 
-                Edit the file and add the following tags to the document:
-                <ul>
-                    <li>&lt;!DOCTYPE html&gt;</li>
-                    <li>&lt;html lang="en"&gt;</li>
-                    <li>&lt;head&gt;</li>
-                    <li>&lt;title&gt;</li>
-                    <li>&lt;body&gt;</li>
-                </ul>
-            </p>
-            <p>You can use these extra tags if you like to create a structure for your document, but you can leave them out if you want to.
-                <ul>
-                    <li>&lt;header&gt;</li>
-                    <li>&lt;main&gt;</li>
-                    <li>&lt;section&gt;</li>
-                    <li>&lt;footer&gt;</li>
-                </ul>
-            </p>
-            <p>Make sure you have a closing tag for each of the tags you add. You can also add some comments using the &lt;!-- and --&gt; tags. 
-                You can use the comments to explain what you are doing or to remind yourself what you need to do.</p>
+            <p>In this exercise you will create a HTML document containing a table and a hyperlink.</p>
+            <p>You will use the &lt;table&gt;, &lt;thead&gt;, &lt;btody&gt;, &lt;tfoot&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;, and &lt;a&gt; tags.</p>
+            <p>Copy the file <code>template.html</code> and name it <code>exercise-03.html</code>. If you prefer, you can create a new, empty file 
+                called <code>exercise-03.html</code> and copy the code from the template file into it.</p>
             <p>In the body of the document add a table with a caption and create a hyperlink. Use the exaple at the top of this page as 
                 a guide. You can use the same images and text as the example, or you can use your own images and text. You can also use the same 
                 table tructure as the example, or you can use your own structure.</p>
-            <p>When you are finished save your document then open it up in your browser to see what it looks like. If you make any changes to the document,
-                you will need to save the document again and refresh the page in your browser to see the changes.</p>
+            <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-03.html">http://localhost:8000/exercise-03.html</a> to 
+                see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Edmund Mulligan</p>
-    </footer>
+    <div id="footer"></div>
 </html>

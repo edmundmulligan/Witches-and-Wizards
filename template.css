@@ -1,0 +1,15 @@
+/* This is a template CSS file you can use when creating your own stylesheets. */
+
+/* 
+ * Comments in a style sheet are different to those in an HTML document. 
+ * They begin with a slash followed by a star and end with a star followed by a slash
+ * Your browser will ignore everything in the comments section so you can use comments to
+ * make a note of what you have done or as a reminder of what you still need to do.
+ */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}

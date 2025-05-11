@@ -7,67 +7,30 @@
 
 <html lang="en">
 <head>
-    <title>Witchcraft and Wizardry Exercise 05</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        header, footer {
-            background-color: #f4f4f4;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-        section {
-            margin-bottom: 20px;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .title {
-            font-weight: bold;
-            color: #ff0000;
-        }
-        .highlight {
-            background-color: #ffcccc;
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-        .large {
-            font-size: 1.5em;
-        }
-        .small {
-            font-size: 0.5em;
-        }
-    </style>
+    <title>Web Witchcraft and Wizardry Exercise 05</title>
+    <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
+    <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1 class="title">Witchcraft and Wizardry Exercise 05</h1>
-    </header>
+    <div id="header"></div>
     <main>
+        <h1>Witchcraft and Wizardry Exercise 05</h1>
         <section>
             <h2>Welcome to Exercise 05</h2>
             <p> 
-                Up until now we have created lots of content but it looks quite boring. In this exercise we will add some style to our web pages to change the way they look.
-                We will use CSS to do this. CSS stands for Cascading Style Sheets. It is a language that is used to describe the style of a document written in HTML.
+                Up until now you have created lots of content but it looks quite boring. In this exercise you will add some style to your web pages to change the way they look.
+                You will use CSS to do this. CSS stands for Cascading Style Sheets. It is a language that is used to describe the style of a document written in HTML.
             </p>
             <p>
                 CSS comes in two parts. First you have to define what the style looks like. This is done in the &lt;head&gt; section of your HTML document. You can do this by adding a 
                 <code>&lt;style&gt;</code> tag to the <code>&lt;head&gt;</code> section. Then you need to add the style to the HTML elements you want to change. You can do this by 
                 adding a <code>class</code> to the HTML element you want to change.
             </p>
+            <h1 class="title">You can change the format of a title using a class</h1>
             <p>
-                You can change the style of <span class="highlight">just a bit of text</span> by incorporaing it within a <code>&lt;span&gt;</code> block. You can also do things 
+                Or you can change the style of <span class="highlight">just a bit of text</span> by incorporaing it within a <code>&lt;span&gt;</code> block. You can also do things 
                 like <span class="large">make text larger</span> or <span class="small">smaller</span> with suitable CSS classes.
             </p>
             <div class="standout">
@@ -137,16 +100,17 @@
         &lt;section&gt;
             &lt;h2&gt;Welcome to Exercise 05&lt;/h2&gt;
             &lt;p&gt; 
-                Up until now we have created lots of content but it looks quite boring. In this exercise we will add some style to our web pages to change the way they look.
-                We will use CSS to do this. CSS stands for Cascading Style Sheets. It is a language that is used to describe the style of a document written in HTML.
+                Up until now you have created lots of content but it looks quite boring. In this exercise you will add some style to your web pages to change the way they look.
+                You will use CSS to do this. CSS stands for Cascading Style Sheets. It is a language that is used to describe the style of a document written in HTML.
             &lt;/p&gt;
             &lt;p&gt;
                 CSS comes in two parts. First you have to define what the style looks like. This is done in the &lt;head&gt; section of your HTML document. You can do this by adding a 
                 &lt;code&gt;&lt;style&gt;&lt;/code&gt; tag to the &lt;code&gt;&lt;head&gt;&lt;/code&gt; section. Then you need to add the style to the HTML elements you want to change. You can do this by 
                 adding a &lt;code&gt;class&lt;/code&gt; to the HTML element you want to change.
             &lt;/p&gt;
+            &lt;h1 class="title"&gt;You can change the format of a title using a class&lt;/h1&gt;
             &lt;p&gt;
-                You can change the style of &lt;span class="highlight"&gt;just a bit of text&lt;/span&gt; by incorporaing it within a &lt;code&gt;&lt;span&gt;&lt;/code&gt; block. You can also do things 
+                Or you can change the style of &lt;span class="highlight"&gt;just a bit of text&lt;/span&gt; by incorporaing it within a &lt;code&gt;&lt;span&gt;&lt;/code&gt; block. You can also do things 
                 like &lt;span class="large"&gt;make text larger&lt;/span&gt; or &lt;span class="small"&gt;smaller&lt;/span&gt; with suitable CSS classes.
             &lt;/p&gt;
             &lt;div class="title"&gt;
@@ -164,21 +128,29 @@
             </pre>
         </section>
         <section>
-            <p>Note the structure of this document.</p>
+            <h2>What you need to know</h2>
             <ul>
                 <li>The styles are defined in the &lt;head&gt; section of the document.</li>
-                <li>Each style hass a name and then a set of rules which are put in curly braces, for example <code>body {}</code>.</li>
+
+                <li>Each style has a name and then a set of rules which are put in curly braces, for example <code>body {}</code>.</li>
+
                 <li>More than one name can share the same style rules by separating the names with a comma, for example <code>body, header, footer {}</code>.</li>
+
                 <li>Style names are either HTML element names like <code>body</code>, <code>header</code>, <code>footer</code>, in which case the style will be applied to all elements of that type in the document, 
                     or they are class names which start with a dot like <code>.title</code>, <code>.highlight</code>, <code>.large</code>, and <code>.small</code> in which case the style will be applied to all elements 
                     with that class name.</li>
+
                 <li>Class names are added to the HTML element using the <code>class</code> attribute, for example <code>&lt;h1 class="title"&gt;</code>.</li>
+
                 <li>Although we didn't do it here, you can use both class names and element names in the same style rule. For example, you could have a style rule like <code>p.special {}</code> which would only 
                     apply to <code>&lt;p&gt;</code> elements with the class <code>special</code>.</li>
+
                 <li>CSS allows you to specify the colour of the text and the background color. Yo can either specify colours using their names like <code>red</code>, <code>blue</code>, <code>green</code>, or you 
                     can use hex codes like <code>#ff0000</code> for red, <code>#00ff00</code> for green, and <code>#0000ff</code> for blue.</li>
+
                 <li>If you make a mistake in your CSS, the browser will ignore the whole style rule. If you make a style change and it doesn't work, it is usually because you have made a mistake in the CSS, so 
                     it is important to test your CSS in the browser to make sure it works every time you make a change.</li>
+
                 <li>Be very careful when specifying colours - the keyword you need to use is color not colour. This is because CSS was invented by American programmers who use the American spelling of the word.</li>
             </ul>
         </section>
@@ -186,25 +158,8 @@
             <h2>Exercise 05</h2>
             <p>In this exercise you will create a HTML document with styles. 
             </p>
-            <p>In your editor create a new file called MyExercise-05.html. Either create a new empty file or copy MyExercise-Template.html. 
-                Edit the file and add the following tags to the document:
-                <ul>
-                    <li>&lt;!DOCTYPE html&gt;</li>
-                    <li>&lt;html lang="en"&gt;</li>
-                    <li>&lt;head&gt;</li>
-                    <li>&lt;title&gt;</li>
-                    <li>&lt;body&gt;</li>
-                    <li>&lt;header&gt;</li>
-                    <li>&lt;main&gt;</li>
-                    <li>&lt;section&gt;</li>
-                    <li>&lt;footer&gt;</li>
-                    <li>&lt;h1&gt;</li>
-                    <li>&lt;h2&gt;</li>
-                    <li>&lt;p&gt;</li>
-                </ul>
-            </p>
-            <p>Make sure you have a closing tag for each of the tags you add. You can also add some comments using the &lt;!-- and --&gt; tags. 
-                You can use the comments to explain what you are doing or to remind yourself what you need to do.</p>
+            <p>Copy the file <code>template.html</code> and name it <code>exercise-05.html</code>. If you prefer, you can create a new, empty file 
+                called <code>exercise-05.html</code> and copy the code from the template file into it.</p>
             <p>Now add a <code>&lt;style&gt;</code> section to the &lt;head&gt; section of your document. Between the <code>&lt;style&gt;&lt;/style&gt;</code> tags add some CSS styles to change the way your document looks.
                 Play around with the styles to see what they do. You can use the styles from this exercise or you can write your own. Make some styles that apply to all the elements of a certain type, 
                 for example <code>h1</code>, <code>h2</code>, <code>p</code>, and some styles that apply to just element with a particular class, for example <code>.title</code>, <code>.highlight</code>, 
@@ -212,11 +167,9 @@
             <p>Now write some content for your document. You can make up anything you like but make sure you use the classes you defined in the <code>&lt;style&gt;</code> section. 
                 You can also add some images using the &lt;img&gt; tag. There are several images you can use in the <code>Images</code> folder.</p>
                 <p>Try using use some <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags, with <code>class</code> attributes.</p>
-            <p>When you are finished save your document then open it up in your browser to see what it looks like. If you make any changes to the document,
-                you will need to save the document again and refresh the page in your browser to see the changes.</p>
+            <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-05.html">http://localhost:8000/exercise-05.html</a> to 
+                see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Edmund Mulligan</p>
-    </footer>
+    <div id="footer"></div>
 </html>
