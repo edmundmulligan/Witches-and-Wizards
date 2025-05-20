@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Copyright 2025 Edmund Mulligan -->
-<!-- This file is part of the Witchcraft and Wizardry course. -->
+<!-- This file is part of the Web Witchcraft and Wizardry course. -->
 <!-- This file is licensed under the MIT License. -->
 <!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
 <!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
@@ -12,19 +12,27 @@
     <title>Web Witchcraft and Wizardry Exercise 01</title>
     <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
     <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+    <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div id="header"></div>
     <main>
-        <h1>Witchcraft and Wizardry Exercise 01</h1>
+        <h1>Witchcraft and Wizardry Exercise 1</h1>
         <section>
-            <h2>Welcome to Exercise 01</h2>
+            <h2>Welcome to Exercise 1</h2>
             <p>In this exercise you will create your first, simple HTML document.</p>
         </section>
-        <section>
-            <pre>
+        <h2 onclick="toggleSection('code', event);" class="magicInvisible">See the code</h2>
+        <section id="code" class="hidden">
+            <pre style="display: flex;">
+                <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;">
+                    1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26
+                </span>
+                <span>
 &lt;!DOCTYPE html&gt;
-&lt;!-- This file is part of the Witchcraft and Wizardry course. --&gt;
+&lt;!-- This file is part of the Web Witchcraft and Wizardry course. --&gt;
 &lt;!-- This file is licensed under the MIT License. --&gt;
 &lt;!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. --&gt;
 &lt;!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. --&gt;
@@ -49,20 +57,22 @@
         &lt;/footer&gt; 
     &lt;/body&gt; 
 &lt;/html&gt; 
+                </span>
             </pre>
         </section>
-        <section>
-            <h2>What you need to know</h2>
+        <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
+            <section id="what-you-need-to-know" class="hidden">
+
             <ul>
                 <li>The first line is <code>&lt;!DOCTYPE html&gt;</code> This tells your browser that this is a web page written using the HTML language. All web pages need to 
                     start with this line.</li>
 
-                <li>After the <code>&lt;!DOCTYPE html&gt;</code> line, we have some comments. Comments are not displayed in the browser, but are useful for developers to 
-                    understand the code. The comments in this document tell you that this is a file for the Witchcraft and Wizardry course and that it is licensed under the 
+                <li>In lines 2-5 we have some comments. Comments are not displayed in the browser, but are useful for web witches and wizards to 
+                    understand the code. The comments in this document tell you that this is a file for the Web Witchcraft and Wizardry course and that it is licensed under the 
                     MIT License. Comments start with <code>&lt;!--</code> and end with <code>--&gt;</code>. You can use comments to explain your code, or remind yourself why you 
                     wrote something the way you did.</li>
 
-                <li>After the comments is an <code>&lt;html&gt;</code> tag. This tells your browser that eveything following this line is part of the HTML document. 
+                <li>Line 6 is an <code>&lt;html&gt;</code> tag. This tells your browser that eveything following this line is part of the HTML document. 
                     All HTML documents need to start with this and end with a corresponding <code>&lt;/html&gt;</code> line. The <code>lang="en"</code> attribute (which comes 
                     after the tag name but before the closing <code>&gt;</code>) indicates that the document is in English.</li>
 
@@ -70,11 +80,27 @@
                     enclosed in angle brackets, e.g., <code>&lt;tagname&gt;content&lt;/tagname&gt;</code> and note that (almost) every tag has a corresponding closing tag (that is 
                     the same as the opening tag but with a forward slash before the tag name).</li>
 
-                    <li>Tags can be nested inside each other. For example, you can have a <code>&lt;p&gt;</code> tag inside a <code>&lt;div&gt;</code> tag. Note you must make sure
+                <li>Tags can be nested inside each other. For example, you can have a <code>&lt;p&gt;</code> tag inside a <code>&lt;div&gt;</code> tag. Note you must make sure
                     that you close the tags in the correct order. For example, if you have a <code>&lt;p&gt;</code> tag inside a <code>&lt;div&gt;</code> tag, you must close
-                    the <code>&lt;p&gt;</code> tag before you close the <code>&lt;div&gt;</code> tag. If you don't, the browser will not display the page correctly.</li>
+                    the <code>&lt;/p&gt;</code> tag before you close the <code>&lt;/div&gt;</code> tag. If you don't, the browser will not display the page correctly. This means 
+                    that 
+                    <pre>
+&lt;div&gt;
+    &lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;/div&gt;
+                    </pre>
+                    is valid and will display correctly but 
+                   <pre>
+&lt;div&gt;
+&lt;p&gt;This is a paragraph&lt;/div&gt;
+&lt;/p&gt;
+                    </pre>
+                    is not valid and will not display correctly. The browser will try to guess what you mean, but it may not be what you intended. This is called <strong>HTML
+                    parsing</strong>. The browser will try to fix the errors, but it is better to get it right in the first place. If you are not sure if your HTML is valid, you
+                    can use a validator. There are many free validators available online. One of the most popular is the <a href="https://validator.w3.org/" target="_blank">W3C 
+                    Markup  Validation Service</a>. This will check your HTML and tell you if there are any errors. It will also give you suggestions on how to fix them.</li>
 
-                    <li>If you are using <code>Visual Studio Code</code> to edit your web pages, the tool will help you by automatically adding the closing tag when you type the 
+                <li>If you are using <code>Visual Studio Code</code> to edit your web pages, the tool will help you by automatically adding the closing tag when you type the 
                     opening tag. If you delete the closing tag then when you type <code>&lt;/</code> the editor will automatically add the closing tag for you. This is very 
                     helpful, provided you remember this is happening. If you forget and write the whole of the closing tag, you will end up with a bit of HTML nonsense that will 
                     show up in the browser and you will need to go back and delete it. So be careful when you are editing your HTML code.</li>
@@ -88,33 +114,34 @@
 
                 <li>The only tag that <strong>*MUST*</strong> be in the <code>&lt;head&gt;</code> section is the <code>&lt;title&gt;</code> tag. This tag defines the title of the 
                     document, which is displayed in the browser's title bar or tab. The title should be a short and descriptive name for the document. The title is not displayed on 
-                    the page itself, but it is important for search engines and bookmarks. We will cover other tags that go in the header section in later lessions. As always 
+                    the page itself, but it is important for search engines and bookmarks. We will cover other tags that go in the header section in later lessons. As always 
                     you must have a closing tag for the title tag and a closing tag for the head section.</li>
 
-                <li><code>&lt;meta&gt;</code> tags in the head section are used to define the information the browser needs to display the page correctly. The <code>charset</code> attribute 
-                    defines the character set used in the document. The <code>viewport</code> attribute defines how the page should be displayed on different devices. This is important 
-                    for responsive design, which is a way of making web pages look good on all devices.</li>
+                <li><code>&lt;meta&gt;</code> tags in the head section are used to define the information the browser needs to display the page correctly. The <code>meta charset</code> 
+                    tag on line 9 defines the character set used in the document. The <code>meta viewport</code> tag in line 10 defines how the page should be displayed on different 
+                    devices. This is important for responsive design, which is a way of making web pages look good on all devices.</li>
 
-                <li>After the <code>&lt;head&gt;</code> section is the <code>&lt;body&gt;</code> section. This is where the content of the document goes. The content can be text, 
+                <li>lines 12-25 are the <code>&lt;body&gt;</code> section. This is where the content of the document goes. The content can be text, 
                     images, links, and other elements, even videos and sound clips.</li>
 
-                <li>Evey web page will have different content in the body section but good practice is to have a header section, a main section, and a footer section. If you leve 
-                    these sections out, the browser will still display the page but it may be harder to read and edit the page later. The header section usually contains the title of 
-                    the document (this is often the same as the title used in the <code>&lt;head&gt;</code> section but it doesn't have to be) and a navigation
-                    menu. The main section contains the main content of the document. The footer section usually contains copyright information and links to other pages. Using 
+                <li>Evey web page will have different content in the body section but good practice is to have a <code>header</code> section (N.B. this is not the same as the 
+                    <code>head</code> section in every HTML document), a <code>main</code> section, and a <code>footer</code> section. If you leave these sections out, the browser 
+                    will still display the page but it may be harder to read and edit the page later. The <code>header</code> section usually contains the title of the document 
+                    (this is often the same as the title used in the <code>&lt;head&gt;</code> section but it doesn't have to be) and a navigation menu. The <code>main</code> section 
+                    contains the main content of the document. The <code>footer</code> section usually contains copyright information and links to other pages. Using 
                     structures like this will make it easier for search engines to find your page and for users to navigate your site. They will also make it easier for you to 
                     add CSS and JavaScript to your page to make your pages look and work better.</li>
 
                 <li>The tags in the <code>&lt;body&gt;</code> section to focus on in this exercise are the <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and 
                     <code>&lt;p&gt;</code> tags.</li>
 
-                <li>The <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> tags are used for headings. The <code>&lt;h1&gt;</code> tag is used for the main heading of the 
-                    document and <code>&lt;h2&gt;</code> is used for subheadings. You can have as many <code>&lt;h2&gt;</code> tags as you like, but there should only be one 
+                <li>The <code>&lt;h1&gt;</code> tag in line 14 and <code>&lt;h2&gt;</code> tag in line 18 are used for headings. The <code>&lt;h1&gt;</code> tag is used for the main heading 
+                    of the document and <code>&lt;h2&gt;</code> is used for subheadings. You can have as many <code>&lt;h2&gt;</code> tags as you like, but there should only be one 
                     <code>&lt;h1&gt;</code> tag per document. You can also use <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, and <code>&lt;h6&gt;</code> 
                     tags for subheadings, but these are not used as often.</li>
 
-                <li>The <code>&lt;p&gt;</code> tag is used for paragraphs of text. You can have as many <code>&lt;p&gt;</code> tags as you like, but they should be used to break up 
-                    the content into paragraphs. The <code>&lt;p&gt;</code> tag is one of the very few tags that does not need a closing tag, although it is still good practice to 
+                <li>The <code>&lt;p&gt;</code> tag in lines 19 and 23 is used for paragraphs of text. You can have as many <code>&lt;p&gt;</code> tags as you like, but they should be used to 
+                    break up the content into paragraphs. The <code>&lt;p&gt;</code> tag is one of the very few tags that does not need a closing tag, although it is still good practice to 
                     use one.</li>
 
                 <li>Note that HTML is not case sensitive, so you can use upper or lower case letters for the tags. However, it is good practice to use lower case letters for the tags 
@@ -126,29 +153,95 @@
 
                 <li>We will cover other tags in later lessons as well as look at how to make the page look better using CSS and how to make it work better using JavaScript.</li>
 
-                <li>Finally, the <code>&lt;footer&gt;</code> section contains copyright information and links to other pages. The copyright information is usually at the bottom of 
-                    the page and should include the name of the author and the year. The links to other pages can be to other pages on your site or to external sites.</li>
-                    <li>The <code>&amp;copy;</code> in the footer is the code for the copyright symbol &copy;. HTML uses codes like this for displaying special symbols.</li>
+                <li>Finally, the <code>&lt;footer&gt;</code> section in lines 22-24 contains copyright information and links to other pages. The copyright information is usually at the 
+                    bottom of the page and should include the name of the author and the year. The links to other pages can be to other pages on your site or to external sites.</li>
+                    <li>The <code>&amp;copy;</code> in line 23 is the code for the copyright symbol &copy;. HTML uses codes like this for displaying special symbols.</li>
             </ul>
         </section>
-        <section>
-            <h2>Exercise 01</h2>
+        <h2 onclick="toggleSection('exercise-1', event);" class="magicInvisible">Exercise 1</h2>
+        <section id="exercise-1" class="hidden">
             <p>In this exercise you will create a simple HTML document using the tags we have covered in this lesson. 
                 You will use the &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;h1&gt;, &lt;h2&gt;, and &lt;p&gt; tags.</p>
+
             <p>Copy the file <code>template.html</code> and name it <code>exercise-01.html</code>. If you prefer, you can create a new, empty file 
                 called <code>exercise-01.html</code> and copy the code from the template file into it.</p>
-                <p>Edit the file and add some content. If you don't know what to write, write something about witches and wizards. Make sure you use some of the 
+            
+            <p>Edit the file and add some content. If you don't know what to write, write something about witches and wizards. Make sure you use some of the 
                 tags we have covered in this lesson. You can use the <code>&lt;h1&gt;</code> tag for the title of the document, the <code>&lt;h2&gt;</code> tag for
                 the main heading, and the <code>&lt;p&gt;</code> tag for paragraphs of text. Don't forget to put the heading in the <code>&lt;header&gt;</code> section and the
                 paragraphs in the <code>&lt;main&gt;</code> section.
+
             <p>Make sure you have a closing tag for each of the tags you add. You can also add some comments using the &lt;!-- and --&gt; tags. 
                 You can use the comments to explain what you are doing or to remind yourself what you need to do.</p>
+            
             <p>Try to include several &lt;h2&gt; and &lt;p&gt; tags in your document. You can use the &lt;h2&gt; tags for subheadings and the &lt;p&gt; tags for
                 paragraphs of text. You can write about anything you find intersting. If you are stuck for ideas use a heading of "Witches and Wizards" and have subheadings
                 of "Witches" and "Wizards" then write some intersting paragraphs about witches and wizards under each subheading. And if you don't know anything 
                 intersting, just make someting up!</p>
+        
             <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-01.html">http://localhost:8000/exercise-01.html</a> to 
                 see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
+        </section>
+
+        <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witched and Wizards</h2>
+        
+        <section id="advanced-witches-and-wizards" class="hidden">
+            <p>When you create a web page you create a <strong>document</strong>. The tags that you use define the structure of your documrnt and in later exercises you will 
+                learn how to use that structure, knows as the <strong>Document Object Model</strong> or <strong>DOM</strong>, to change tha appearance of sections of your web page 
+                with styles or to interact with the user of you web page using Javascript.</p>
+            
+            <p>The DOM is a <strong>hierarchical</strong> or <strong>tree</strong> structure. This means that the tags are arranged in a tree-like structure - imagine a tree with the 
+                trunk in the ground (ignore the roots as this metaphor only works so far) and the main branches coming out of the trunk then smaller branches coming out of the 
+                main branches and so on. The <code>&lt;html&gt;</code> tag is the trunk of the tree, and the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags are the
+                main branches. The other tags are the smaller branches and leaves. The tree structure is important because it allows you to select and manipulate elements in the
+                document using CSS and JavaScript.</p>
+        
+            <p>Imagine you have a web page that looks like this:
+                <pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Web Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to my web page&lt;/h1&gt;
+        &lt;section&gt;
+            &lt;h2&gt;About me&lt;/h2&gt;
+            &lt;p&gt;My name is Edmund Mulligan and I am a web developer.&lt;/p&gt;
+            &lt;h2&gt;My hobbies&lt;/h2&gt;
+            &lt;p&gt;I am a STEM ambassador, I sing in a Male Voice Choir and I teach Nonviolent Communication.&lt;/p&gt;
+        &lt;/section&gt;
+     &lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+                </p>
+            <p>The DOM model of this document would look like this:
+                <ul>
+                    <li><strong>html</strong></li>
+                    <ul>
+                        <li><strong>head</strong></li>
+                        <ul>
+                            <li><strong>title</strong>: "My Web Page"</li>
+                        </ul>
+                        <li><strong>body</strong></li>
+                        <ul>
+                            <li><strong>h1</strong>: "Welcome to my web page"</li>
+                            <li><strong>section</strong></li>
+                            <ul>
+                                <li><strong>h2</strong>: "About me"</li>
+                                <li><strong>p</strong>: "My name is Edmund Mulligan and I am a web developer."</li>
+                                <li><strong>h2</strong>: "My hobbies"</li>
+                                <li><strong>p</strong>: "I am a STEM ambassador, I sing in a Male Voice Choir and I teach Nonviolent Communication."</li>
+                            </ul>
+                        </ul>
+                    </ul>
+                </ul>
+            </p>
+    
+            <p>Note that the elements in the DOM match the tags in the HTML document, but there are no closing tags in the DOM. You can reference the elements of the 
+                DOM using the <strong>dot notation</strong>. For example, you can reference the <code>&lt;h1&gt;</code> element using <code>document.body.h1</code>.
+                You can also reference the <code>&lt;h2&gt;</code> elements using <code>document.body.section.h2</code>. In later exercises you will learn how to give 
+                elements <strong>ids</strong> and <strong>classes</strong> so you can distinguish between elements of the same type.</p>
+
         </section>
     </main>
     <div id="footer"></div>

@@ -14,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header, footer {
     background-color: #f4f4f4;
     padding: 10px 20px;
@@ -22,26 +23,72 @@ header, footer {
 main {
     padding: 20px;
 }
+
 section {
     margin-bottom: 20px;
 }
+
 pre {
+    display: flex;
+    font-family: "Fira Mono", "Consolas", monospace;
     background-color: #f4f4f4;
     padding: 10px;
     border-radius: 5px;
 }
+
+pre span:first-child {
+    user-select: none;
+    color: #888;
+    text-align: right;
+    margin-right: 1em;
+    min-width: 2em;
+}
+
+:where(h1) {
+  margin-block: 0.67em;
+  font-size: 2em;
+}
+
 .title, .standout{
     font-weight: bold;
     color: #ff0000;
 }
+
 .highlight {
     background-color: #ffcccc;
     padding: 2px 4px;
     border-radius: 3px;
 }
+
 .large {
     font-size: 1.5em;
 }
+
 .small {
     font-size: 0.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+.magicInvisible:before {
+    font-family: "Font Awesome 6 Sharp";
+    font-weight: 900;
+    content: "\f0d0\f138";
+    margin-right: 0.5em;
+    color: #7c3aed;
+}
+
+.magicVisible:before {
+    font-family: "Font Awesome 6 Sharp";
+    font-weight: 900;
+    content: "\e2ca\f13a";
+    margin-right: 0.5em;
+    color: #7c3aed;
+}
+
+.magicInvisible:hover,
+.magicVisible:hover {
+    cursor: pointer;
 }

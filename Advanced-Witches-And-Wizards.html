@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
     <script src="/resources/scripts/loadReadme.js" defer></script>
     <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+    <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header"></div>
@@ -22,58 +24,177 @@
             <p>N.B. This page is just a place holder at the moment as I haven't written the content yet.</p>
         </section>
         <section>
-            <ul>
-                <li><h2>Web basics</h2></li>
-                <ul>
-                    <li>What is the difference between the Internet and the World Wide Web?</li>
-                    <li>Who invented the World Wide Web?</li>
-                    <li>How does the web work?</li>
-                    <li>What is a web server?</li>
-                    <li>What is URL?</li>
-                    <li>What is HTML?</li>
-                    <li>What is CSS?</li>
-                    <li>What is JavaScript?</li>
-                    <li>What does a web browser do?</li>
-                    <li>What is a 404 error?</li>
-                    <li>What is a Search Engine?</li>
-                    <li>What is SEO?</li>
-                </ul>
-                <li><h2>Web development basics</h2></li>
-                <ul>
-                    <li>What is web development?</li>
-                    <li>What is front-end development?</li>
-                    <li>What is back-end development?</li>
-                    <li>What is full-stack development?</li>
-                    <li>What is a program or algorithm?</li>
-                    <li>What is a variable?</li>
-                    <li>What is a fuction?</li>
-                    <li>What is a parameter?</li>
-                    <li>What is an object?</li>
-                    <li>What is a method?</li>
-                    <li>What is data?</li>
-                    <li>What is a data structure?</li>
-                    <li>What is a database?</li>
-                    <li>What is responsive design?</li>
-                    <li>What is accessibility?</li>
-                </ul>
-                <li><h2>Tips and tricks real developers use to make their lives easier</h2></li> 
-                <ul>
-                    <li>Make backups of your work.</li>
-                    <li>Use folders to organize your files.</li>
-                    <li>Use consistent naming conventions.</li>
-                    <li>Don't repeat yourself.</li>
-                    <li>Comment your code.</li>
-                    <li>Always test everything.</li>
-                    <li>Make sure your web page is secure to it can't be hacked.</li>
-                    <li>Use version control (Git).</li> 
-                </ul>
-                <li><h2>More About Witches and Wizards</h2></li>
-                <ul>
-                    <li>Who are the most famous witches (apart from Hermione Grainger)?</li>
-                    <li>Who are the most famous wizards (apart from Harry Potter)?</li>
-                    <li>What are the best books and films about witches and wizards (apart from the Harry Potter ones)?</li>
-                </ul>
-            </ul>
+            <h2 onclick="toggleSection('web-basics', event);" class="magicInvisible">Web Basics</h2>
+            <div id="web-basics" class="hidden">
+                <p>Here are some basic questions and answers about the web:</p>
+                    <h3 onclick="toggleSection('web-basics-01', event);" class="magicInvisible">What is the difference between the Internet and the World Wide Web?</h3>
+                    <div id="web-basics-01" class="hidden">
+                        <p>The Internet is a global network of computers that are connected to each other. The World Wide Web is a system of interlinked hypertext documents that are accessed via the Internet.</p>
+                    </div>
+                    <h3 onclick="toggleSection('web-basics-02', event);" class="magicInvisible">Who invented the World Wide Web?</h3>
+                    <div id="web-basics-02" class="hidden">
+                        <p>The World Wide Web was invented by Tim Berners-Lee in 1989 while he was working at CERN.</p>
+                    </div>
+                    <h3 onclick="toggleSection('web-basics-03', event);" class="magicInvisible">How does the web work?</h3>
+                    <div id="web-basics-03" class="hidden">
+                        <p>The web works by using a system of interlinked hypertext documents that are accessed via the Internet. When you click on a link, your web browser sends a request to the server that hosts the document, and the server sends the document back to your browser.</p>
+                    </div>
+                    <h3 onclick="toggleSection('web-basics-04', event);" class="magicInvisible">What is a web server?</h3>
+                    <div id="web-basics-04" class="hidden">
+                        <p>A web server is a computer that stores web pages and serves them to users when they request them. It uses the HTTP protocol to communicate with web browsers.</p>
+                    </div>
+                    <h3 onclick="toggleSection('web-basics-05', event);" class="magicInvisible">What is URL?</h3>
+                    <div id="web-basics-05" class="hidden">
+                        <p>A URL (Uniform Resource Locator) is the address of a web page. It consists of a protocol (usually HTTP or HTTPS), a domain name, and a path to the specific page.</p>
+                    </div>
+                    <h3 onclick="toggleSection('web-basics-06', event);" class="magicInvisible">What is HTML?</h3>
+                    <div id="web-basics-06" class="hidden">
+                        <p>HTML (Hypertext Markup Language) is the standard markup language for creating web pages. It is used to structure content on the web.</p>
+                    </div>
+                    <h3 onclick="toggleSection('web-basics-07', event);" class="magicInvisible">What is CSS?</h3>
+                    <div id="web-basics-07" class="hidden">
+                        <p>CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a document written in HTML. It is used to control the layout and appearance of web pages.</p>
+                    </div>
+                    <h3 onclick="toggleSection('web-basics-08', event);" class="magicInvisible">What is JavaScript?</h3>
+                    <div id="web-basics-08" class="hidden">
+                        <p>JavaScript is a programming language that is commonly used to create interactive effects within web browsers. It is used to add dynamic behavior to web pages.</p>
+                    </div>
+                    <h3 onclick="toggleSection('web-basics-09', event);" class="magicInvisible">What does a web browser do?</h3>
+                    <div id="web-basics-09" class="hidden">
+                        <p>A web browser is a software application that allows users to access and view web pages. It interprets HTML, CSS, and JavaScript to display the content of a web page.</p>
+                    </div>
+                    <h3 onclick="toggleSection('web-basics-10', event);" class="magicInvisible">What is a 404 error?</h3>
+                    <div id="web-basics-10" class="hidden">
+                        <p>A 404 error is an HTTP status code that indicates that the requested page could not be found on the server. This usually means that the page has been moved or deleted.</p>
+                    </div>
+                    <h3 onclick="toggleSection('web-basics-11', event);" class="magicInvisible">What is a Search Engine?</h3>
+                    <div id="web-basics-11" class="hidden">
+                        <p>A search engine is a software system that is designed to carry out web searches. It allows users to search for information on the web by entering keywords or phrases.</p>
+                    </div>
+                    <h3 onclick="toggleSection('web-basics-12', event);" class="magicInvisible">What is SEO?</h3>
+                    <div id="web-basics-12" class="hidden">
+                        <p>SEO (Search Engine Optimization) is the process of improving the visibility of a website or a web page in a search engine's organic results. It involves optimizing the content and structure of a website to make it more attractive to search engines.</p>
+                    </div>
+            </div>
+
+            <h2 onclick="toggleSection('web-development-basics', event);" class="magicInvisible">Web Development Basics</h2>
+            <div id="web-development-basics" class="hidden">
+                <p>Here are some basic questions and answers about web development:</p>
+                <h3 onclick="toggleSection('web-development-basics-01', event);" class="magicInvisible">What is web development?</h3>
+                <div id="web-development-basics-01" class="hidden">
+                    <p>Web development is the process of creating and maintaining websites. It involves a combination of programming, design, and content creation.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-02', event);" class="magicInvisible">What is front-end development?</h3>
+                <div id="web-development-basics-02" class="hidden">
+                    <p>Front-end development is the part of web development that deals with the user interface and user experience. It involves creating the layout, design, and interactivity of a website using HTML, CSS, and JavaScript.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-03', event);" class="magicInvisible">What is back-end development?</h3>
+                <div id="web-development-basics-03" class="hidden">
+                    <p>Back-end development is the part of web development that deals with the server-side of a website. It involves creating and managing the database, server, and application logic using programming languages like PHP, Python, Ruby, or Java.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-04', event);" class="magicInvisible">What is full-stack development?</h3>
+                <div id="web-development-basics-04" class="hidden">
+                    <p>Full-stack development is the practice of working on both the front-end and back-end of a website. A full-stack developer has the skills to work on all aspects of web development.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-05', event);" class="magicInvisible">What is a program or algorithm?</h3>
+                <div id="web-development-basics-05" class="hidden">
+                    <p>A program is a set of instructions that a computer can execute to perform a specific task. An algorithm is a step-by-step procedure for solving a problem or accomplishing a task.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-06', event);" class="magicInvisible">What is a variable?</h3>
+                <div id="web-development-basics-06" class="hidden">
+                    <p>A variable is a named storage location in a program that can hold a value. It can be used to store data that can be changed during the execution of the program.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-07', event);" class="magicInvisible">What is a function?</h3>
+                <div id="web-development-basics-07" class="hidden">
+                    <p>A function is a block of code that performs a specific task. It can take input parameters and return a value. Functions are used to organize code and make it reusable.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-08', event);" class="magicInvisible">What is a parameter?</h3>
+                <div id="web-development-basics-08" class="hidden">
+                    <p>A parameter is a variable that is passed to a function when it is called. It allows the function to receive input data and use it in its calculations.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-09', event);" class="magicInvisible">What is an object?</h3>
+                <div id="web-development-basics-09" class="hidden">
+                    <p>An object is a data structure that contains properties and methods. It is used to represent real-world entities and their behavior in a program.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-10', event);" class="magicInvisible">What is a method?</h3>
+                <div id="web-development-basics-10" class="hidden">
+                    <p>A method is a function that is associated with an object. It can be used to perform actions on the object's properties or to manipulate the object itself.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-11', event);" class="magicInvisible">What is data?</h3>
+                <div id="web-development-basics-11" class="hidden">
+                    <p>Data is information that is processed or stored by a computer. It can be in the form of text, numbers, images, or any other type of information.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-12', event);" class="magicInvisible">What is a data structure?</h3>
+                <div id="web-development-basics-12" class="hidden">
+                    <p>A data structure is a way of organizing and storing data in a computer so that it can be accessed and modified efficiently. Common data structures include arrays, linked lists, stacks, queues, and trees.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-13', event);" class="magicInvisible">What is a database?</h3>
+                <div id="web-development-basics-13" class="hidden">
+                    <p>A database is an organized collection of data that can be accessed and managed using a database management system (DBMS). It allows for efficient storage, retrieval, and manipulation of data.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-14', event);" class="magicInvisible">What is responsive design?</h3>
+                <div id="web-development-basics-14" class="hidden">
+                    <p>Responsive design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes. It uses fluid grids, flexible images, and CSS media queries to adapt the layout to the viewing environment.</p>
+                </div>
+                <h3 onclick="toggleSection('web-development-basics-15', event);" class="magicInvisible">What is accessibility?</h3>
+                <div id="web-development-basics-15" class="hidden">
+                    <p>Accessibility is the practice of making web pages usable by people with disabilities. It involves designing and developing web content that can be accessed by all users, regardless of their abilities or disabilities.</p>
+                </div>
+            </div>
+
+            <h2 onclick="toggleSection('tips-and-tricks', event);" class="magicInvisible">Tips and tricks real developers use to make their lives easier</h2>
+            <div id="tips-and-tricks" class="hidden">
+                <p>Here are some tips and tricks that real developers use to make their lives easier:</p>
+                <h3 onclick="toggleSection('tips-and-tricks-01', event);" class="magicInvisible">Make backups of your work.</h3>
+                <div id="tips-and-tricks-01" class="hidden">
+                    <p>Always make backups of your work to avoid losing it in case of a computer crash or other disaster. Use cloud storage or external hard drives to keep your files safe.</p>
+                </div>
+                <h3 onclick="toggleSection('tips-and-tricks-02', event);" class="magicInvisible">Use folders to organize your files.</h3>
+                <div id="tips-and-tricks-02" class="hidden">
+                    <p>Organize your files into folders to make it easier to find what you need. Use descriptive names for your folders and files to help you remember what they contain.</p>
+                </div>
+                <h3 onclick="toggleSection('tips-and-tricks-03', event);" class="magicInvisible">Use consistent naming conventions.</h3>
+                <div id="tips-and-tricks-03" class="hidden">
+                    <p>Use consistent naming conventions for your files and folders to make it easier to find what you need. Use lowercase letters and separate words with underscores or hyphens.</p>
+                </div>
+                <h3 onclick="toggleSection('tips-and-tricks-04', event);" class="magicInvisible">Don't repeat yourself.</h3>
+                <div id="tips-and-tricks-04" class="hidden">
+                    <p>Don't repeat yourself (DRY) is a principle of software development that states that you should not write the same code multiple times. Instead, use functions or classes to encapsulate reusable code.</p>
+                </div>
+                <h3 onclick="toggleSection('tips-and-tricks-05', event);" class="magicInvisible">Comment your code.</h3>
+                <div id="tips-and-tricks-05" class="hidden">
+                    <p>Comment your code to explain what it does and how it works. This will help you and others understand your code when you come back to it later.</p>
+                </div>
+                <h3 onclick="toggleSection('tips-and-tricks-06', event);" class="magicInvisible">Always test everything.</h3>
+                <div id="tips-and-tricks-06" class="hidden">
+                    <p>Always test your code to make sure it works as expected. Use unit tests, integration tests, and end-to-end tests to ensure that your code is reliable and bug-free.</p>
+                </div>
+                <h3 onclick="toggleSection('tips-and-tricks-07', event);" class="magicInvisible">Make sure your web page is secure so it can't be hacked.</h3>
+                <div id="tips-and-tricks-07" class="hidden">
+                    <p>Make sure your web page is secure to prevent unauthorized access and data breaches. Use HTTPS, validate user input, and keep your software up to date.</p>
+                </div>
+                <h3 onclick="toggleSection('tips-and-tricks-08', event);" class="magicInvisible">Use version control (Git).</h3>
+                <div id="tips-and-tricks-08" class="hidden">
+                    <p>Use version control (Git) to keep track of changes to your code and collaborate with others. It allows you to revert to previous versions of your code and manage multiple branches of development.</p>
+                </div>
+            </div>
+
+            <h2 onclick="toggleSection('more-about-witches-and-wizards', event);" class="magicInvisible">More About Witches and Wizards</h2>
+            <div id="more-about-witches-and-wizards" class="hidden">
+                <p>Here are some questions and answers about witches and wizards:</p>
+                <h3 onclick="toggleSection('more-about-witches-and-wizards-01', event);" class="magicInvisible">Who are the most famous witches (apart from Hermione Grainger)?</h3>
+                <div id="more-about-witches-and-wizards-01" class="hidden">
+                    <p>Some of the most famous witches include: Glinda the Good Witch, Elphaba (the Wicked Witch of the West), and Baba Yaga.</p>
+                </div>
+                <h3 onclick="toggleSection('more-about-witches-and-wizards-02', event);" class="magicInvisible">Who are the most famous wizards (apart from Harry Potter)?</h3>
+                <div id="more-about-witches-and-wizards-02" class="hidden">
+                    <p>Some of the most famous wizards include: Merlin, Gandalf, and Dumbledore.</p>
+                </div>
+                <h3 onclick="toggleSection('more-about-witches-and-wizards-03', event);" class="magicInvisible">What are the best books and films about witches and wizards (apart from the Harry Potter ones)?</h3>
+                <div id="more-about-witches-and-wizards-03" class="hidden">
+                    <p>Some of the best books and films about witches and wizards include: The Chronicles of Narnia, The Lord of the Rings, and The Wizard of Oz.</p>
+                </div>
+            </div>
         </section>
     </main>
     <div id="footer"></div>
