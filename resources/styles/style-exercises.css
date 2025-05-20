@@ -1,11 +1,5 @@
-/* This CSS file is used to style the HTML content of the documentation. */
-
 /* 
- * This is a comment in CSS.
- * Comments in a style sheet are different to those in an HTML document. 
- * Comments begin with a slash followed by a star and end with a star followed by a slash
- * Your browser will ignore everything in the comments section so you use comments to
- * make a note of what you have done or as a reminder of what you still need to do.
+ * This CSS file is used to style the HTML content of exercises in this project.
  */
 
 body {
@@ -51,7 +45,7 @@ pre span:first-child {
 
 .title, .standout{
     font-weight: bold;
-    color: #ff0000;
+    color: #7c3aed;
 }
 
 .highlight {

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Copyright 2025 Edmund Mulligan -->
-<!-- This file is part of the Witchcraft and Wizardry course. -->
+<!-- This file is part of the Web Witchcraft and Wizardry course. -->
 <!-- This file is licensed under the MIT License. -->
 <!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
 <!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
@@ -9,17 +9,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Witchcraft and Wizardry Exercise 02</title>
+    <title>Web Witchcraft and Wizardry Exercise 2</title>
     <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+    <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header"></div>
     <main>
-        <h1>Witchcraft and Wizardry Exercise 02</h1>
+        <h1>Witchcraft and Wizardry Exercise 2</h1>
         <section>
-            <h2>Welcome to Exercise 02</h2>
+            <h2>Welcome to Exercise 2</h2>
             <p>In this exercise you will look at:</p>
             <ul>
                 <li>Unnumbered lists</li>
@@ -33,27 +34,32 @@
             </ol>
             <img src="/resources/images/witch-and-wizard.jpg" alt="Witch and Wizard" style="width:300px;height:auto;">
         </section>
-        <section>
-            <pre>
+        <h2 onclick="toggleSection('code', event);" class="magicInvisible">See the code</h2>
+        <section id="code" class="hidden">
+            <pre style="display: flex;">
+                <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;">
+                    1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38
+                </span>
+                <span>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
     &lt;!-- Copyright 2025 Edmund Mulligan --&gt;
-    &lt;!-- This file is part of the Witchcraft and Wizardry course. --&gt;
+    &lt;!-- This file is part of the Web Witchcraft and Wizardry course. --&gt;
     &lt;!-- This file is licensed under the MIT License. --&gt;
     &lt;!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. --&gt;
     &lt;!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. --&gt;
     &lt;head&gt;
-        &lt;title&gt;Witchcraft and Wizardry Exercise 02&lt;/title&gt;
+        &lt;title&gt;Web Witchcraft and Wizardry Exercise 2&lt;/title&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;/head&gt;
     &lt;body&gt;
         &lt;header&gt;
-            &lt;h1&gt;Witchcraft and Wizardry Exercise 02&lt;/h1&gt;
+            &lt;h1&gt;Web Witchcraft and Wizardry Exercise 2&lt;/h1&gt;
         &lt;/header&gt;
         &lt;main&gt;
             &lt;section&gt;
-                &lt;h2&gt;Welcome to Exercise 02&lt;/h2&gt;
+                &lt;h2&gt;Welcome to Exercise 2&lt;/h2&gt;
                 &lt;p&gt;In this exercise you will look at:&lt;/p&gt;
                 &lt;ul&gt;
                     &lt;li&gt;Unnumbered lists&lt;/li&gt;
@@ -73,10 +79,11 @@
         &lt;/footer&gt;
     &lt;/body&gt;
 &lt;/html&gt;
+                </span>
             </pre>
         </section>
-        <section>
-            <h2>What you need to know</h2>
+        <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
+        <section id="what-you-need-to-know" class="hidden">
             <h3>Lists</h3>
             <ul>
                 <li>Unnumbered lists display as bullet points in the browser. A list starts with the <code>&lt;ul&gt;</code> tag and finishes, as 
@@ -87,18 +94,16 @@
 
                 <li>Each item in the list is enclosed in <code>&lt;li&gt;</code> and <code>&lt;/li&gt;</code> tags. You can have as many items in 
                     the list as you like.</li>
-
-                <li>You can nest lists inside other lists. For example, you can have an unnumbered list inside an ordered list or an ordered list inside 
-                    an unnumbered list. This is done by putting the <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> tags inside the <code>&lt;li&gt;</code> 
-                    tags. It is very important that if you do this, you have a closing tag for each of the lists and you put them in the correct order. If you 
-                    don't, the browser will not display the page correctly.</li>
             </ul>
             <h3>Images</h3>
             <ul>
                 <li>Images are added to the page using the <code>&lt;img&gt;</code> tag. This tag does not have a closing tag. The <code>src</code> attribute is used to specify the
-                    location of the image file. The <code>alt</code> attribute is used to specify an alternative text for the image. This text is displayed if the image cannot be loaded. 
-                    The <code>style</code> attribute is used to specify the size of the image. In this case, the image is 300 pixels wide and the height is set to auto, which means it will 
-                    be scaled to maintain the aspect ratio of the image. We will lot at style more in exercises 5 and 6.</li>
+                    location of the image file. </li>
+                    
+                <li>The <code>alt</code> attribute is used to specify an alternative text for the image. This text is displayed if the image cannot be loaded.</li>
+
+                <li>The <code>style</code> attribute is used to specify the size of the image. In this case, the image is 300 pixels wide and the height is set to auto, which means it will 
+                    be scaled to maintain the aspect ratio of the image. We will look at style more in exercises 5 and 6.</li>
 
                 <li>In this example the image being displayed is on your computer in the <code>images</code> directory. The <code>src</code> attribute is set to 
                     <code>/resources/images/witch-and-wizard.jpg</code>. You can also show pictures that are on the internet by using a full URL 
@@ -107,10 +112,10 @@
                     is safest to use images that are on your computer.</li>
             </ul>
         </section>
-        <section>
-            <h2>Exercise 02</h2>
+        <h2 onclick="toggleSection('exercise-2', event);" class="magicInvisible">Exercise 2</h2>
+        <section id="exercise-2" class="hidden">
             <p>In this exercise you will create a simple HTML document with lists and images. 
-                You will use the &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, and &lt;img&gt; tags as well as the ones we used in exercise 1.</p>
+                You will use the &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, and &lt;img&gt; tags as well as the ones you used in exercise 1.</p>
             <p>Copy the file <code>template.html</code> and name it <code>exercise-02.html</code>. If you prefer, you can create a new, empty file 
                 called <code>exercise-02.html</code> and copy the code from the template file into it.</p>
             <p>Create a heading for the page using the &lt;h1&gt; tag. This should be the title of your page. 
@@ -136,12 +141,61 @@
                 <li>Uses a magic staff</li>
                 <li>Has a spell book</li>
             </ol>
-            <p>If you want a stretch, try creating a list inside a list. Experiment with an unnumbered list inside an unnumbered list and see how your browser changed the bullet points for the inner list. Also 
-                try an ordered list inside an ordered list and try an unnumbered list inside an ordered list. Make sure you get the closing tags in the right order. If you get 
-            these wrong, the browser will make a best guess to show you what you intended, but the results will be unpredictable and may display either rubbish or nothing.</p>
             <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-02.html">http://localhost:8000/exercise-02.html</a> to 
                 see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
+        </section>
+        <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witched and Wizards</h2>
+        <section id="advanced-witches-and-wizards" class="hidden">
+            <h3>Lists</h3>
+            <p>You can nest lists inside other lists. For example, you can have an unnumbered list inside an ordered list or an ordered list inside 
+                an unnumbered list. This is done by putting the <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> tags inside the <code>&lt;li&gt;</code> 
+                tags. It is very important that if you do this, you have a closing tag for each of the lists and you put them in the correct order. If you 
+                don't, the browser will not display the page correctly.</p>
+            <p>Here is an example of an unordered list inside an unorderd list</p>
+            <pre>
+&lt;ul&gt;
+    &lt;li&gt;Witches&lt;/li&gt;
+    &lt;li&gt;Wizards&lt;/li&gt;
+    &lt;li&gt;Monsters&lt;/li&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Vampires&lt;/li&gt;
+        &lt;li&gt;Werewolves&lt;/li&gt;
+        &lt;li&gt;Ghosts&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/ul&gt;
+            </pre>
+            <p>It looks like this</p>
+            <ul>
+                <li>Witches</li>
+                <li>Wizards</li>
+                <li>Monsters</li>
+                <ul>
+                    <li>Vampires</li>
+                    <li>Werewolves</li>
+                    <li>Ghosts</li>
+                </ul>
+            </ul>
+            <p>Notice that the inner list is indented. This is done automatically by the browser. Also notice that the bullet points for the inner list are different from the outer list. This is also done automatically 
+                by the browser. Each level of indentation uses different style bullets, but more than two levels of indentation is considered bad style by many designers and writers.</p>
 
+            <h3>Images</h3>
+            <p>Images come in different formats and you should choose the format that is best for the type of image you are using. The most common formats are:</p>
+            <ul>
+                <li><strong>GIF</strong> - This format is best for simple images with few colors, such as cartoons and animations. It uses lossless compression and supports transparency, but it only supports 
+                    256 colors. GIFS can also be animated, which means that they can display a series of images in a loop. This is done by using multiple frames in the same file. The browser will display each frame 
+                    in turn, creating the illusion of movement.</li>
+                <li><strong>PNG</strong> - This format is best for images with fewer colors, such as logos and icons. It uses lossless compression, which means that the image quality is not affected by the compression. 
+                    It also supports transparency. PNG is usually preferred over GIF for images with transparency because it supports more colors and has better quality. PNG is also better for images with text, such as 
+                    screenshots and diagrams.</li>
+                <li><strong>JPEG</strong> - This is the most common format for photographs. It uses a lot of compression to make the file size smaller, but this can result in a loss of quality. It is best for images with lots 
+                    of colors and details.</li>
+                <li><strong>SVG</strong> - This format is best for vector images, such as logos and icons. SVG uses mathematical equations to describe the image. This means that if you zoom in on the image, it will not lose quality,
+                    unlike GIF, PNG and JPEG. SVG is also smaller than other formats because it does not use pixels to represent the image.</li>
+                <li><strong>WebP</strong> - This is a newer format that is designed to be smaller than JPEG and PNG. It uses lossy and lossless compression, which means that it can be used for both photographs and simple images. 
+                    It is supported by most modern browsers.</li>
+            </ul>
+            <p>Of course, if you download an image from the internet, you have to use the format that it comes in. You can convert images from one format to another using a program like GIMP or Photoshop. You can also use online tools like 
+                <a href="https://www.online-convert.com/">Online Convert</a> or <a href="https://convertio.co/">Convertio</a>. These tools allow you to upload an image and choose the format you want to convert it to.</p>
         </section>
     </main>
     <footer>
