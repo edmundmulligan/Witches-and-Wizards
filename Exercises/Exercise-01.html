@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
     <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
     <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="/resources/scripts/numberLines.js" defer></script>
     <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
 
 </head>
@@ -20,17 +21,15 @@
     <div id="header"></div>
     <main>
         <h1>Web Witchcraft and Wizardry Exercise 1</h1>
-        <section>
-            <h2>Welcome to Exercise 1</h2>
+        <h2 onclick="toggleSection('welcome', welcome);" class="magicInvisible">Welcome to Exercise 1</h2>
+        <section id="welcome" class="hidden">
             <p>In this exercise you will create your first, simple HTML document.</p>
         </section>
-        <h2 onclick="toggleSection('code', event);" class="magicInvisible">See the code</h2>
-        <section id="code" class="hidden">
+        <h2 onclick="toggleSection('html', event);" class="magicInvisible">See the HTML</h2>
+        <section id="html" class="hidden">
             <pre style="display: flex;">
-                <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;">
-                    1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26
-                </span>
-                <span>
+                <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;" id="html-numbers-id"></span>
+                <span id="html-code-id">
 &lt;!DOCTYPE html&gt;
 &lt;!-- This file is part of the Web Witchcraft and Wizardry course. --&gt;
 &lt;!-- This file is licensed under the MIT License. --&gt;
@@ -46,7 +45,7 @@
         &lt;header&gt; 
             &lt;h1&gt;Web Witchcraft and Wizardry Exercise 1&lt;/h1&gt; 
         &lt;/header&gt; 
-            &lt;main&gt; 
+        &lt;main&gt; 
             &lt;section&gt; 
                 &lt;h2&gt;Welcome to Exercise 1&lt;/h2&gt; 
                 &lt;p&gt;In thise exercise you will create your first, simple HTML document.&lt;/p&gt; 
@@ -56,7 +55,7 @@
             &lt;p&gt;&amp;copy; 2025 Edmund Mulligan&lt;/p&gt; 
         &lt;/footer&gt; 
     &lt;/body&gt; 
-&lt;/html&gt; 
+&lt;/html&gt;
                 </span>
             </pre>
         </section>
@@ -158,8 +157,8 @@
                     <li>The <code>&amp;copy;</code> in line 23 is the code for the copyright symbol &copy;. HTML uses codes like this for displaying special symbols.</li>
             </ul>
         </section>
-        <h2 onclick="toggleSection('exercise-1', event);" class="magicInvisible">Exercise 1</h2>
-        <section id="exercise-1" class="hidden">
+        <h2 onclick="toggleSection('exercise', event);" class="magicInvisible">Exercise</h2>
+        <section id="exercise" class="hidden">
             <p>In this exercise you will create a simple HTML document using the tags we have covered in this lesson. 
                 You will use the &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;h1&gt;, &lt;h2&gt;, and &lt;p&gt; tags.</p>
 
@@ -183,7 +182,7 @@
                 see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
         </section>
 
-        <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witched and Wizards</h2>
+        <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witches and Wizards</h2>
         <section id="advanced-witches-and-wizards" class="hidden">
             <p>When you create a web page you create a <strong>document</strong>. The tags that you use define the structure of your documrnt and in later exercises you will 
                 learn how to use that structure, knows as the <strong>Document Object Model</strong> or <strong>DOM</strong>, to change tha appearance of sections of your web page 
@@ -242,6 +241,11 @@
                 elements <strong>ids</strong> and <strong>classes</strong> so you can distinguish between elements of the same type.</p>
 
         </section>
+        <h2 onclick="toggleSection('congratulations', event);" class="magicInvisible">Congratulations</h2>
+        <section id="congratulations" class="hidden highlight">
+            <p>Congratulations! You have completed the first exercise in the Web Witchcraft and Wizardry course. You have learned how to create a simple HTML document using 
+                the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;p&gt;</code> tags.</p>
+            <p>In the next exercise you will learn how to add some style to your web page using CSS.</p>
     </main>
     <div id="footer"></div>
 </html>

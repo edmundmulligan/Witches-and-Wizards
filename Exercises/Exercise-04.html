@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Copyright 2025 Edmund Mulligan -->
-<!-- This file is part of the Witchcraft and Wizardry course. -->
+<!-- This file is part of the Web Witchcraft and Wizardry course. -->
 <!-- This file is licensed under the MIT License. -->
 <!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
 <!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
@@ -9,17 +9,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Witchcraft and Wizardry Exercise 04</title>
+    <title>Web Witchcraft and Wizardry Exercise 4</title>
     <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+    <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="/resources/scripts/numberLines.js" defer></script>
+    <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header"></div>
     <main>
-        <h1>Witchcraft and Wizardry Exercise 04</h1>
-        <section>
-            <h2>Welcome to Exercise 04</h2>
+        <h1>Web Witchcraft and Wizardry Exercise 4</h1>
+        <h2 onclick="toggleSection('welcome', welcome);" class="magicInvisible">Welcome to Exercise 4</h2>
+        <section id="welcome" class="hidden">
             <div>
                 <p> 
                     The last exercise was quite hard with lots of new material. This one is much easier because you are not really going to do anything. You will introduce
@@ -34,8 +36,11 @@
                 </p>
             </div>
         </section>
-        <section>
-            <pre>
+        <h2 onclick="toggleSection('html', event);" class="magicInvisible">See the HTML</h2>
+        <section id="html" class="hidden">
+            <pre style="display: flex;">
+                <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;" id="html-numbers-id"></span>
+                <span id="html-code-id">
 &lt;!DOCTYPE html&gt;    
 &lt;html lang="en"&gt;    
     &lt;!-- Copyright 2025 Edmund Mulligan --&gt;    
@@ -73,18 +78,19 @@
             &lt;p&gt;&amp;copy; 2025 Edmund Mulligan&lt;/p&gt;    
         &lt;/footer&gt;    
     &lt;/body&gt;    
-&lt;/html&gt;    
+&lt;/html&gt;
+                </span>
             </pre>
         </section>
-        <section>
-            <h2>What you need to know</h2>
+        <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
+            <section id="what-you-need-to-know" class="hidden">
             <ul>
                 <li><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags both work in the same way - the only difference is that <code>&lt;div&gt;</code> separates your page into blocks
                     of content with each block starting on a new line, while <code>&lt;span&gt;</code> is used to group together inline elements that are on the same line.</li>
                 </ul>
         </section>
-        <section>
-            <h2>Exercise 04</h2>
+        <h2 onclick="toggleSection('exercise', event);" class="magicInvisible">Exercise</h2>
+        <section id="exercise" class="hidden">
             <p>In this exercise you will create a simple HTML document using the tags we have covered in this lesson. 
                 You will use the &lt;div&gt;, and &lt;span&gt; tags.</p>
             <p>Copy the file <code>template.html</code> and name it <code>exercise-04.html</code>. If you prefer, you can create a new, empty file 
@@ -98,6 +104,9 @@
                 To do this, right click on the page and select <strong>Inspect (Q)</strong>. This will open a new window at the bottom of the page where you can explore the HTML elements of your page 
                 in the Inspector tab. You should then
                 be able to see the <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags you have added but which are invisible on the main page.</p>
+        </section>
+        <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witches and Wizards</h2>
+        <section id="advanced-witches-and-wizards" class="hidden">
         </section>
     </main>
     <div id="footer"></div>

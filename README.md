@@ -11,7 +11,7 @@ Welcome *Web Witch or Wizard* to the world of web development! Here, you will le
 
 ## How to get started
 1. Browse to https://github.com/edmundmulligan/Witches-and-Wizards
-2. Click on the code button towards the top right of this screen.
+2. Click on the green code button towards the top right of this screen.
 3. Select Download ZIP.
 4. When the download is complete copy the zip file (Witches-And-Wizards-main.zip) from your Download folder to a local folder on your computer.
 5. Right click on the copied zip file and extract its contents. This will create a folder called Witches-And-Wizards-main.
@@ -32,7 +32,7 @@ Mozilla Firefox and Visual Studio Code.
 Note that you will not be writing any python code in these exercises, but you will need it to run a local web server. Without it, your browser may block loading javascript files to make your computer more secure.
 
 ## Ready to do some witchcraft and wizardry?
-1. Make sure Visual Studio Code and Python are installed on your computer. You only need to do this the first time you run these exercises after that they should be there.
+1. Make sure Visual Studio Code and Python are installed on your computer. You only need to do this the first time you run these exercises; after that they should be there.
 2. Start Visual Studio Code and open the Witches-and-Wizards-main folder. You can do this by clicking on File, then Open Folder, and selecting the Witches-and-Wizards-main folder. 
 you should see a list of files and folders in the left-hand pane.
 3. In Visual Studio Code go to the menu at the top of the window, click on Terminal and select New Terminal. This will open a terminal window at the bottom of the screen.

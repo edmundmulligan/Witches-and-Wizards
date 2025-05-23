@@ -1,3 +1,7 @@
+// This scripts toggles the visibility of sections in a webpage.
+// It adds event listeners to elements with the class 'magicVisible'.
+// When clicked, it toggles the visibility of the corresponding section and changes the class of the clicked element.
+
 function toggleSection(sectionId, event) {
     const section = document.getElementById(sectionId);
     if (section) {

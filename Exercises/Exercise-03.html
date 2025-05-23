@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Copyright 2025 Edmund Mulligan -->
-<!-- This file is part of the Witchcraft and Wizardry course. -->
+<!-- This file is part of the Web Witchcraft and Wizardry course. -->
 <!-- This file is licensed under the MIT License. -->
 <!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
 <!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
@@ -9,17 +9,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Witchcraft and Wizardry Exercise 03</title>
+    <title>Web Witchcraft and Wizardry Exercise 3</title>
     <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+    <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="/resources/scripts/numberLines.js" defer></script>
+    <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header"></div>
     <main>
-        <h1>Witchcraft and Wizardry Exercise 03</h1>
-        <section>
-            <h2>Welcome to Exercise 03</h2>
+        <h1>Witchcraft and Wizardry Exercise 3</h1>
+        <h2 onclick="toggleSection('welcome', event);" class="magicInvisible">Welcome to Exercise 3</h2>
+        <section id="welcome" class="hidden">
             <p>In this exercise you will discover tables and hyperlinks.</p>
             <table border="1">
                 <caption>Witches and Wizards</caption>
@@ -67,27 +69,30 @@
                 </tfoot>
             </table>
         </section>
-        <section>
-            <pre>
+        <h2 onclick="toggleSection('html', event);" class="magicInvisible">See the HTML</h2>
+        <section id="html" class="hidden">
+            <pre style="display: flex;">
+                <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;" id="html-numbers-id"></span>
+                <span id="html-code-id">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
     &lt;!-- Copyright 2025 Edmund Mulligan --&gt;
-    &lt;!-- This file is part of the Witchcraft and Wizardry course. --&gt;
+    &lt;!-- This file is part of the Web Witchcraft and Wizardry course. --&gt;
     &lt;!-- This file is licensed under the MIT License. --&gt;
     &lt;!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. --&gt;
     &lt;!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. --&gt;
     &lt;head&gt;
-        &lt;title&gt;Witchcraft and Wizardry Exercise 03&lt;/title&gt;
+        &lt;title&gt;Web Witchcraft and Wizardry Exercise 3&lt;/title&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;/head&gt;
     &lt;body&gt;
         &lt;header&gt;
-            &lt;h1&gt;Witchcraft and Wizardry Exercise 03&lt;/h1&gt;
+            &lt;h1&gt;Web Witchcraft and Wizardry Exercise 3&lt;/h1&gt;
         &lt;/header&gt;
         &lt;main&gt;
             &lt;section&gt;
-                &lt;h2&gt;Welcome to Exercise 03&lt;/h2&gt;
+                &lt;h2&gt;Welcome to Exercise 3&lt;/h2&gt;
                 &lt;p&gt;In this exercise you will discover tables and hyperlinks.&lt;/p&gt;
                 &lt;table border="1"&gt;
                     &lt;caption&gt;Witches and Wizards&lt;/caption&gt;
@@ -141,10 +146,11 @@
         &lt;/footer&gt;
     &lt;/body&gt;
 &lt;/html&gt;
+            </span>
             </pre>
         </section>
-        <section>
-            <h2>What you need to know</h2>
+        <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
+        <section id="what-you-need-to-know" class="hidden">
             <h3>Tables</h3>
             <ul>
                 <li>Tables and hyperlinks are more complicated than the tags we have already used, but they follow the same rules about needing closing tags that match the opening tags.</li>
@@ -184,8 +190,8 @@
                     attribute to open the link in a new tab or window. If you miss out the <code>target="_blank"</code> attribute the link will open in the same tab or window and will replace the page you are on.</li>
             </ul>
         </section>
-        <section>
-            <h2>Exercise 03</h2>
+        <h2 onclick="toggleSection('exercise', event);" class="magicInvisible">Exercise</h2>
+        <section id="exercise" class="hidden">
             <p>In this exercise you will create a HTML document containing a table and a hyperlink.</p>
             <p>You will use the &lt;table&gt;, &lt;thead&gt;, &lt;btody&gt;, &lt;tfoot&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;, and &lt;a&gt; tags.</p>
             <p>Copy the file <code>template.html</code> and name it <code>exercise-03.html</code>. If you prefer, you can create a new, empty file 
@@ -195,6 +201,9 @@
                 table tructure as the example, or you can use your own structure.</p>
             <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-03.html">http://localhost:8000/exercise-03.html</a> to 
                 see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
+        </section>
+        <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witches and Wizards</h2>
+        <section id="advanced-witches-and-wizards" class="hidden">
         </section>
     </main>
     <div id="footer"></div>

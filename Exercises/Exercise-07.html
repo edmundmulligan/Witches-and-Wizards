@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Copyright 2025 Edmund Mulligan -->
-<!-- This file is part of the Witchcraft and Wizardry course. -->
+<!-- This file is part of the Web Witchcraft and Wizardry course. -->
 <!-- This file is licensed under the MIT License. -->
 <!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
 <!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
@@ -9,17 +9,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Witchcraft and Wizardry Exercise 07</title>
+    <title>Web Witchcraft and Wizardry Exercise 7</title>
     <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+    <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="/resources/scripts/numberLines.js" defer></script>
+    <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header"></div>
     <main>
-        <h1>Witchcraft and Wizardry Exercise 07</h1>
-        <section>
-            <h2>Welcome to Exercise 07</h2>
+        <h1>Web Witchcraft and Wizardry Exercise 7</h1>
+        <h2 onclick="toggleSection('welcome', welcome);" class="magicInvisible">Welcome to Exercise 7</h2>
+        <section id="welcome" class="hidden">
             <p>In this exercise you will create your first Javascript program.</p>
             <p>You will create three buttons. The first buton will pop up a message when you click it. The second button will turn a message 
                 in a <code>&lt;div&gt;</code> on and off when you click it. The third button has no listener so will do nothing 
@@ -46,8 +48,11 @@
                 });
             </script>
         </section>
-        <section>
-            <pre>
+        <h2 onclick="toggleSection('html', event);" class="magicInvisible">See the HTML</h2>
+        <section id="html" class="hidden">
+            <pre style="display: flex;">
+                <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;" id="html-numbers-id"></span>
+                <span id="html-code-id">
 &lt;!DOCTYPE html&gt;
 &lt;!-- This file is part of the Witchcraft and Wizardry course. --&gt;
 &lt;!-- This file is licensed under the MIT License. --&gt;
@@ -97,10 +102,11 @@
         &lt;/footer&gt; 
     &lt;/body&gt; 
 &lt;/html&gt; 
+                </span>
             </pre>
         </section>
-        <section>
-            <h2>What you need to know</h2>
+        <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
+            <section id="what-you-need-to-know" class="hidden">
             <ul>
                 <li>There are several new concepts in this exercise. First we have a new tag <code>&lt;button&gt;</code> and <code>&lt;/button&gt;</code>. Whatever goes between the 
                 start and close tags is what is shown on the button. You can even use images insead of text and have a graphical button. Also note that clicking on a button does 
@@ -155,27 +161,37 @@
 
             </ul>
         </section>
-        <section>
-            <h2>Exercise 07</h2>
+        <h2 onclick="toggleSection('exercise', event);" class="magicInvisible">Exercise</h2>
+        <section id="exercise" class="hidden">
             <p>In this exercise you will create a simple HTML document with some buttons and will write Javascript to do something when you click the buttons. 
                 You will use the &lt;button&gt;, and &lt;script&gt; tags, and the <code>id=""</code> attibute.</p>
+
             <p>Copy the file <code>template.html</code> and name it <code>exercise-07.html</code>. If you prefer, you can create a new, empty file 
                 called <code>exercise-07.html</code> and copy the code from the template file into it.</p>
-                <p>Edit the file and add some content. You need to include the <code>&lt;button&gt;</code> and <code>&lt;/button&gt;</code> tags, and the <code>&lt;script&gt;</code> and 
-                    <code>&lt;/script&gt;</code> tags and the <code>&lt;div&gt;</code> and <code>&lt;/div&gt;</code> tags. Make sure you give each button and the <code>&lt;div&gt;</code> an 
-                    unique id. You can use whatever you like for the id, but you will need to use the same ids in your Javascript code.</p>
+
+            <p>Edit the file and add some content. You need to include the <code>&lt;button&gt;</code> and <code>&lt;/button&gt;</code> tags, and the <code>&lt;script&gt;</code> and 
+                <code>&lt;/script&gt;</code> tags and the <code>&lt;div&gt;</code> and <code>&lt;/div&gt;</code> tags. Make sure you give each button and the <code>&lt;div&gt;</code> an 
+                unique id. You can use whatever you like for the id, but you will need to use the same ids in your Javascript code.</p>
+
             <p>Write some Javascript code to do something when you click the buttons. You can use the code from the example above as a starting point.
                 You can use the <code>document.getElementById()</code> method to get the button elements and the <code>addEventListener()</code> method to listen for a click event on the buttons. 
                 You can use the <code>alert()</code> method to display a message when you click the first button. You can use the <code>innerHTML</code> property of the <code>&lt;div&gt;</code> 
                 element to display a message when you click the second button.</p>
+
             <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-07.html">http://localhost:8000/exercise-07.html</a> to 
                 see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
+
             <p>If you are using Firefox as your browser you can use the <strong>Developer Tools</strong> to look at the JavaScript console. 
                 To do this, right click on the page and select <strong>Inspect (Q)</strong>. This will open a new window at the bottom of the page where you can view the console in the console tab.
                 If you have made any mistakes in your javascript that stop the program from running, you will see an error message in the console. These are known as <strong>bugs</strong> or 
                 <strong>syntax errors</strong>. There are other kinds of bugs, in particular <strong>semantic errors</strong> are where the program runs but does not do what you expect it to do. Those are 
-                often much harder to find and fix.
+                often much harder to find and fix.</p>
         </section>
+
+        <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witches and Wizards</h2>
+        <section id="advanced-witches-and-wizards" class="hidden">
+        </section>
+        
         <section class="highlight">
             <h2 class="standout">Congratualtions</h2>
             <p>Well done for getting to the end of this exercise. It was definitely the hardest so far. Once you have mastered the concepts in this lesson, it gets easier. From now on we will 

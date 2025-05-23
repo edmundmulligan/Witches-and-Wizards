@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Copyright 2025 Edmund Mulligan -->
-<!-- This file is part of the Witchcraft and Wizardry course. -->
+<!-- This file is part of the Web Witchcraft and Wizardry course. -->
 <!-- This file is licensed under the MIT License. -->
 <!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
 <!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
@@ -9,17 +9,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Witchcraft and Wizardry Exercise 06</title>
+    <title>Web Witchcraft and Wizardry Exercise 6</title>
     <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+    <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="/resources/scripts/numberLines.js" defer></script>
+    <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header"></div>
     <main>
-        <h1>Witchcraft and Wizardry Exercise 06</h1>
-        <section>
-            <h2>Welcome to Exercise 06</h2>
+        <h1>Web Witchcraft and Wizardry Exercise 6</h1>
+        <h2 onclick="toggleSection('welcome', welcome);" class="magicInvisible">Welcome to Exercise 6</h2>
+        <section id="welcome" class="hidden">
             <p>
                 In the last exercise you discovered styles. The styles in a document can get quite long so sometimes we put the styles into a seperate 
                 file, called a stylesheet, and link to it from the HTML document. This is a good idea because it makes the HTML document easier to read and edit.
@@ -36,8 +38,12 @@
                 </p>
             </div>
         </section>
-        <section>
-            <pre>
+        
+        <h2 onclick="toggleSection('html', event);" class="magicInvisible">See the HTML</h2>
+        <section id="html" class="hidden">
+            <pre style="display: flex;">
+                <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;" id="html-numbers-id"></span>
+                <span id="html-code-id">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
     &lt;!-- Copyright 2025 Edmund Mulligan --&gt; 
@@ -79,11 +85,57 @@
             &lt;p&gt;&amp;copy; 2025 Edmund Mulligan&lt;/p&gt; 
         &lt;/footer&gt; 
     &lt;/body&gt; 
-&lt;/html&gt; 
+&lt;/html&gt;
+                </span>
             </pre>
         </section>
-        <section>
-            <h2>What you need to know</h2>
+        <h2 onclick="toggleSection('css', event);" class="magicInvisible">See the CSS</h2>
+        <section id="css" class="hidden">
+            <pre style="display: flex;">
+                <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;" id="css-numbers-id"></span>
+                <span id="css-code-id">
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    text-align: center;
+}
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 20px;
+}
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+.title, .standout{
+    font-weight: bold;
+    color: #ff0000;
+}
+.highlight {
+    background-color: #ffcccc;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+.large {
+    font-size: 1.5em;
+}
+.small {
+    font-size: 0.5em;
+}
+                </span>
+            </pre>
+        </section>
+        <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
+            <section id="what-you-need-to-know" class="hidden">
             <ul>
                 <li>The stylesheet is linked to the HTML document using the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> section. The <code>rel</code> 
                 attribute specifies the relationship between the HTML document and the stylesheet. The <code>type</code> attribute specifies the type of the stylesheet. The 
@@ -93,8 +145,8 @@
                     specifies the location of the stylesheet. You can change tle look of this page by changing the file name to <code>styles-2.css</code></li>
             </ul>
         </section>
-        <section>
-            <h2>Exercise 06</h2>
+        <h2 onclick="toggleSection('exercise', event);" class="magicInvisible">Exercise</h2>
+        <section id="exercise" class="hidden">
             <p>In this exercise you will create a HTML document and a stylesheet. 
                 You can use everything you have learned so far.
             </p>
@@ -121,6 +173,10 @@
                 To do this, right click on the page and select <strong>Inspect (Q)</strong>. This will open a new window at the bottom of the page where you can explore the CSS styles of your page 
                 in the Style Editor tab. You can even edit the stlyes in this window and see the effect of the original page. The changes you make here are not permenant, though. To make them permenant 
                 you will need to edit them in the stylesheet.</p>
+        </section>
+        
+        <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witches and Wizards</h2>
+        <section id="advanced-witches-and-wizards" class="hidden">
         </section>
         <section class="highlight">
             <h2 class="standout">Congratualtions</h2>
