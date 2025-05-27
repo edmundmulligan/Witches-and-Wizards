@@ -20,7 +20,7 @@
     <div id="header"></div>
     <main>
         <h1>Web Witchcraft and Wizardry Exercise 5</h1>
-        <h2 onclick="toggleSection('welcome', welcome);" class="magicInvisible">Welcome to Exercise 5</h2>
+        <h2 onclick="toggleSection('welcome', event);" class="magicInvisible">Welcome to Exercise 5</h2>
         <section id="welcome" class="hidden">
             <p> 
                 Up until now you have created lots of content but it looks quite boring. In this exercise you will add some style to your web pages to change the way they look.
@@ -55,7 +55,7 @@
     &lt;!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. --&gt;    
     &lt;!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. --&gt;    
     &lt;head&gt;
-        &lt;title&gt;Witchcraft and Wizardry Exercise 05 &lt;/title&gt;
+        &lt;title&gt;Witchcraft and Wizardry Exercise 5 &lt;/title&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
         &lt;style&gt;
@@ -83,7 +83,7 @@
             }
             .title {
                 font-weight: bold;
-                color: #ff0000;
+                color: red;
             }
             .highlight {
                 background-color: #ffcccc;
@@ -100,7 +100,7 @@
     &lt;/head&gt;    
     &lt;body&gt;
     &lt;header&gt;
-        &lt;h1 class="title"&gt;Witchcraft and Wizardry Exercise 05&lt;/h1&gt;
+        &lt;h1&gt;Witchcraft and Wizardry Exercise 05&lt;/h1&gt;
     &lt;/header&gt;
     &lt;main&gt;
         &lt;section&gt;
@@ -137,22 +137,22 @@
         <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
             <section id="what-you-need-to-know" class="hidden">
             <ul>
-                <li>The styles are defined in the &lt;head&gt; section of the document.</li>
+                <li>The styles are defined in the &lt;head&gt; section of the document in lines 12-50.</li>
 
-                <li>Each style has a name and then a set of rules which are put in curly braces, for example <code>body {}</code>.</li>
+                <li>Each style has a name and then a set of rules which are put in curly braces, for example <code>body {}</code> in lines 13-18.</li>
 
-                <li>More than one name can share the same style rules by separating the names with a comma, for example <code>body, header, footer {}</code>.</li>
+                <li>More than one name can share the same style rules by separating the names with a comma, for example <code>header, footer {}</code> in lines 19-23.</li>
 
                 <li>Style names are either HTML element names like <code>body</code>, <code>header</code>, <code>footer</code>, in which case the style will be applied to all elements of that type in the document, 
                     or they are class names which start with a dot like <code>.title</code>, <code>.highlight</code>, <code>.large</code>, and <code>.small</code> in which case the style will be applied to all elements 
                     with that class name.</li>
 
-                <li>Class names are added to the HTML element using the <code>class</code> attribute, for example <code>&lt;h1 class="title"&gt;</code>.</li>
+                <li>You can combine these, for example <code>p.highlight</code> which will only apply to <code>&lt;p&gt;</code> elements with the <code>class="highlight"</code> attribute. 
+                    There are other options for specifying how styles can be applied, but we won't be using them in these exercises.</li>
 
-                <li>Although we didn't do it here, you can use both class names and element names in the same style rule. For example, you could have a style rule like <code>p.special {}</code> which would only 
-                    apply to <code>&lt;p&gt;</code> elements with the class <code>special</code>.</li>
+                <li>Class names are added to the HTML element using the <code>class</code> attribute, for example <code>&lt;h1 class="title"&gt;</code> in line 68.</li>
 
-                <li>CSS allows you to specify the colour of the text and the background color. Yo can either specify colours using their names like <code>red</code>, <code>blue</code>, <code>green</code>, or you 
+                <li>CSS allows you to specify the colour of the text and the background color. You can either specify colours using their names like <code>red</code>, <code>blue</code>, <code>green</code>, or you 
                     can use hex codes like <code>#ff0000</code> for red, <code>#00ff00</code> for green, and <code>#0000ff</code> for blue.</li>
 
                 <li>If you make a mistake in your CSS, the browser will ignore the whole style rule. If you make a style change and it doesn't work, it is usually because you have made a mistake in the CSS, so 
@@ -167,18 +167,119 @@
             </p>
             <p>Copy the file <code>template.html</code> and name it <code>exercise-05.html</code>. If you prefer, you can create a new, empty file 
                 called <code>exercise-05.html</code> and copy the code from the template file into it.</p>
+
             <p>Now add a <code>&lt;style&gt;</code> section to the &lt;head&gt; section of your document. Between the <code>&lt;style&gt;&lt;/style&gt;</code> tags add some CSS styles to change the way your document looks.
                 Play around with the styles to see what they do. You can use the styles from this exercise or you can write your own. Make some styles that apply to all the elements of a certain type, 
                 for example <code>h1</code>, <code>h2</code>, <code>p</code>, and some styles that apply to just element with a particular class, for example <code>.title</code>, <code>.highlight</code>, 
                 <code>.large</code>, and <code>.small</code>.</p>
+
             <p>Now write some content for your document. You can make up anything you like but make sure you use the classes you defined in the <code>&lt;style&gt;</code> section. 
                 You can also add some images using the &lt;img&gt; tag. There are several images you can use in the <code>Images</code> folder.</p>
+
                 <p>Try using use some <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags, with <code>class</code> attributes.</p>
+
             <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-05.html">http://localhost:8000/exercise-05.html</a> to 
                 see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
         </section>
+
         <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witches and Wizards</h2>
         <section id="advanced-witches-and-wizards" class="hidden">
+            <p>It is possible to nest CSS styles inside other styles and it allows you to create more complex styles. 
+                For example, you can create a style that applies to all <code>&lt;h1&gt;</code> elements inside a <code>&lt;div&gt;</code> with a class of <code>.title</code> like this:</p>
+            <pre>
+&lt;style&gt;
+    .title h1 {color: blue;}
+&lt;/style&gt;
+&lt;div class="title"&gt;
+    &lt;h1&gt;This is a title that is blue and gets its colour from the div class&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div&gt;
+    &lt;h1 class="title"&gt;This is a normal title that is not blue and gets its colour from the h1 class&lt;/h1&gt;
+&lt;/div&gt;
+            </pre>
+
+            <style>
+                .title h1 {color: blue;}
+            </style>
+            <div class="title">
+                <h1>This is a title that is blue and gets its colour from the div class</h1>
+            </div>
+            <div>
+                <h1 class="title">This is a normal title that is not blue and gets its colour from the h1 class</h1>
+            </div>
+
+            <p>In this case, the style will only apply to <code>&lt;h1&gt;</code> elements that are inside a <code>&lt;div&gt;</code> with a class of <code>.title</code>. <code>&lt;h1&gt;</code> 
+                elements outside of a <code>&lt;div class="title"&gt;</code> will use the default style for <code>&lt;h1&gt;</code> elements.</p>
+
+            <p>You can use this to create more complex styles that apply to specific elements inside other elements. Be careful though, because it can get very confusing and if you make 
+                a mistake, it can be hard to find out what went wrong.</p>
+
+            <p>Another common use for styles is to create menues. You can use CSS to create a horizontal or vertical menu by using <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> elements and styling them with CSS.</p>
+            <p>For example, you can create a horizontal menu like this:</p>
+            <pre>
+&lt;style&gt;
+    .menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    .menu li {
+        margin-right: 20px;
+    }
+    .menu li a {
+        text-decoration: none;
+        color: blue;
+    }
+&lt;/style&gt;
+&lt;ul class="menu"&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+            </pre>
+
+            <p>Without the CSS, this will look like a list of links, but with the CSS applied, it will look like a horizontal menu.</p>
+            <p>Without the menu class:</p>
+            <ul>
+                <li id="home"><a href="#home">Home</a></li>
+                <li id="about"><a href="#about">About</a></li>
+                <li id="conact"><a href="#contact">Contact</a></li>
+            </ul>
+
+            <p>With the menu class:</p>
+            <style>
+                .menu {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                }
+                .menu li {
+                    margin-right: 20px;
+                }
+                .menu li a {
+                    text-decoration: none;
+                    color: blue;
+                }
+            </style>
+            <ul class="menu">
+                <li id="home"><a href="#home">Home</a></li>
+                <li id="about"><a href="#about">About</a></li>
+                <li id="contact"><a href="#contact">Contact</a></li> 
+            </ul>
+
+            <p>There are many other things you can do with CSS, such as adding borders, changing the font size, and more. You can find out more about CSS on the
+            <a href="https://www.w3schools.com/css/default.asp" target="_blank">W3Schools CSS Tutorial</a> or the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web Docs</a>.</p>
+        </section>
+
+        <h2 onclick="toggleSection('congratulations', event);" class="magicInvisible">Congratulations</h2>
+        <section id="congratulations" class="hidden highlight">
+            <p>Congratulations! You have completed the fifth exercise in the Web Witchcraft and Wizardry course. You web pages can use styles to make them more attractive (or horrible - be careful!).</p>
+            
+            <p>You learned about the <code>&lt;style&gt;</code> tag for defining styles in the document header and the <code>class=""</code> attribute to use the styles in your document body.</p>
+
+            <p>In the next exercise you will learn how to take the CSS style definitions out of your document and put them in a seperate file.</p>
         </section>
     </main>
     <div id="footer"></div>

@@ -20,7 +20,7 @@
     <div id="header"></div>
     <main>
         <h1>Web Witchcraft and Wizardry Exercise 4</h1>
-        <h2 onclick="toggleSection('welcome', welcome);" class="magicInvisible">Welcome to Exercise 4</h2>
+        <h2 onclick="toggleSection('welcome', event);" class="magicInvisible">Welcome to Exercise 4</h2>
         <section id="welcome" class="hidden">
             <div>
                 <p> 
@@ -55,7 +55,7 @@
     &lt;/head&gt;    
     &lt;body&gt;    
         &lt;header&gt;    
-            &lt;h1&gt;Witchcraft and Wizardry Exercise 04&lt;/h1&gt;    
+            &lt;h1&gt;Witchcraft and Wizardry Exercise 4&lt;/h1&gt;    
         &lt;/header&gt;    
         &lt;main&gt;    
             &lt;section&gt;    
@@ -85,6 +85,10 @@
         <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
             <section id="what-you-need-to-know" class="hidden">
             <ul>
+                <li><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> are used to mark up the structure of your document, much like <code>&lt;section&gt;</code> and <code>&lt;main&gt;</code>.</li>
+
+                <li>You can see <code>&lt;div&gt;</code> being used in line 20-26 and 27-31. <code>&lt;span&gt;</code> is used in line 29.</li>
+
                 <li><code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags both work in the same way - the only difference is that <code>&lt;div&gt;</code> separates your page into blocks
                     of content with each block starting on a new line, while <code>&lt;span&gt;</code> is used to group together inline elements that are on the same line.</li>
                 </ul>
@@ -106,7 +110,38 @@
                 be able to see the <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags you have added but which are invisible on the main page.</p>
         </section>
         <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witches and Wizards</h2>
-        <section id="advanced-witches-and-wizards" class="hidden">
+                <section id="advanced-witches-and-wizards" class="hidden">
+        <p>You can't tell that a web page contains <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> just by looking at it, but you can use developer tools in your browser to see the code in your 
+            web page.</p>
+        
+        <p>In Firefox, you can right click on the page and select <strong>View Page Source</strong>. This will open a new tab that shows you the HTML code just like in Visual Studio Code. The only difference 
+            is that the colour coding may be different. This is because in Visual Studio Code you can load themes which use different colours.</p>
+
+        <p>You can also use the <strong>Developer Tools</strong> to see the HTML code for your page. To do this, right click on the page and select <strong>Inspect (Q)</strong>. 
+            This will open a new window at the bottom of the page where you can explore the HTML elements of your page in the Inspector tab.</p>
+
+        <p>If you look at the page source for this page, you will see that it uses <code>&amp;lt;</code> and <code>&amp;gt;</code> lots of times. These are called HTML entities and they are used to represent 
+            the <code>&lt;</code> and <code>&gt;</code> characters in HTML code. This is because if you just typed <code>&lt;div&gt;</code> in your HTML code, the browser would think you were trying to create 
+            a <code>&lt;div&gt;</code> element, so I need to use the HTML entities instead to enable you to see what I mean.</p>
+        
+        <p> &amp;lt; is the HTML entity for <code>&lt;</code> and stands for "less than" while and &amp;gt; is the HTML entity for <code>&gt;</code> which stands for "greater than". 
+            You can also use &amp;amp; for the <code>&amp;</code> character and you have already seen &amp;copy; used for the copyright &copy; symbol. You can find a list of all the HTML entities 
+            <a href="https://www.w3schools.com/html/html_entities.asp" target="_blank">here</a></p>
+
+        <p>Sharp eyed witches and wizards will have noticed that I have used the <code>&lt;code&gt;</code> tag 
+            to mark up HTML code in this section. This makes the code stand out from the rest of the text and makes it easier to read. The tag works just like <code>&lt;span&gt;</code> except that it 
+            has a predfined style that uses a fixed width font instead of the default font. You can change this appearance using CSS as you will soon discover.</p>
+        </section>
+
+        <h2 onclick="toggleSection('congratulations', event);" class="magicInvisible">Congratulations</h2>
+        <section id="congratulations" class="hidden highlight">
+            <p>Congratulations! You have completed the fourth exercise in the Web Witchcraft and Wizardry course. You web pages can now mark up their structure is much finer grain detail which will 
+                be vital when you come to add CSS and Javascript to your page.</p>
+            
+            <p>You learned about the <code>&lt;div&gt;</code>, and <code>&lt;span&gt;</code> tags for structuring your HTML documents. THey are the most common tags used in HTML documents to
+                group together sections of content. You also learned about the <code>&lt;code&gt;</code> tag which is used to mark up code in your HTML documents.</p>
+
+            <p>In the next exercise you will learn how to add CSS to change the style of you web pages.</p>
         </section>
     </main>
     <div id="footer"></div>

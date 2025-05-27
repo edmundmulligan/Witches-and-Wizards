@@ -7,6 +7,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+
 }
 
 header, footer {
@@ -14,6 +15,7 @@ header, footer {
     padding: 10px 20px;
     text-align: center;
 }
+
 main {
     padding: 20px;
 }
@@ -38,6 +40,11 @@ pre span:first-child {
     min-width: 2em;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #7c3aed;
+    margin-top: 0;
+}
+
 :where(h1) {
   margin-block: 0.67em;
   font-size: 2em;
@@ -45,7 +52,7 @@ pre span:first-child {
 
 .title, .standout{
     font-weight: bold;
-    color: #7c3aed;
+    color: red;
 }
 
 .highlight {
@@ -86,4 +93,31 @@ pre span:first-child {
 .magicInvisible:hover,
 .magicVisible:hover {
     cursor: pointer;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;   /* Center the menu horizontally */
+    list-style-type: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    gap: 20px;                 /* Space between menu items */
+}
+
+header ul li {
+    margin: 0;
+    padding: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #333;             /* Change link color as needed */
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+header ul li a:hover {
+    background: #eee;        /* Highlight on hover */
 }

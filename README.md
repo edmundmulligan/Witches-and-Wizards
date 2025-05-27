@@ -1,6 +1,11 @@
-# Web Witchcraft and Wizardry for learning HTML, CSS and JS
+# Web Witchcraft and Wizardry for learning HTML, CSS and Javascript
 
 Welcome *Web Witch or Wizard* to the world of web development! Here, you will learn the art of creating stunning websites and applications. For a certain value of stunning, especially if you are easily stunned. What I'm saying is this will get you started but there is a lot more to the World Wide Web than you will cover in this introduction. But I'll give you enough to start exploring on your own, if you are curious. And witches and wizards are always curious. So you are in the right place.
+
+## Prior Knowledge
+- This course is for people who want to learn how to write good web pages. By good, I mean well structured and secure, not that the content is good - that will be down to you. 
+- Some experience of writing computer programs is necessary; that could be using Scratch or Python but you do not need to have used JavaScript before.
+- You should have some experience of browsing the web and following hyperlinks, but I assume that that applies to everyone these days.
 
 ## What you need
 - A computer with an internet connection. If you are at a Code Dojo, please ask one of the mentors for the internet password if you need it.
@@ -32,7 +37,7 @@ Mozilla Firefox and Visual Studio Code.
 Note that you will not be writing any python code in these exercises, but you will need it to run a local web server. Without it, your browser may block loading javascript files to make your computer more secure.
 
 ## Ready to do some witchcraft and wizardry?
-1. Make sure Visual Studio Code and Python are installed on your computer. You only need to do this the first time you run these exercises; after that they should be there.
+1. Make sure Visual Studio Code and Python are installed on your computer. You only need to do this the first time you run these exercises; after that they should be there. If you are using a Code Dojo computer these should already be installed for you.
 2. Start Visual Studio Code and open the Witches-and-Wizards-main folder. You can do this by clicking on File, then Open Folder, and selecting the Witches-and-Wizards-main folder. 
 you should see a list of files and folders in the left-hand pane.
 3. In Visual Studio Code go to the menu at the top of the window, click on Terminal and select New Terminal. This will open a terminal window at the bottom of the screen.

@@ -19,7 +19,7 @@
 <body>
     <div id="header"></div>
     <main>
-        <h1>Witchcraft and Wizardry Exercise 3</h1>
+        <h1>Web Witchcraft and Wizardry Exercise 3</h1>
         <h2 onclick="toggleSection('welcome', event);" class="magicInvisible">Welcome to Exercise 3</h2>
         <section id="welcome" class="hidden">
             <p>In this exercise you will discover tables and hyperlinks.</p>
@@ -155,6 +155,8 @@
             <ul>
                 <li>Tables and hyperlinks are more complicated than the tags we have already used, but they follow the same rules about needing closing tags that match the opening tags.</li>
 
+                <li>The table is defined by the <code>&lt;table&gt;</code> tag in line 21 and <code>&lt;/table&gt;</code> tag in line 65. Everything between these tags is part of the table.</li>
+
                 <li>Note the indentations in this code. Indentation is not necessary - your web page will display in the broswer just fine without using indentations but if you 
                     use indentations it makes the code easier to read and understand. The biggest advantage is that consistent indentation helps you spot mismatched opening and closing tags.</li>
 
@@ -165,45 +167,121 @@
                 <li>In this example we are using the <code>border="1"</code> attribute in the <code>&lt;table&gt;</code> attribute to draw an outline of the table. This is not 
                 normally used any more - you can draw borders around tables in much more flexible ways using CSS which we will look at in later lessons.</li>
 
-                <li>The <code>&lt;caption&gt;</code> tag is optional and is used to add a title to the table. The caption is displayed above the table.</li>
+                <li>The <code>&lt;caption&gt;</code> tag in line 22 is optional and is used to add a title to the table. The caption is displayed above the table in the browser.</li>
 
-                <li>After the <code>&lt;caption&gt;</code> tag we have three blocks <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>. These are used to define 
-                    the header, body, and footer of the table. The header is displayed at the top of the table, the body is displayed in the middle, and the footer is displayed at the bottom.
-                    These blocks are optional, but they are useful for structuring the table and making it easier to read. If you omit them, the table will still work and the browser will treat
-                    the first row as the header, the last row as the footer, and the rest as the body.</li>
+                <li>After the <code>&lt;caption&gt;</code> tag we have three blocks <code>&lt;thead&gt;</code> (lines 23-28), <code>&lt;tbody&gt;</code> (lines 29-56), and 
+                    <code>&lt;tfoot&gt;</code> (lines 57-64). These are used to define the header, body, and footer of the table. The header is displayed at the top of the table, the body 
+                    is displayed in the middle, and the footer is displayed at the bottom. These blocks are optional, but they are useful for structuring the table and making it easier to read. 
+                    If you omit them, the table will still work and the browser will treat everything as the body.</li>
 
                 <li>Within each block we have rows, which are defined by the <code>&lt;tr&gt;</code> and <code>&lt;/tr&gt;</code> tags. Each row can contain one or more cells, which are defined 
                     by the <code>&lt;td&gt;</code> and <code>&lt;/td&gt;</code> tags.. Rows in the header usually use the <code>&lt;th&gt;</code> and <code>&lt;/th&gt;</code> tags instead of the 
-                    <code>&lt;td&gt;</code> and <code>&lt;/td&gt;</code> tags. The <code>&lt;th&gt;</code> tag is used to define a header cell, which is usually displayed in bold.</li>
+                    <code>&lt;td&gt;</code> and <code>&lt;/td&gt;</code> tags. The <code>&lt;th&gt;</code> tag is used to define a header cell, which is displayed in bold.</li>
 
                 <li>Within the individual <code>&lt;td&gt;</code> cells you can put whatever you like: text, images or lists. Your browser will work out the sizes of the cells and rows and 
                     columns for you. It is imprtant that you put the same number of cells in each row - if you don't the browser will still display the table but it will look funny.</li>
                
-                <li>If you do want to change the number of cells in a row you can use the <code>colspan="2"</code> attribute in the <code>&lt;td&gt;</code> tag to make a cell span two or more columns.</li>
+                <li>In lines 59-63 there is a row that spans two columns which we do using the <code>colspan="2"</code> attribute in the first cell of the row. This allows you to merge cells in your 
+                    table. If your table has more than two columns, you don't have to merge all the cells in the row, but you must make sure that the total number of columns in the row, including, 
+                    the number of colspans matches the number of columns in the other rows. In this case it works out fine as the footer of the table is a hyperlink (see below) 
+                    which doesn't apply to only one colums.</li>
             </ul>
             <h3>Hyperlinks</h3>
             <ul>
-                <li>Hyperlinks are defined by the <code>&lt;a&gt;</code> and <code>&lt;/a&gt;</code> tags. Everything between these tags will displayed as a clickable link. If it is text it will be 
-                    underlined and blue, but you can also use images or other HTML elements as links.</li>
+                <li>In lines 60 and 61 we have a hyperlink. This is defined by the <code>&lt;a&gt;</code> and <code>&lt;/a&gt;</code> tags. Everything between these tags will be displayed as a clickable link.
+                    Note that the <code>&lt;a&gt;</code> tag is split over two lines, but this is just for readability. You can put the <code>&lt;a&gt;</code> tag on one line if you prefer.</li>
 
-                    <li>You must use the <code>href="https://www.example.com"</code> attribute in the <code>&lt;a&gt;</code> tag to specify the URL of the link. You can also use the <code>target="_blank"</code> 
-                    attribute to open the link in a new tab or window. If you miss out the <code>target="_blank"</code> attribute the link will open in the same tab or window and will replace the page you are on.</li>
+                <li>You don't have to put text between the <code>&lt;a&gt;</code> and <code>&lt;/a&gt;</code> tags - you could have an <code>&lt;img&gt;</code> instead. If you do use text, the link will be 
+                    underlined and blue (although you can change that using CSS). Also when you hover the mouse over a link, whether it is text or an image, the pointer will change so you know the link can 
+                    be clicked on.</li>
+
+                    <li>You must use the <code>href=""</code> attribute in the <code>&lt;a&gt;</code> tag to specify the URL of the link , see the Advanced Witches and Wizards section below for more about 
+                        URLs.</li>
+                    <li>You can also use the <code>target="_blank"</code> attribute to open the link in a new tab or window. If you miss out the <code>target="_blank"</code> attribute the link will 
+                        default to <code>target="_self"</code> which will open the link in the same tab or window and will replace the page you are on.</li>
             </ul>
         </section>
         <h2 onclick="toggleSection('exercise', event);" class="magicInvisible">Exercise</h2>
         <section id="exercise" class="hidden">
-            <p>In this exercise you will create a HTML document containing a table and a hyperlink.</p>
+            <p>In this exercise you will create two HTML documents, one containing a table and one joined with a hyperlink.</p>
+
             <p>You will use the &lt;table&gt;, &lt;thead&gt;, &lt;btody&gt;, &lt;tfoot&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;, and &lt;a&gt; tags.</p>
-            <p>Copy the file <code>template.html</code> and name it <code>exercise-03.html</code>. If you prefer, you can create a new, empty file 
-                called <code>exercise-03.html</code> and copy the code from the template file into it.</p>
-            <p>In the body of the document add a table with a caption and create a hyperlink. Use the exaple at the top of this page as 
+
+            <p>Copy the file <code>template.html</code> and name it <code>exercise-03a.html</code>. If you prefer, you can create a new, empty file 
+                called <code>exercise-03a.html</code> and copy the code from the template file into it. Then do the same to create a second file called <code>exercise-03b.html</code></p>
+
+            <p>In the body of the first document add a table with a caption. Use the example in this page as 
                 a guide. You can use the same images and text as the example, or you can use your own images and text. You can also use the same 
                 table tructure as the example, or you can use your own structure.</p>
-            <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-03.html">http://localhost:8000/exercise-03.html</a> to 
+
+            <p>In the second document, put any content you like. Use the previous exercises for ideas and inspiration.</p>
+
+            <p>In the first document, add a hyperlink to the second document. Use the <code>&lt;a href="exercise-03b.html"&gt;</code> tag to link to the second document. And in the second document,
+                add a hyperlink back to the first document using the <code>&lt;a href="exercise-03a.html"&gt;</code> tag.</p>
+            <p>Make sure that the links work by opening the first document in your browser and clicking on the link to the second document.
+                You should be able to navigate back and forth between the two documents.</p>
+
+            <p>Finally, in the first document, add a hyperlink to an external website. You can use any website you like, but make sure it is a valid URL.
+                You can use the <code>https://www.wikipedia.org/</code> website as an example. You will need to use the full URL and you want to make sure that the link opens in a new tab or window, 
+                so you will need to use the <code>target="_blank"</code> attribute. Your external link will look something like:</p>
+            <pre>
+&lt;a href="https://www.wikipedia.org/" target="_blank"&gt;Visit Wikipedia&lt;/a&gt;
+            </pre>
+
+            <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-03a.html">http://localhost:8000/exercise-03a.html</a> to 
                 see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
         </section>
         <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witches and Wizards</h2>
         <section id="advanced-witches-and-wizards" class="hidden">
+            <h3>Tables</h3>
+            <p>Many older websites use tables to layout the elements on a page page because they didn't have CSS available. This is not a good practice and is not recommended these days. This is mainly because 
+                tables do not scale well on different screen sizes, such as on mobile phones or tablets. It is much better to use CSS to layout the page, as you will discover in later lessons. 
+                However, tables are still used for displaying data, such as in spreadsheets or databases.</p>
+
+            <h3>Hyperlinks</h3>
+            <p>Hyperlinks are a fundamental part of the web. They allow you to link to other pages, images, or files. You can also use hyperlinks to link to other websites or to link to specific sections of a page.</p>
+
+            <p>The URL, or Uniform Resource Locator, is the address of a resource on the web. It is made up of several parts, including the protocol (such as http or https), the domain name (such as example.com), the port,  the 
+                path to the resource (such as /path/to/resource), and any optional parameters known as a query string. A full URL is of the form <code>protocol://server:port/resource?queryString</code>.</p>
+        
+            <p>So far you have only used the <strong>http</strong> protocol, which stand for <strong>Hyper Text Transfer Protocol</strong>. This was completly normal in the early days of the web, but all the data transmitted 
+                over the web using this protocol is unencrypted. This means that anyone, and by that I mean hackers, can intercept your data and read it. This is a security risk, especially if you are transmitting sensitive 
+                information, such as passwords or financial data. To address this issue, a new protocol was introduced called <strong>https</strong>, which stands for
+                <strong>Hyper Text Transfer Protocol Secure</strong>. This protocol encrypts the data transmitted over the web, making it much more secure. You can tell if a website is using https by looking for the padlock icon 
+                in the address bar of your browser. For these exercises it is safe to use http because the server is running on your own computer so you are not transmitting any data over the internet. But if you link to 
+                external websites, you should always use https to ensure that the data is transmitted securely.</p>
+
+            <p>There are many other protcols you can use to link to resources on the web, such as <strong>ftp</strong> (File Transfer Protocol) for transferring files, 
+                and <strong>telnet</strong> for remote access to servers. We will not cover those protocols in this course, but you can find out more about them on the web. One that you may
+                want to use is the <strong>mailto</strong> protocol, which allows you to create a link that opens the user's email client with a new message addressed to a specific email address. You can even include a 
+                query string to set the subject line of the email. This is useful for creating links that allow users to contact you directly from your website.</p>
+
+            <p>For example, to <a href="mailto:edmund@edmundmulligan.name?subject=Feedback%29About%20The%20Web%20Witchcraft%20And%20Wizardry%20Exercises">send Edmund feedback</a>, you can use the following code:</p>
+
+            <pre>
+&lt;a href="mailto:edmund@edmundmulligan.name?subject=Feedback%20About%20The%20Web%20Witchcraft%20And%20Wizardry%20Exercises"&gt;send Edmund feedback&lt;/a&gt;
+            </pre>
+
+            <p>This will create a link that opens the user's email client with a new message addressed to me, with the subject line set to "Feedback About The Web Witchcraft And Wizardry Exercises". The <code>?subject=</code> 
+                part of the URL is called a query string, and it allows you to pass additional information to the email client or any other resource. Note that you can't put any 
+                spaces in the href, because your broweser will think that the URL has ended at the space. Instead, you can use a <code>%20</code> code to represent a space in a URL. This is called URL encoding, and it is used to
+                ensure that URLs are valid and can be transmitted over the web. You can also use other characters in URLs, such as <code>%3A</code> for a colon, <code>%2F</code> for a forward slash, and so on. You can find a 
+                full list of URL encoding characters <a href="https://www.w3schools.com/tags/ref_urlencode.ASP" target="_blank">here</a>.
+                In your own web pages, please use your own email address rather than mine!</p>
+
+            <p>Most web sites run on port number 80, which is the default port for the http protocol, or 443, which is the default port for https. In those cases you do not need to specify the port number in the URL. 
+                When you set up these exercises, you used python to start a simple web server on your own computer (which is known as <strong>localhost</strong>). Because python doesn't know if your computer is already 
+                running a web server, it doesn't use the default port number of 80 and uses port 8000 instead. This is why you access the exercises using the URL <code>http://localhost:8000/</code>.</p>
+        </section>
+
+        <h2 onclick="toggleSection('congratulations', event);" class="magicInvisible">Congratulations</h2>
+        <section id="congratulations" class="hidden highlight">
+            <p>Congratulations! You have completed the third exercise in the Web Witchcraft and Wizardry course. You web pages can now include tables and links to other pages.</p>
+            <p>You learned about the <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> tags for creating tables, 
+                and the <code>&lt;a&gt;</code> tag for adding hyperlinks to your page.
+                You also learned about the <code>href</code> and <code>target</code> attributes for the <code>&lt;a&gt;</code> tag.</p>
+
+            <p>In the next exercise you will learn how to add divisions and spans to your page which will then be used in later exercises to adjust page styles.</p>
         </section>
     </main>
     <div id="footer"></div>

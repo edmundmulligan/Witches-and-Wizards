@@ -21,7 +21,7 @@
     <div id="header"></div>
     <main>
         <h1>Web Witchcraft and Wizardry Exercise 8</h1>
-        <h2 onclick="toggleSection('welcome', welcome);" class="magicInvisible">Welcome to Exercise 8</h2>
+        <h2 onclick="toggleSection('welcome', event);" class="magicInvisible">Welcome to Exercise 8</h2>
         <section id="welcome" class="hidden">
             <p>This exercise is a bit easier than the last one. In the last exercise you wrote some Javascript and put it in the HTML web page.
                 This makes the page a bit cluttered as it contains both your content (the HTML) and your program (the Javascript).</p>
@@ -29,13 +29,15 @@
                 easier to read as it will only contain the content of the page. It will also make it easier to reuse your Javascript code in other pages.</p>
             <p>The HTML part of the page (or at least the buttons) is the same as in the last exercise, but the Javascript is stored in a seperate file. You 
                 will also add a <code>&lt;script&gt;</code> tag in the header of the HTML file to load the Javascript file.</p>
-            <p>You will create three buttons. The first buton will pop up a message when you click it. The second button will turn a message 
-                in a <code>&lt;div&gt;</code> on and off when you click it. The third button has no listener so will do nothing 
-                when you click it.</p>
+            <p>You will create four buttons. The first buton will pop up a message when you click it. The second button will turn a message 
+                in a <code>&lt;div&gt;</code> on and off when you click it. The third button has no listener so will do nothing when 
+                you click it. The fourth button will change image each time you click.</p>
+
             <p>
                 <button id="exercise-08-button-1">Click me!</button>
                 <button id="exercise-08-button-2">Click me too!</button>
                 <button id="exercise-08-button-3">Don't bother clicking me</button>
+                <button id="exercise-08-button-4"><img src="/resources/images/young-witch.jpg" title="Click on me to turn me into a wizard" style="width:50px;height:auto"></button>
             </p>
             <div id="exercise-08-output"></div>
         </section>
@@ -52,10 +54,10 @@
 &lt;!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. --&gt;
 &lt;html lang="en"&gt;
     &lt;head&gt; 
-        &lt;title&gt;Witchcraft and Wizardry Exercise 01&lt;/title&gt;
+        &lt;title&gt;Witchcraft and Wizardry Exercise 08&lt;/title&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;script src="exercise-08.js" defer%gt;&lt;/script&gt;
+        &lt;script src="exercise-08.js" defer&gt;&lt;/script&gt;
     &lt;/head&gt; 
     &lt;body&gt; 
         &lt;header&gt; 
@@ -65,17 +67,22 @@
             &lt;h2&gt;Welcome to Exercise 08&lt;/h2&gt;
             &lt;p&gt;This exercise is a bit easier than the last one. In the last exercise you wrote some Javascript and put it in the HTML web page.
                 This makes the page a bit cluttered as it contains both your content (the HTML) and your program (the Javascript).&lt;/p&gt;
+
             &lt;p&gt;In this exercise we will move the Javascript into a seperate file, just like we did with the CSS in Exercise 6. This will make your HTML file 
                 easier to read as it will only contain the content of the page. It will also make it easier to reuse your Javascript code in other pages.&lt;/p&gt;
+            
             &lt;p&gt;The HTML part of the page (or at least the buttons) is the same as in the last exercise, but the Javascript is stored in a seperate file. You 
                 will also add a &lt;code&gt;&lt;script&gt;&lt;/code&gt; tag in the header of the HTML file to load the Javascript file.&lt;/p&gt;
-                &lt;p&gt;You will create three buttons. The first buton will pop up a message when you click it. The second button will turn a message 
-                in a &lt;code>&amp;lt;div&amp;gt;&lt;/code&gt; on and off when you click it. The third button has no listener so will do nothing 
-                when you click it.&lt;/p&gt;
+        
+            &lt;p&gt;You will create four buttons. The first buton will pop up a message when you click it. The second button will turn a message 
+                in a &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; on and off when you click it. The third button has no listener so will do nothing when 
+                you click it. The fourth button will change image each time you click.&lt;/p&gt;
+
             &lt;p&gt;
                 &lt;button id="exercise-08-button-1"&gt;Click me!&lt;/button&gt;
                 &lt;button id="exercise-08-button-2"&gt;Click me too!&lt;/button&gt;
                 &lt;button id="exercise-08-button-3"&gt;Don't bother clicking me&lt;/button&gt;
+                &lt;button id="exercise-08-button-4"&gt;&lt;img src="/resources/images/young-witch.jpg" title="Click on me to turn me into a wizard" style="width:50px;height:auto"&gt;&lt;/button&gt;
             &lt;/p&gt;
             &lt;div id="exercise-08-output"&gt;&lt;/div&gt;
             &lt;/section&gt;
@@ -93,18 +100,57 @@
             <pre style="display: flex;">
                 <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;" id="js-numbers-id"></span>
                 <span id="js-code-id">
+// define a function to display a message in a pop-up window
 function message(msg) {
-    alert(msg);
+    alert(msg + "\n" + "message timed at " + new Date().toLocaleTimeString());
 }
-document.getElementById("exercise-08-button").addEventListener("click", function() {
+
+// add an event listener to the first button
+// when the button is clicked, call the message function
+document.getElementById("exercise-08-button-1").addEventListener("click", function() {
     message("Ouch! You clicked my button");
 });
+
+// add an event listener to the second button
+// when the button is clicked, toggle the message in the output div
 document.getElementById("exercise-08-button-2").addEventListener("click", function() {
-    if (document.getElementById("exercise-08-output").innerHTML == "") {
-        document.getElementById("exercise-08-output").innerHTML = "You clicked my button too!";
+    // use const to define variables that won't change in this function
+    const outputDiv = document.getElementById("exercise-08-output");
+    const timestamp = new Date().toLocaleTimeString();
+
+    // check if the output div already contains the message
+    // if it does, clear the output div
+    if (outputDiv.innerHTML.includes ("You clicked my button too!")) {
+        outputDiv.innerHTML = "";
     } else {
-        document.getElementById("exercise-08-output").innerHTML = "";
+        outputDiv.innerHTML = "You clicked my button too!&lt;br&gt;Message timed at " + timestamp;
     }
+});
+
+// there is no event listener for the third button, so it does nothing when you click it
+/*
+ * Note: The third button is intentionally left without an event listener.
+ * This is to demonstrate that without an event listener, the button does not respond to clicks.
+ * You can click it as many times as you like, but it will not do anything.
+ * 
+ * We could have left these comments out but it is good practice to explain why something is done in code.
+ * This shows someone that the code was deliberately left out rather than just being missed out by mistake.
+ */
+
+// add an event listener to the fourth button
+// when the button is clicked, change the image in the button and update the output div
+document.getElementById("exercise-08-button-4").addEventListener("click", function() {
+    // use const to define variables that won't change in this function
+    const img = this.querySelector("img");
+    const outputDiv = document.getElementById("exercise-08-output");
+
+    if (img.src.includes("witch")) {
+        this.innerHTML = '&lt;img src="/resources/images/young-wizard.jpg" title="Click on me to turn me into a witch" style="width:50px;height:auto"&gt;';
+        outputDiv.innerHTML = "Now I am a Wizard!";
+    } else {
+        this.innerHTML = '&lt;img src="/resources/images/young-witch.jpg" title="Click on me to turn me into a wizard" style="width:50px;height:auto"&gt;';
+        outputDiv.innerHTML = "Now I am a Witch!";
+     }
 });
                 </span>
             </pre>
@@ -112,41 +158,50 @@ document.getElementById("exercise-08-button-2").addEventListener("click", functi
         <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
         <section id="what-you-need-to-know" class="hidden">
             <ul>
-                <li>We are using the <code>&lt;script&gt;&lt;/script&gt;</code> block in the header section to load the Javascript code. Notice that (unlike in the last exercise where the 
-                javascript program was inside the block) there is nothing in the block itself and we are using the <code>src="exercise-08.js"</code> attribute to load the 
-                program.</li>
+                <li>First notice how much shorter the HTML file is than in the last exercise. This is because we have moved the Javascript code into a seperate file.</li>
 
-                <li>The <code>&ltscript&gt;</code> tag also uses the <code>defer</code> attribute. This forces your broswer to wait until the whole HTML page has loaded before running any Javascript. 
-                    Because the page is so small you probably won't notice the difference, but it is a good idea to use this attribute because the Javascript code uses HTML elements in the page 
-                    (like the buttons and the output <code>&lt;div&gt;</code>) and if the Javascript code runs before the page has loaded, it won't be able to find the elements 
-                    and will throw an error.</li>
+                <li>We are using the <code>&lt;script&gt;&lt;/script&gt;</code> block in line 11 of the header section to load the Javascript code. Notice that (unlike in the last exercise 
+                    where the javascript program was inside the block) there is nothing in the block itself and we are using the <code>src="exercise-08.js"</code> attribute to load the 
+                    program.</li>
+
+                <li>The <code>&lt;script&gt;</code> tag also uses the <code>defer</code> attribute. This forces your broswer to wait until the whole HTML page has loaded before running any 
+                    Javascript. Because the page is so small you probably won't notice the difference, but it is a good idea to use this attribute because the Javascript code uses HTML 
+                    elements in the page (like the buttons and the output <code>&lt;div&gt;</code>) and if the Javascript code runs before the page has loaded, it won't be able to find the 
+                    elements and will throw an error.</li>
 
                 <li>The Javascript is the same as in the last exercise (except the buttons have new names) but notice you don't need <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> 
-                tags in the javascript file because the broswer already knows this is Javascript by the ime you load it.</li>
+                    tags in the javascript file because the broswer already knows this is Javascript by the time you load it.</li>
 
                 <li>The actual code works in the same way as in exercise-07, so refere back to that if you need a reminder on how it works.</li>
             </ul>
         </section>
+
         <h2 onclick="toggleSection('exercise', event);" class="magicInvisible">Exercise</h2>
         <section id="exercise" class="hidden">
             <p>In this exercise you will create a HTML document and a Javascript file to do something when you click the buttons. 
                 You will use the &lt;script&gt; tag with the <code>src=""</code> and <code>defer</code> attibutes in the head rather than the body of the document.</p>
+
             <p>Copy the file <code>template.html</code> and name it <code>exercise-08.html</code>. If you prefer, you can create a new, empty file 
                 called <code>exercise-08.html</code> and copy the code from the template file into it.</p>
+
             <p>Edit the file and add some content. You need to include the <code>&lt;button&gt;</code> and <code>&lt;/button&gt;</code> tags, and the <code>&lt;div&gt;</code> and 
-                <code>&lt;/div&gt;</code> tags, but do not put <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> tags in the body. Make sure you give each button and the <code>&lt;div&gt;</code> an 
-                    unique id. You can use whatever you like for the id, but you will need to use the same ids in your Javascript code.</p>
-            <p>Add the <code>&lt;script&gt;</code> tag in the head of the document. Use the <code>src="exercise-08.js"</code> attribute to load the Javascript file and the <code>defer</code> attribute to 
-                make sure the Javascript code runs after the HTML page has loaded.</p>
+                <code>&lt;/div&gt;</code> tags, but do not put <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> tags in the body. Make sure you give each button and the 
+                <code>&lt;div&gt;</code> an unique id. You can use whatever you like for the id, but you will need to use the same ids in your Javascript code.</p>
+
+            <p>Add the <code>&lt;script&gt;</code> tag in the head of the document. Use the <code>src="exercise-08.js"</code> attribute to load the Javascript file and the 
+                <code>defer</code> attribute to make sure the Javascript code runs after the HTML page has loaded.</p>
+
             <p>Copy the file <code>template.js</code> and name it <code>exercise-08.js</code>. If you prefer, you can create a new, empty file 
                 called <code>exercise-08.js</code> and copy the code from the template file into it.</p>
 
             <p>Write some Javascript code to do something when you click the buttons. You can use the code from the example above as a starting point.
-                You can use the <code>document.getElementById()</code> method to get the button elements and the <code>addEventListener()</code> method to listen for a click event on the buttons. 
-                You can use the <code>alert()</code> method to display a message when you click the first button. You can use the <code>innerHTML</code> property of the <code>&lt;div&gt;</code> 
-                element to display a message when you click the second button.</p>
+                You can use the <code>document.getElementById()</code> method to get the button elements and the <code>addEventListener()</code> method to listen for a click event on 
+                the buttons. You can use the <code>alert()</code> method to display a message when you click the first button. You can use the <code>innerHTML</code> property of 
+                 <code>&lt;div&gt;</code> element to display a message when you click the second button.</p>
+
             <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-08.html">http://localhost:8000/exercise-08.html</a> to 
                 see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
+
             <p>If you are using Firefox as your browser you can use the <strong>Developer Tools</strong> to look at the JavaScript console. 
                 To do this, right click on the page and select <strong>Inspect (Q)</strong>. This will open a new window at the bottom of the page where you can view the console in the console tab.
                 If you have made any mistakes in your javascript that stop the program from running, you will see an error message in the console. These are known as <strong>bugs</strong> or 
@@ -155,10 +210,16 @@ document.getElementById("exercise-08-button-2").addEventListener("click", functi
         </section>
         <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witches and Wizards</h2>
         <section id="advanced-witches-and-wizards" class="hidden">
+            <p>There is not much to say in this exercise, as it was mostly about moving the Javascript code into a seperate file. 
+                However, if you want to learn more about the <code>&lt;script&gt;</code> tag and how to use it, you can read the 
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" target="_blank">MDN Web Docs</a>.</p>
         </section>
-                <section class="highlight">
-            <h2 class="standout">Congratualtions</h2>
-            <p>That's it for now. Well done for getting this far. More exercises that use everything you have learned will follow, but for now you can go and create some Web Magic. Enjoy.</p>
+
+
+        <h2 onclick="toggleSection('congratulations', event);" class="magicInvisible">Congratulations</h2>
+        <section id="congratulations" class="hidden highlight">
+            <p>Congratultions. You are now a true Web Witch or Wizard (your choice). That's it for now. 
+                Well done for getting this far. More exercises that use everything you have learned will follow, but for now you can go and create some Web Magic. Enjoy.</p>
         </section>
     </main>
     <div id="footer"></div>

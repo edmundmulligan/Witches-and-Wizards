@@ -21,10 +21,11 @@
     <div id="header"></div>
     <main>
         <h1>Web Witchcraft and Wizardry Exercise 1</h1>
-        <h2 onclick="toggleSection('welcome', welcome);" class="magicInvisible">Welcome to Exercise 1</h2>
+        <h2 onclick="toggleSection('welcome', event);" class="magicInvisible">Welcome to Exercise 1</h2>
         <section id="welcome" class="hidden">
             <p>In this exercise you will create your first, simple HTML document.</p>
         </section>
+
         <h2 onclick="toggleSection('html', event);" class="magicInvisible">See the HTML</h2>
         <section id="html" class="hidden">
             <pre style="display: flex;">
@@ -59,9 +60,9 @@
                 </span>
             </pre>
         </section>
-        <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
-            <section id="what-you-need-to-know" class="hidden">
 
+        <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
+        <section id="what-you-need-to-know" class="hidden">
             <ul>
                 <li>The first line is <code>&lt;!DOCTYPE html&gt;</code> This tells your browser that this is a web page written using the HTML language. All web pages need to 
                     start with this line.</li>
@@ -157,6 +158,7 @@
                     <li>The <code>&amp;copy;</code> in line 23 is the code for the copyright symbol &copy;. HTML uses codes like this for displaying special symbols.</li>
             </ul>
         </section>
+
         <h2 onclick="toggleSection('exercise', event);" class="magicInvisible">Exercise</h2>
         <section id="exercise" class="hidden">
             <p>In this exercise you will create a simple HTML document using the tags we have covered in this lesson. 
@@ -212,6 +214,7 @@
 &lt;/html&gt;
                 </pre>
                 </p>
+
             <p>The DOM model of this document would look like this:
                 <ul>
                     <li><strong>html</strong></li>
@@ -239,13 +242,14 @@
                 DOM using the <strong>dot notation</strong>. For example, you can reference the <code>&lt;h1&gt;</code> element using <code>document.body.h1</code>.
                 You can also reference the <code>&lt;h2&gt;</code> elements using <code>document.body.section.h2</code>. In later exercises you will learn how to give 
                 elements <strong>ids</strong> and <strong>classes</strong> so you can distinguish between elements of the same type.</p>
-
         </section>
+
         <h2 onclick="toggleSection('congratulations', event);" class="magicInvisible">Congratulations</h2>
         <section id="congratulations" class="hidden highlight">
             <p>Congratulations! You have completed the first exercise in the Web Witchcraft and Wizardry course. You have learned how to create a simple HTML document using 
                 the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and <code>&lt;p&gt;</code> tags.</p>
-            <p>In the next exercise you will learn how to add some style to your web page using CSS.</p>
+            <p>In the next exercise you will learn how to add lists and images to your page.</p>
+        </section>
     </main>
     <div id="footer"></div>
 </html>

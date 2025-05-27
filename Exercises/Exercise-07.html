@@ -20,30 +20,72 @@
     <div id="header"></div>
     <main>
         <h1>Web Witchcraft and Wizardry Exercise 7</h1>
-        <h2 onclick="toggleSection('welcome', welcome);" class="magicInvisible">Welcome to Exercise 7</h2>
+        <h2 onclick="toggleSection('welcome', event);" class="magicInvisible">Welcome to Exercise 7</h2>
         <section id="welcome" class="hidden">
             <p>In this exercise you will create your first Javascript program.</p>
-            <p>You will create three buttons. The first buton will pop up a message when you click it. The second button will turn a message 
-                in a <code>&lt;div&gt;</code> on and off when you click it. The third button has no listener so will do nothing 
-                when you click it.</p>
+
+            <p>You will create four buttons. The first buton will pop up a message when you click it. The second button will turn a message 
+                in a <code>&lt;div&gt;</code> on and off when you click it. The third button has no listener so will do nothing when 
+                you click it. The fourth button will change image each time you click.</p>
+
             <p>
                 <button id="exercise-07-button">Click me!</button>
                 <button id="exercise-07-button-2">Click me too!</button>
                 <button id="exercise-07-button-3">Don't bother clicking me</button>
+                <button id="exercise-07-button-4"><img src="/resources/images/young-witch.jpg" title="Click on me to turn me into a wizard" style="width:50px;height:auto"></button>
             </p>
             <div id="exercise-07-output"></div>
             <script>
+                // define a function to display a message in a pop-up window
                 function message(msg) {
-                    alert(msg);
+                    alert(msg + "\n" + "message timed at " + new Date().toLocaleTimeString());
                 }
+
+                // add an event listener to the first button
+                // when the button is clicked, call the message function
                 document.getElementById("exercise-07-button").addEventListener("click", function() {
                     message("Ouch! You clicked my button");
                 });
+
+                // add an event listener to the second button
+                // when the button is clicked, toggle the message in the output div
                 document.getElementById("exercise-07-button-2").addEventListener("click", function() {
-                    if (document.getElementById("exercise-07-output").innerHTML == "") {
-                        document.getElementById("exercise-07-output").innerHTML = "You clicked my button too!";
+                    // use const to define variables that won't change in this function
+                    const outputDiv = document.getElementById("exercise-07-output");
+                    const timestamp = new Date().toLocaleTimeString();
+
+                    // check if the output div already contains the message
+                    // if it does, clear the output div
+                    if (outputDiv.innerHTML.includes ("You clicked my button too!")) {
+                        outputDiv.innerHTML = "";
                     } else {
-                        document.getElementById("exercise-07-output").innerHTML = "";
+                        outputDiv.innerHTML = "You clicked my button too!<br>Message timed at " + timestamp;
+                    }
+                });
+
+                // there is no event listener for the third button, so it does nothing when you click it
+                /*
+                 * Note: The third button is intentionally left without an event listener.
+                 * This is to demonstrate that without an event listener, the button does not respond to clicks.
+                 * You can click it as many times as you like, but it will not do anything.
+                 * 
+                 * We could have left these comments out but it is good practice to explain why something is done in code.
+                 * This shows someone that the code was deliberately left out rather than just being missed out by mistake.
+                 */
+
+                // add an event listener to the fourth button
+                // when the button is clicked, change the image in the button and update the output div
+                document.getElementById("exercise-07-button-4").addEventListener("click", function() {
+                    // use const to define variables that won't change in this function
+                    const img = this.querySelector("img");
+                    const outputDiv = document.getElementById("exercise-07-output");
+
+                    if (img.src.includes("witch")) {
+                        this.innerHTML = '<img src="/resources/images/young-wizard.jpg" title="Click on me to turn me into a witch" style="width:50px;height:auto">';
+                        outputDiv.innerHTML = "Now I am a Wizard!";
+                    } else {
+                        this.innerHTML = '<img src="/resources/images/young-witch.jpg" title="Click on me to turn me into a wizard" style="width:50px;height:auto">';
+                        outputDiv.innerHTML = "Now I am a Witch!";
                     }
                 });
             </script>
@@ -66,32 +108,72 @@
     &lt;/head&gt; 
     &lt;body&gt; 
         &lt;header&gt; 
-            &lt;h1&gt;Witchcraft and Wizardry Exercise 01&lt;/h1&gt; 
+            &lt;h1&gt;Witchcraft and Wizardry Exercise 7&lt;/h1&gt; 
         &lt;/header&gt; 
         &lt;section&gt;
             &lt;h2&gt;Welcome to Exercise 07&lt;/h2&gt;
             &lt;p&gt;In this exercise you will create your first Javascript program.&lt;/p&gt;
-            &lt;p&gt;You will create three buttons. The first buton will pop up a message when you click it. The second button will turn a message 
-                in a &lt;code&gt;&lt;div&gt;&lt;/code&gt; on and off when you click it. The third button has no listener so will do nothing 
-                when you click it.&lt;/p&gt;
-            &lt;p&gt;
+            &lt;p&gt;You will create four buttons. The first buton will pop up a message when you click it. The second button will turn a message 
+                in a &lt;code&gt;&lt;div&gt;&lt;/code&gt; on and off when you click it. The third button has no listener so will do nothing when 
+                you click it. The fourth button will change image each time you click.&lt;/p&gt;
+
                 &lt;button id="exercise-07-button-1"&gt;Click me!&lt;/button&gt;
                 &lt;button id="exercise-07-button-2"&gt;Click me too!&lt;/button&gt;
                 &lt;button id="exercise-07-button-3"&gt;Don't bother clicking me&lt;/button&gt;
+                &lt;button id="exercise-07-button-4"&gt;&lt;img src="/resources/images/young-witch.jpg" title="Click on me to turn me into a wizard" style="width:50px;height:auto"&gt;&lt;/button&gt;
             &lt;/p&gt;
             &lt;div id="exercise-07-output"&gt;&lt;/div&gt;
             &lt;script&gt;
+                // define a function to display a message in a pop-up window
                 function message(msg) {
-                    alert(msg);
+                    alert(msg + "\n" + "message timed at " + new Date().toLocaleTimeString());
                 }
+
+                // add an event listener to the first button
+                // when the button is clicked, call the message function
                 document.getElementById("exercise-07-button-l").addEventListener("click", function() {
                     message("Ouch! You clicked my button");
                 });
+
+                // add an event listener to the second button
+                // when the button is clicked, toggle the message in the output div
                 document.getElementById("exercise-07-button-2").addEventListener("click", function() {
-                    if (document.getElementById("exercise-07-output").innerHTML == "") {
-                        document.getElementById("exercise-07-output").innerHTML = "You clicked my button too!";
+                    // use const to define variables that won't change in this function
+                    const outputDiv = document.getElementById("exercise-07-output");
+                    const timestamp = new Date().toLocaleTimeString();
+
+                    // check if the output div already contains the message
+                    // if it does, clear the output div
+                    if (outputDiv.innerHTML.includes ("You clicked my button too!")) {
+                        outputDiv.innerHTML = "";
                     } else {
-                        document.getElementById("exercise-07-output").innerHTML = "";
+                        outputDiv.innerHTML = "You clicked my button too!&lt;br&gt;Message timed at " + timestamp;
+                    }
+                });
+
+                // there is no event listener for the third button, so it does nothing when you click it
+                /*
+                 * Note: The third button is intentionally left without an event listener.
+                 * This is to demonstrate that without an event listener, the button does not respond to clicks.
+                 * You can click it as many times as you like, but it will not do anything.
+                 * 
+                 * We could have left these comments out but it is good practice to explain why something is done in code.
+                 * This shows someone that the code was deliberately left out rather than just being missed out by mistake.
+                 */
+
+                // add an event listener to the fourth button
+                // when the button is clicked, change the image in the button and update the output div
+                document.getElementById("exercise-07-button-4").addEventListener("click", function() {
+                    // use const to define variables that won't change in this function
+                    const img = this.querySelector("img");
+                    const outputDiv = document.getElementById("exercise-07-output");
+
+                    if (img.src.includes("witch")) {
+                        this.innerHTML = '&lt;img src="/resources/images/young-wizard.jpg" title="Click on me to turn me into a witch" style="width:50px;height:auto"&gt;';
+                        outputDiv.innerHTML = "Now I am a Wizard!";
+                    } else {
+                        this.innerHTML = '&lt;img src="/resources/images/young-witch.jpg" title="Click on me to turn me into a wizard" style="width:50px;height:auto"&gt;';
+                        outputDiv.innerHTML = "Now I am a Witch!";
                     }
                 });
             &lt;/script&gt;
@@ -107,58 +189,162 @@
         </section>
         <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
             <section id="what-you-need-to-know" class="hidden">
+            <h3>HTML</h3>
             <ul>
-                <li>There are several new concepts in this exercise. First we have a new tag <code>&lt;button&gt;</code> and <code>&lt;/button&gt;</code>. Whatever goes between the 
-                start and close tags is what is shown on the button. You can even use images insead of text and have a graphical button. Also note that clicking on a button does 
-                nothing unless there is some Javascript to tell the browser what to do when you click. The third button does nothing, however many times you click on it.</li>
+                <li>There are lots of new concepts in this exercise. First we have a new tag <code>&lt;button&gt;</code> and <code>&lt;/button&gt;</code> in lines 23-26.
+                    Whatever goes between the start and close tags is what is shown on the button. You can even use images insead of text and have a graphical button. Also note that 
+                    clicking on a button does nothing unless there is some Javascript to tell the browser what to do when you click. The third button does nothing, however many times 
+                    you click on it, because it has no listener.</li>
 
                 <li>Each button has a new attribute called <code>id=""</code>. This is an identifier for the button. You use this id to refer to the button in your Javascript code.
                     You can use whatever you like for the id, but it is a good idea to use something that describes what the button does. And be consistent when you name your buttons - 
                     it will make your Javascript code easier to read. The id must be unique in the document, so you can't have two buttons with the same id. You can have buttons with 
-                    the same id on different web pages, but that is not a good idea. Notice that in our example we included the name of the web page, <code>exercise-07</code> in the id 
-                    for each button.</li>
+                    the same id on different web pages, but that is not always a good idea. Notice that in our example we included the name of the web page, <code>exercise-07</code> 
+                    in the id for each button to ensure the id won't clash with element ids on other web pages.</li>
 
-                <li>Underneath the buttons we have an empty <code>&lt;div&gt;</code> tag with an id of <code>exercise-07-output</code>. This is where the Javascript will write a message 
-                    when the second button is clicked.</li>
+                <li>Also notice that the <code>&lt;img&gt;</code> tag in line 26 has a new attribute called <code>title=""</code>. This is a tooltip that appears when you hover over the image. 
+                    It is a good idea to use this attribute to provide a description of the image, especially if the image is not purely decorative.</li>
+
+                <li>Underneath the buttons on line 28 we have an empty <code>&lt;div&gt;</code> tag with an id of <code>exercise-07-output</code>. This is where the Javascript will write 
+                    a message when the second and fourth buttons are clicked.</li>
+            </ul>
+            <h3>Javascript</h3>
+            <ul>
+                <li>We also have our first <strong>Javascript</strong> code. If some of this explaination sounds a bit like gobledegook, then check out the 
+                    <a href="/Advanced-Witches-And-Wizards.html" target="_blank">Advanced Witches and Wizards</a> page for more detailed information about programming jargon. 
+                    The javascript code is between the <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> tags in lines 29-82.</li>
+
+                <li>Note the use of <strong>comments</strong> in the Javascript code at lines 30, 35, 36 58-65 and elsewhere. Comments are used to explain what the code does and are 
+                    ignored by the browser when it runs the code. They are very useful for you and anyone else who reads your code to understand what it does. You can add comments in 
+                    Javascript using <code>//</code> for single line comments or <code>/* ... */</code> for multi-line comments.</li>
                 
-                <li>We also have our first Javascript code. If some of this explaination sounds a bit like gobledegook, then check out the 
-                    <a href="Advanced-Witches-And-Wizards.html" target="_blank">Advanced Witches and Wizards</a> page for more detailed information about programming jargon. 
-                    The javascript code is between the <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> tags.</li>
+                <li>Each Javascript statement ends with a semicolon <code>;</code>. This is not strictly necessary, but it is a good practice to include them. 
+                    It makes your code easier to read and helps to avoid errors.</li>
                 
-                <li>The first three lines of the code in the <code>&lt;script&gt;</code> block defines a function called <code>message(msg)</code>. This function takes one argument or 
-                    parameter, <code>msg</code>, which is the message to be displayed. 
-                    The function uses the built in Javascript <code>alert()</code> method to display the message in a pop-up window. Javascript has many built in methods and you put them 
-                    together to make a program.</li>
+                <li>Javascript is case sensitive, so <code>document</code> and <code>Document</code> are not the same thing. You must use the correct case for all keywords, variables, and 
+                    functions. Forgetting this is a source of many bugs - even for experienced web witches and wizards</li>
+                
+                <li>Blocks of code are enclosed in curly braces <code>{ ... }</code>. This is used to group statements together. 
+                    For example, the code inside the <code>addEventListener()</code> method in lines 43-55 is a block of code that is executed when the button is clicked. 
+                    Within that block are other blocks, such as the <code>if</code> statement in lines 50-52, and the else statement in lines 52-54.</li>
 
-                <li>Each tag in the HTML document defines an <strong>element</strong>. So a &lt;button&gt; tag defines a button element, a &lt;p&gt; tag defines a paragraph element, and so on. 
-                    Even the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags define elements, although we never really use the <code>head</code> element. As an aside, when you 
-                    define styles in CSS, you are defining styles for elements. So when you say <code>h1 { color: red; }</code>, you are saying that all <code>&lt;h1&gt;</code> elements should be 
-                    red.</li>
+                <li>You may remember from Exercise 1, each tag in the HTML document defines an <strong>element</strong> in the Document Object Model (DOM). So a &lt;button&gt; tag 
+                    defines a button element, a &lt;p&gt; tag defines a paragraph element, and so on. 
+                    As an aside, when you define styles in CSS, you are defining styles for elements. So when you say <code>h1 { color: red; }</code>, you are saying that all 
+                    <code>&lt;h1&gt;</code> elements in the DOM should be red.</li>
 
-                <li>In the Javascript code we use the <code>document</code> object to access the elements in the HTML document. The <code>document</code> object is a built in object in Javascript 
-                    that represents the HTML document.It is the root element of the document and contains all the other elements in the document. Javascript can access the elements in the document
-                    using the <code>document.getElementById()</code> method. This method takes one argument, the id of the element you want to access. That is why we gave each button an id. 
+                <li>The first four lines of code (lines 30-33) in the <code>&lt;script&gt;</code> section defines a function called <code>message(msg){}</code>. This function takes one 
+                    argument or parameter, <code>msg</code>, which is the message to be displayed. and a block of code that is executed to display the message when the function is called.</li>
+                
+                <li><strong>Functions</strong> are a fundamental building block of Javascript. They are reusable pieces of code that can be called with different arguments to perform a 
+                    specific task. Each function has a name, in this case <code>message</code>, and can take zero or more <strong>arguments</strong>.
+                    In this case, the <code>message()</code> function is defined to display a message in a pop-up window when it is called.
+                    The function uses the built in Javascript <code>alert()</code> function to display the message in a pop-up window. It also adds the current time to the message
+                    using the <code>new Date().toLocaleTimeString()</code> method.</li>
 
-                <lt>Every time you do something in the browser, like moving the mouse, clicking a button, or typing in a text box, the browser sends an <strong>event</strong> and Javascript can 
-                    ceate <strong>listeners</strong> attached to elements which listen for those events and when they hear an event they can do something. So you can use these events to trigger 
-                    your Javascript code. In this case we are using the <code>addEventListener()</code> method to listen for a click event on a button. 
-                    When the button is clicked, a function (which depents on which button is clicked) is called and the program does someonething.</li>
+                <li>Another fundamental building block of Javascript is the <strong>variable</strong>. A variable is a named storage location for a value. 
+                    In this case, we use the <code>const</code> keyword to define a constant variable, which means that the value of the variable cannot be changed. 
+                    We use <code>const</code> for variables that we know will not change, such as the <code>outputDiv</code> variable in line 45. If we do try and change the value later,
+                    we will get an error. If we want to define a variable that can change, we use the <code>let</code> keyword instead of <code>const</code>.
+                    If we want to define a variable that is global and can be accessed from anywhere in the code, we use the <code>var</code> keyword.
+                    However, it is generally a good practice to use <code>const</code> or <code>let</code> instead of <code>var</code> as they have a more predictable scope and behavior.</li>
 
-                <li>In our example we have two buttons. The first button has an id of <code>exercise-07-button-1</code> and the second button has an id of <code>exercise-07-button-2</code>. For each 
-                    button we use the <code>document.getElementById()</code> method to get the button element. We then use the <code>addEventListener()</code> method to listen for a click event on
-                    the button. The <code>addEventListener()</code> method takes two arguments, the event to listen for and the function to call when the event occurs. </li>
+                <li>An <strong>object</strong> is like a super variable that can hold multiple values and functions. We call the values <strong>properties</strong> and the functions 
+                    <strong>methods</strong>. In our code we use the <code>document</code> object to access the elements in the HTML document. and the <code>Date</code> object to get 
+                    the current time.</li>
 
-                <li>For the first button, we listen for a click event and call the <code>message()</code> function with the message "Ouch! You clicked my button". This will pop up a message when you 
-                    click the button.</li>
+                <li>The <code>document</code> object is a built in object in Javascript that represents the HTML document, or more accurately, the DOM. It contains all the elements in the 
+                    DOM, such as the buttons and the <code>&lt;div&gt;</code> elements. We use the <code>document.getElementById()</code> method to get a reference to an element in
+                    the document by its id at line 45. This method takes one argument, the id of the element you want to access. That is why we gave each button an id.</li>
 
-                <li>For the second button, we listen for a click event and check if the <code>&lt;div&gt;</code> with the id of <code>exercise-07-output</code> is empty. The <code>innerHTML</code> 
-                    property of an element is the HTML content of the element. So the innerHTML propert of <code>&lt;div&gt;&lt;p&gt;This is a paragraph&lt;/p&gt;&lt;/div&gt;</code> is 
-                    &lt;p&gt;This is a paragraph&lt;/p&gt;. In this case if the <code>&lt;div&gt;</code> is empty, we set the innerHTML property to "You clicked my button too!". If it is not empty, 
-                    then we can assume we have already clicked the button and written the message so when the listener hears a second click, we set the innerHTML property to an empty string, thus removing
-                    the message from the <code>&lt;div&gt;</code>. This is how we can turn the message on and off.</li>
+                <li>The Date object is a built in object in Javascript that represents a date and time. An instance of the Date object is created using the <code>new Date()</code> constructor 
+                    in line 46 and the <code>toLocaleTimeString()</code> method is called on the Date object to get the current time as a string whioch is then stored in the (constant) variable 
+                    <code>timestamp</code>. It is constant because we are not going to change its value later.</li>
 
-                <li>Note that even though the third button has an id of <code>exercise-07-button-3</code>, it does not have an event listener, so it does nothing when you click it.</li>
+                <li>The timestamp is added to the message so that you can see when the message was displayed. In order to show the time on a new line in an alert box, we add the
+                    newline character <code>"\n"</code> in the string we pass to the alert() function in line 53.</li>
 
+                <li>Javascript has many built in functions and you put them together with the ones you write to make your programs.</li>
+            </ul>
+            <h3>Event Listeners</h3>
+            <ul>
+                <li>In our example we have four buttons and each button needs an event <strong>listener</strong> to "listen" for the user to click on that button and then do someting.</li>
+                
+                <li>The first button has an id of <code>exercise-07-button-1</code> and the second button has an id of <code>exercise-07-button-2</code>, 
+                    etc. For each button we use the <code>document.getElementById()</code> method to get the button element. We then use the <code>addEventListener()</code> method to listen 
+                    for a click event on the button. The <code>addEventListener()</code> method takes two arguments, the event to listen for (there are lots of events other than just a 
+                    mouse click) and the function to call when the event occurs. </li>
+
+                <li>For the first button, in lines 30-33, we listen for a click event (and because the listener is attached to the button with id <code>exercise-07-button-1</code>, this only 
+                    works when the user clicks on that button, not anywhere else)
+                    
+                    <ul>
+                        <li>When the click happens, we call the <code>message()</code> function with the message "Ouch! You clicked my button".</li>
+                        
+                        <li>The <code>message()</code> function then pops up an alert box with the message it was passed and the timestamp of when the button was clicked.</li>
+                
+                        <li>Using a function to generate the alert message instead of simply calling the alert function directly is a good practice. It allows you to reuse the function, for 
+                            example if you have multiple buttons that need to display a message with a timestamp when clicked. You can simply call the <code>message()</code> function with 
+                            different messages for each button.</li>
+                    </ul>
+                </li>
+                <li>For the second button, we listen for a click event and trigger a function in lines 41-50. This is a bit more complicated than the button 1 example.
+                    <ul>
+                        <li>We start by creating <code>const</code> variables called <code>outputDiv</code> and <code>timestamp</code> in line 45-46, which hold a reference to the 
+                            <code>&lt;div&gt;</code> element with the id of <code>exercise-07-output</code> and the current date and time object, respectively.</li>
+                            
+                        <li>For the <code>outputDiv</code> variable, we do this using the <code>document.getElementById()</code> method. This allows us to access the <code>&lt;div&gt;</code> 
+                            element and change its content when the button is clicked. If we want to change the id of the <code>&lt;div&gt;</code> element, we can do so in the HTML code, and 
+                            in line 44, but we don't need to make any changes elsewhere in the Javascript code. Now each time we want to refer to the <code>&lt;div&gt;</code> element, we can 
+                            use the <code>outputDiv</code> variable.</li>
+                        
+                        <li>For the <code>timestamp</code> variable, we use the <code>new Date()</code> constructor to create a new Date object and then call the 
+                            <code>toLocaleTimeString()</code> method on it to get the current time as a string. This is used to display the time when the button was clicked.</li>
+
+                        <li>In line 45, we introduce another new property, <code>innerHTML</code>, which is a property of the <code>&lt;div&gt;</code> element (well every type of element 
+                            has this property, but we mostly use it on <code>div</code>s). This property contains the HTML content of the element. We can use this property to check what 
+                            is currently in the <code>&lt;div&gt;</code> element and change it.</li>
+
+                        <li>Lines 50-54 contain an <code>if</code> statement. This is a very powerful feature of Javascript that allows you to make decisions in your code. 
+                            The <code>if</code> statement checks if the <code>innerHTML</code> property of the <code>&lt;div&gt;</code> element contains the string "You clicked my button too!". 
+                            If it does, then we know that the user has already clicked the button and we can assume that we have already written the message in the <code>&lt;div&gt;</code>. 
+                            In this case, we set the <code>innerHTML</code> property to an empty string, which removes the message from the <code>&lt;div&gt;</code>. If the <code>innerHTML</code> property does not contain the string "You clicked my button too!", then we know that the user has not clicked the button yet,
+                            does not contain the message we set the <code>innerHTML</code> property to "You clicked my button too!" and add a timestamp of when the button was clicked.</li>
+
+                        <li>Note that we can't check if the <code>innerHTML</code> property equals the string "You clicked my button too!" because it also has the timestamp in it so that would 
+                            fail. Instead we use the <code>includes()</code> method to check if the <code>innerHTML</code> property contains the string "You clicked my button too!". 
+                            This is a more flexible way to check if the message is already in the <code>&lt;div&gt;</code>.</li>
+
+                        <li>So the second button is a toggle button. The first time you click it, it will write the message "You clicked my button too!" in the <code>&lt;div&gt;</code> element.
+                            The second time you click it, it will remove the message from the <code>&lt;div&gt;</code> element. This is a common pattern in user interfaces, where you want to 
+                            toggle a message on and off when the user clicks a button.</li>
+                    </ul>
+                </li>
+
+                <li>Note that even though the third button has an id of <code>exercise-07-button-3</code>, it does not have an event listener, so it does nothing when you click it. There are 
+                    some comments in lines 57-65, but these have no effect on the code. They are just there to explain why the button does nothing.</li>
+
+                <li>The fourth button does two things when you click it. First, it changes the image in the button from a witch to a wizard or vice versa, and second, it writes a message in 
+                    the exercise-07-output <code>&lt;div&gt;</code> element. The code for this is in lines 69-81.
+                
+                    <ul>
+                        <li>This time we have three <code>const</code> variables. The first is called <code>img</code> and is a reference to the <code>&lt;img&gt;</code> element inside the 
+                            button we clicked on. <code>this</code> is a special property and refers to whatever element the listener is attached to. In this case, it refers to the button 
+                            that was clicked. We use the <code>querySelector()</code> method to get the first <code>&lt;img&gt;</code> element inside the button. </li>
+
+                        <li>The other variable is <code>outputDiv</code> and is the same as the one we used for the second button. It is a reference to the <code>&lt;div&gt;</code> element where 
+                            we will write the message. Note that a variable only exists within the block of code it is defined in, so we can't use the <code>outputDiv</code> variable from the 
+                            second button here. We have to define it again in this block of code. It is possible to define <strong>global variables</strong> that are accessible in all 
+                            functions, but that is not a good practice as it is too easy to accidentally change them in the wrong place and cause bugs in your code.</li>
+
+                        <li>In lines 74-80, we have another <code>if</code> statement. This time we check if the <code>src</code> property of the <code>&lt;img&gt;</code> element contains the 
+                            string "witch" (the full property is <code>src="/resources/images/young-witch.jpg"</code>). 
+                            If it does, then we know that the image is currently a witch and we change it to a wizard by setting the <code>innerHTML</code> property of the button to a new 
+                            <code>&lt;img&gt;</code> element with the src set to the wizard image. We also write a message in the <code>&lt;div&gt;</code> element saying "Now I am a Wizard!".</li>
+                            
+                        <li>If the <code>src</code> property does not contain the string "witch", then we know that the image is currently a wizard and we change it to a witch in the same way, 
+                            and write a message in the <code>&lt;div&gt;</code> element saying "Now I am a Witch!".</li>
+                    </ul>
             </ul>
         </section>
         <h2 onclick="toggleSection('exercise', event);" class="magicInvisible">Exercise</h2>
@@ -180,20 +366,129 @@
 
             <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-07.html">http://localhost:8000/exercise-07.html</a> to 
                 see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
-
-            <p>If you are using Firefox as your browser you can use the <strong>Developer Tools</strong> to look at the JavaScript console. 
-                To do this, right click on the page and select <strong>Inspect (Q)</strong>. This will open a new window at the bottom of the page where you can view the console in the console tab.
-                If you have made any mistakes in your javascript that stop the program from running, you will see an error message in the console. These are known as <strong>bugs</strong> or 
-                <strong>syntax errors</strong>. There are other kinds of bugs, in particular <strong>semantic errors</strong> are where the program runs but does not do what you expect it to do. Those are 
-                often much harder to find and fix.</p>
         </section>
 
         <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witches and Wizards</h2>
         <section id="advanced-witches-and-wizards" class="hidden">
+            <h3>Events and listeners</h3>
+            <p>Every time you do something in the browser, like moving the mouse, clicking a button, or typing in a text box, the browser sends an <strong>event</strong> to the DOM 
+                and you can create <strong>listeners</strong> attached to elements which listen for those events. When they hear an event they are listening for, they can do something. 
+                So you can use these events to trigger your Javascript code.</p>
+
+            <p>Other types of events include <strong>keydown</strong> and <strong>keyup</strong> for when the user presses or releases a key on the keyboard, 
+                <strong>mouseover</strong> and <strong>mouseout</strong> for when the mouse moves over or out of an element, and many more. 
+                You can find a full list of events in the <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">MDN Web Docs</a>.</p>
+
+            <h3>Variables and constants</h3>
+            <p>In Javascript, you can define variables using the <code>let</code> keyword, which allows you to change the value of the variable later, or the <code>const</code> keyword, 
+                which defines a constant that cannot be changed. It is a good practice to use <code>const</code> for variables that you know will not change, and <code>let</code> for variables 
+                that you know will change.</p>
+
+            <p>Variables are used to store values that you can use later in your code. You can think of a variable as a named box that holds a value.
+                You can put a value in the box, take it out, and change it later. For example, you can define a variable called <code>myVariable</code> and assign it a value like this:</p>
+            
+            <pre>
+<code>let myVariable = "Hello World";</code>
+            </pre>
+
+            <p>Now you can use the variable <code>myVariable</code> in your code to refer to the value "Hello World". You can change the value of the variable later like this:</p>
+
+            <pre>
+<code>myVariable = "Goodbye World";</code>
+            </pre>
+
+            <p>Now the variable <code>myVariable</code> holds the value "Goodbye World". You can also define a constant using the <code>const</code> keyword like this:</p>
+
+            <pre>
+<code>const myConstant = "This value cannot change";</code>
+            </pre>
+
+            <p>Now you can use the constant <code>myConstant</code> in your code to refer to the value "This value cannot change". If you try to change the value of the constant later, 
+                you will get an error.</p>
+
+            <p>Variables and constants are very useful in programming because they allow you to store values that you can use later in your code. 
+                You can use them to store numbers, strings, objects, and other values. You can also use them to store references to elements in the DOM, like we did with the 
+                <code>outputDiv</code> variable in the example above.</p>
+
+            <h3>Objects</h3>
+            <p>In Javascript, an <strong>object</strong> is a collection of properties and methods. A property is a value that is associated with the object, and a method is a function that 
+                is associated with the object. You can think of an object as a box that holds multiple values and functions.</p>
+
+            <p>For example, the <code>document</code> object is an object that represents the HTML document. It has properties like <code>title</code>, which holds the title of the document,
+                and methods like <code>getElementById()</code>, which allows you to get a reference to an element in the document by its id.</p>
+
+            <p>You can create your own objects in Javascript using the <code>{}</code> syntax. For example, you can create an object called <code>myObject</code> like this:</p>
+            <pre>
+<code>let myObject = {
+    name: "My Object",
+    value: 42,
+    sayHello: function() {
+        alert("Hello from " + this.name);
+    }
+};</code>
+            </pre>
+
+            <p>Now you can use the object <code>myObject</code> in your code to refer to the object. You can access the properties of the object using the dot notation, like this:</p>
+            <pre>
+<code>alert(myObject.name); // "My Object"</code>
+            </pre>
+
+            <p>You can also call the method of the object using the dot notation, like this:</p>
+            <pre>
+<code>myObject.sayHello(); // "Hello from My Object"</code>
+            </pre>
+
+            <p>Objects are very useful in programming because they allow you to group related values and functions together. You can use them to represent real-world objects, like a person, 
+                a car, or a book, and you can use them to store data that you can use later in your code.</p>
+
+            <h3>Functions and methods</h3>
+            <p>A <strong>function</strong> is a reusable piece of code that can be called with different arguments to perform a specific task. 
+                You can think of a function as a recipe that you can use to cook something. You can call the function with different ingredients (arguments) to get different results.</p>
+            <p>For example, you can define a function called <code>addNumbers(a, b)</code> that takes two arguments and returns their sum like this:</p>
+            <pre>
+<code>function addNumbers(a, b) {
+    return a + b;
+}</code>
+            </pre>
+            <p>Now you can call the function with different arguments to get different results:</p>
+            <pre>
+<code>alert(addNumbers(2, 3)); // 5
+alert(addNumbers(10, 20)); // 30</code>
+            </pre>
+            <p>In this example, the function <code>addNumbers(a, b)</code> takes two arguments, <code>a</code> and <code>b</code>, and returns their sum. 
+                You can call the function with different values for <code>a</code> and <code>b</code> to get different results.</p>
+            
+            <p>A <strong>method</strong> is a function that is associated with an object. You can think of a method as a function that belongs to an object.
+                For example, the <code>sayHello()</code> method in the <code>myObject</code> object we defined earlier is a method that belongs to the object. 
+                You can call the method using the dot notation, like this:</p>
+            <pre>
+<code>myObject.sayHello(); // "Hello from My Object"</code>
+            </pre>
+
+            <h3>Using the Developer Tools</h3>
+            <p>If you are using Firefox as your browser you can use the <strong>Developer Tools</strong> to look at the JavaScript console. 
+                To do this, right click on the page and select <strong>Inspect (Q)</strong>. This will open a new window at the bottom of the page where you can view the console in the 
+                console tab. If you have made any mistakes in your javascript that stop the program from running, you will see an error message in the console. These are known as 
+                <strong>bugs</strong> or <strong>syntax errors</strong>. There are other kinds of bugs, in particular <strong>semantic errors</strong> are where the program runs but 
+                does not do what you expect it to do. Those are often much harder to find and fix.</p>
+
+            <p>You can have your Javascript code write messages to the console using the <code>console.log()</code> method. 
+                For example, you can add a line of code like this in your Javascript code:</p>
+            <pre>
+<code>console.log("This is a message to the console");</code>
+            </pre>
+            <p>This will write the message "This is a message to the console" to the console when the code is executed. You can use this to debug your code and see what is happening 
+                at different points in your code. It is a very useful tool for finding bugs in your code.</p>
+            
+            <p>In the console you can also see any messages that are written to the console using the <code>console.log()</code> method.
+            
+            <p>In the console you can also type in JavaScript commands and see what they do. For example, you can type in <code>alert("Hello World")</code> and press enter to see what happens.
+                You can also type in <code>document.getElementById("exercise-07-output").innerHTML</code> to see what the innerHTML of the <code>&lt;div&gt;</code> is. 
+                This is a great way to test your code and see what it does.</p>
         </section>
         
-        <section class="highlight">
-            <h2 class="standout">Congratualtions</h2>
+        <h2 onclick="toggleSection('congratulations', event);" class="magicInvisible">Congratulations</h2>
+        <section id="congratulations" class="hidden highlight">
             <p>Well done for getting to the end of this exercise. It was definitely the hardest so far. Once you have mastered the concepts in this lesson, it gets easier. From now on we will 
                 be using Javascript to do more interesting things (and getting back to our witches and wizards theme). But you have got over the hardest part of learning to program.
             </p>
