@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- Copyright 2025 Edmund Mulligan -->
+<!-- This file is part of the Witchcraft and Wizardry course. -->
+<!-- This file is licensed under the MIT License. -->
+<!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
+<!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Witchcraft and Wizardry Exercise 07</title>
+    <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
+    <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <h1>Witchcraft and Wizardry Exercise 07</h1>
+        <section>
+            <h2>Welcome to Exercise 07</h2>
+            <p>In this exercise you will create your first Javascript program.</p>
+            <p>You will create three buttons. The first button will pop up a message when you click it. The second button will turn a message 
+                in a <code>&lt;div&gt;</code> on and off when you click it. The third button has no listener so will do nothing 
+                when you click it.</p>
+            <p>
+                <button id="exercise-07-button">Click me!</button>
+                <button id="exercise-07-button-2">Click me too!</button>
+                <button id="exercise-07-button-3">Don't bother clicking me</button>
+            </p>
+            <div id="exercise-07-output"></div>
+            <script>
+                function message(msg) {
+                    alert(msg);
+                }
+                document.getElementById("exercise-07-button").addEventListener("click", function() {
+                    message("Ouch! You clicked my button");
+                });
+                document.getElementById("exercise-07-button-2").addEventListener("click", function() {
+                    if (document.getElementById("exercise-07-output").innerHTML == "") {
+                        document.getElementById("exercise-07-output").innerHTML = "You clicked my button too!";
+                    } else {
+                        document.getElementById("exercise-07-output").innerHTML = "";
+                    }
+                });
+            </script>
+        </section>
+        <section>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;!-- This file is part of the Witchcraft and Wizardry course. --&gt;
+&lt;!-- This file is licensed under the MIT License. --&gt;
+&lt;!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. --&gt;
+&lt;!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. --&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt; 
+        &lt;title&gt;Witchcraft and Wizardry Exercise 01&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;/head&gt; 
+    &lt;body&gt; 
+        &lt;header&gt; 
+            &lt;h1&gt;Witchcraft and Wizardry Exercise 01&lt;/h1&gt; 
+        &lt;/header&gt; 
+        &lt;section&gt;
+            &lt;h2&gt;Welcome to Exercise 07&lt;/h2&gt;
+            &lt;p&gt;In this exercise you will create your first Javascript program.&lt;/p&gt;
+            &lt;p&gt;You will create three buttons. The first buton will pop up a message when you click it. The second button will turn a message 
+                in a &lt;code&gt;&lt;div&gt;&lt;/code&gt; on and off when you click it. The third button has no listener so will do nothing 
+                when you click it.&lt;/p&gt;
+            &lt;p&gt;
+                &lt;button id="exercise-07-button-1"&gt;Click me!&lt;/button&gt;
+                &lt;button id="exercise-07-button-2"&gt;Click me too!&lt;/button&gt;
+                &lt;button id="exercise-07-button-3"&gt;Don't bother clicking me&lt;/button&gt;
+            &lt;/p&gt;
+            &lt;div id="exercise-07-output"&gt;&lt;/div&gt;
+            &lt;script&gt;
+                function message(msg) {
+                    alert(msg);
+                }
+                document.getElementById("exercise-07-button-1").addEventListener("click", function() {
+                    message("Ouch! You clicked my button");
+                });
+                document.getElementById("exercise-07-button-2").addEventListener("click", function() {
+                    if (document.getElementById("exercise-07-output").innerHTML == "") {
+                        document.getElementById("exercise-07-output").innerHTML = "You clicked my button too!";
+                    } else {
+                        document.getElementById("exercise-07-output").innerHTML = "";
+                    }
+                });
+            &lt;/script&gt;
+            &lt;/section&gt;
+        &lt;main&gt;
+        &lt;footer&gt; 
+            &lt;p&gt;&amp;copy; 2025 Edmund Mulligan&lt;/p&gt; 
+        &lt;/footer&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt; 
+            </pre>
+        </section>
+        <section>
+            <h2>What you need to know</h2>
+            <ul>
+                <li>There are several new concepts in this exercise. First we have a new tag <code>&lt;button&gt;</code> and <code>&lt;/button&gt;</code>. Whatever goes between the 
+                start and close tags is what is shown on the button. You can even use images instead of text and have a graphical button. Also note that clicking on a button does 
+                nothing unless there is some Javascript to tell the browser what to do when you click. The third button does nothing, however many times you click on it.</li>
+
+                <li>Each button has a new attribute called <code>id=""</code>. This is an identifier for the button. You use this id to refer to the button in your Javascript code.
+                    You can use whatever you like for the id, but it is a good idea to use something that describes what the button does. And be consistent when you name your buttons - 
+                    it will make your Javascript code easier to read. The id must be unique in the document, so you can't have two buttons with the same id. You can have buttons with 
+                    the same id on different web pages, but that is not a good idea. Notice that in our example we included the name of the web page, <code>exercise-07</code> in the id 
+                    for each button.</li>
+
+                <li>Underneath the buttons we have an empty <code>&lt;div&gt;</code> tag with an id of <code>exercise-07-output</code>. This is where the Javascript will write a message 
+                    when the second button is clicked.</li>
+                
+                <li>We also have our first Javascript code. If some of this explanation sounds a bit like gobledegook, then check out the 
+                    <a href="Advanced-Witches-And-Wizards.html" target="_blank">Advanced Witches and Wizards</a> page for more detailed information about programming jargon. 
+                    The javascript code is between the <code>&lt;script&gt;</code> and <code>&lt;/script&gt;</code> tags.</li>
+                
+                <li>The first three lines of the code in the <code>&lt;script&gt;</code> block defines a function called <code>message(msg)</code>. This function takes one argument or 
+                    parameter, <code>msg</code>, which is the message to be displayed. 
+                    The function uses the built in Javascript <code>alert()</code> method to display the message in a pop-up window. Javascript has many built in methods and you put them 
+                    together to make a program.</li>
+
+                <li>Each tag in the HTML document defines an <strong>element</strong>. So a &lt;button&gt; tag defines a button element, a &lt;p&gt; tag defines a paragraph element, and so on. 
+                    Even the <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags define elements, although we never really use the <code>head</code> element. As an aside, when you 
+                    define styles in CSS, you are defining styles for elements. So when you say <code>h1 { color: red; }</code>, you are saying that all <code>&lt;h1&gt;</code> elements should be 
+                    red.</li>
+
+                <li>In the Javascript code we use the <code>document</code> object to access the elements in the HTML document. The <code>document</code> object is a built in object in Javascript 
+                    that represents the HTML document.It is the root element of the document and contains all the other elements in the document. Javascript can access the elements in the document
+                    using the <code>document.getElementById()</code> method. This method takes one argument, the id of the element you want to access. That is why we gave each button an id. 
+
+                <lt>Every time you do something in the browser, like moving the mouse, clicking a button, or typing in a text box, the browser sends an <strong>event</strong> and Javascript can 
+                    create <strong>listeners</strong> attached to elements which listen for those events and when they hear an event they can do something. So you can use these events to trigger 
+                    your Javascript code. In this case we are using the <code>addEventListener()</code> method to listen for a click event on a button. 
+                    When the button is clicked, a function (which depends on which button is clicked) is called and the program does something.</li>
+
+                <li>In our example we have two buttons. The first button has an id of <code>exercise-07-button-1</code> and the second button has an id of <code>exercise-07-button-2</code>. For each 
+                    button we use the <code>document.getElementById()</code> method to get the button element. We then use the <code>addEventListener()</code> method to listen for a click event on
+                    the button. The <code>addEventListener()</code> method takes two arguments, the event to listen for and the function to call when the event occurs. </li>
+
+                <li>For the first button, we listen for a click event and call the <code>message()</code> function with the message "Ouch! You clicked my button". This will pop up a message when you 
+                    click the button.</li>
+
+                <li>For the second button, we listen for a click event and check if the <code>&lt;div&gt;</code> with the id of <code>exercise-07-output</code> is empty. The <code>innerHTML</code> 
+                    property of an element is the HTML content of the element. So the innerHTML propert of <code>&lt;div&gt;&lt;p&gt;This is a paragraph&lt;/p&gt;&lt;/div&gt;</code> is 
+                    &lt;p&gt;This is a paragraph&lt;/p&gt;. In this case if the <code>&lt;div&gt;</code> is empty, we set the innerHTML property to "You clicked my button too!". If it is not empty, 
+                    then we can assume we have already clicked the button and written the message so when the listener hears a second click, we set the innerHTML property to an empty string, thus removing
+                    the message from the <code>&lt;div&gt;</code>. This is how we can turn the message on and off.</li>
+
+                <li>Note that even though the third button has an id of <code>exercise-07-button-3</code>, it does not have an event listener, so it does nothing when you click it.</li>
+
+            </ul>
+        </section>
+        <section>
+            <h2>Exercise 07</h2>
+            <p>In this exercise you will create a simple HTML document with some buttons and will write Javascript to do something when you click the buttons. 
+                You will use the &lt;button&gt;, and &lt;script&gt; tags, and the <code>id=""</code> attibute.</p>
+            <p>Copy the file <code>template.html</code> and name it <code>exercise-07.html</code>. If you prefer, you can create a new, empty file 
+                called <code>exercise-07.html</code> and copy the code from the template file into it.</p>
+                <p>Edit the file and add some content. You need to include the <code>&lt;button&gt;</code> and <code>&lt;/button&gt;</code> tags, and the <code>&lt;script&gt;</code> and 
+                    <code>&lt;/script&gt;</code> tags and the <code>&lt;div&gt;</code> and <code>&lt;/div&gt;</code> tags. Make sure you give each button and the <code>&lt;div&gt;</code> an 
+                    unique id. You can use whatever you like for the id, but you will need to use the same ids in your Javascript code.</p>
+            <p>Write some Javascript code to do something when you click the buttons. You can use the code from the example above as a starting point.
+                You can use the <code>document.getElementById()</code> method to get the button elements and the <code>addEventListener()</code> method to listen for a click event on the buttons. 
+                You can use the <code>alert()</code> method to display a message when you click the first button. You can use the <code>innerHTML</code> property of the <code>&lt;div&gt;</code> 
+                element to display a message when you click the second button.</p>
+            <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-07.html">http://localhost:8000/exercise-07.html</a> to 
+                see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
+            <p>If you are using Firefox as your browser you can use the <strong>Developer Tools</strong> to look at the JavaScript console. 
+                To do this, right click on the page and select <strong>Inspect (Q)</strong>. This will open a new window at the bottom of the page where you can view the console in the console tab.
+                If you have made any mistakes in your javascript that stop the program from running, you will see an error message in the console. These are known as <strong>bugs</strong> or 
+                <strong>syntax errors</strong>. There are other kinds of bugs, in particular <strong>semantic errors</strong> are where the program runs but does not do what you expect it to do. Those are 
+                often much harder to find and fix.
+        </section>
+        <section class="highlight">
+            <h2 class="standout">Congratualtions</h2>
+            <p>Well done for getting to the end of this exercise. It was definitely the hardest so far. Once you have mastered the concepts in this lesson, it gets easier. From now on we will 
+                be using Javascript to do more interesting things (and getting back to our witches and wizards theme). But you have got over the hardest part of learning to program.
+            </p>
+        </section>
+    </main>
+    <div id="footer"></div>
+</html>
