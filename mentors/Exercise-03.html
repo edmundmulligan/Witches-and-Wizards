@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Copyright 2025 Edmund Mulligan -->
+<!-- This file is part of the Web Witchcraft and Wizardry course. -->
+<!-- This file is licensed under the MIT License. -->
+<!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
+<!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Witchcraft and Wizardry Exercise 1</title>
+    <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
+    <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+    <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="/resources/scripts/numberLines.js" defer></script>
+    <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <h1>Web Witchcraft and Wizardry Exercise 3</h1>
+        <h2 onclick="toggleSection('welcome', event);" class="magicInvisible">How to mentor Exercise 3</h2>
+        <section id="welcome" class="hidden">
+            <p>This is the third exercise and introduces students to tables and hyperlinks.</p>
+        </section>
+
+        <h2 onclick="toggleSection('outcomes', event);" class="magicInvisible">Learning Outcomes</h2>
+        <section id="outcomes" class="hidden">
+            <p>Understand the purpose of tables in HTML.</p>
+            <p>Be able to create a simple table.</p>
+            <p>Be able to use the <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> elements.</p>
+            <p>Understand the purpose of hyperlinks in HTML.</p>
+            <p>Be able to create hyperlinks using the <code>&lt;a&gt;</code> element.</p>
+            <p>Be able to use the <code>href</code> attribute of the <code>&lt;a&gt;</code> element.</p>
+        </section>
+    </main>
+    <div id="footer"></div>
+</html>

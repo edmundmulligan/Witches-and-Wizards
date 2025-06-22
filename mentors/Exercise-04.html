@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Copyright 2025 Edmund Mulligan -->
+<!-- This file is part of the Web Witchcraft and Wizardry course. -->
+<!-- This file is licensed under the MIT License. -->
+<!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
+<!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Witchcraft and Wizardry Exercise 1</title>
+    <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
+    <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+    <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="/resources/scripts/numberLines.js" defer></script>
+    <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <h1>Web Witchcraft and Wizardry Exercise 4</h1>
+        <h2 onclick="toggleSection('welcome', event);" class="magicInvisible">How to mentor Exercise 4</h2>
+        <section id="welcome" class="hidden">
+            <p>This is the fourth exercise and introduces students to divs and spans.</p>
+        </section>
+
+        <h2 onclick="toggleSection('outcomes', event);" class="magicInvisible">Learning Outcomes</h2>
+        <section id="outcomes" class="hidden">
+            <p>Understand the purpose of divs and spans in HTML.</p>
+            <p>Be able to create divs using the <code>&lt;div&gt;</code> element.</p>
+            <p>Be able to create spans using the <code>&lt;span&gt;</code> element.</p>
+            <p>Understand the difference between block-level and inline elements.</p>
+            <p>Be able to use divs for layout and grouping content.</p>
+            <p>Be able to use spans for styling inline content.</p>
+        </section>
+    </main>
+    <div id="footer"></div>
+</html>
