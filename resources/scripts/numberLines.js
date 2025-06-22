@@ -8,7 +8,7 @@ function numberLines(codeSnippetId, lineNumsId) {
     const lineNums = document.getElementById(lineNumsId);
 
     const numLines = section ? section.innerText.split('\n').length : 0;
-    numList = "<br>";
+    let numList = "<br>";
     for (let i = 1; i < numLines -1 ; i++) {
         numList +=  i + "<br>";
     }
