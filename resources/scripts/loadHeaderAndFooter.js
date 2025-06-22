@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentUrl = window.location.href;
     const isMentor = currentUrl.includes('/mentors') || currentUrl.includes('/mentor');
     const headerFile = isMentor ? '/resources/html/headerMentor.html' : '/resources/html/headerStudent.html';
-    console.log(`Loading header from: ${headerFile}`);
 
     // Load header
     fetch(headerFile)
