@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Copyright 2025 Edmund Mulligan -->
-<!-- This file is part of the Witchcraft and Wizardry course. -->
+<!-- This file is part of the Web Witchcraft and Wizardry course. -->
 <!-- This file is licensed under the MIT License. -->
 <!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. -->
 <!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
@@ -9,16 +9,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Witchcraft and Wizardry Exercise 06</title>
+    <title>Web Witchcraft and Wizardry Exercise 6</title>
     <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
     <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+    <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="/resources/scripts/numberLines.js" defer></script>
+    <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header"></div>
     <main>
-        <h1>Witchcraft and Wizardry Exercise 06</h1>
-        <section>
-            <h2>Welcome to Exercise 06</h2>
+        <h1>Web Witchcraft and Wizardry Exercise 6</h1>
+        <h2 onclick="toggleSection('welcome', event);" class="magicInvisible">Welcome to Exercise 6</h2>
+        <section id="welcome" class="hidden">
             <p>
                 In the last exercise you discovered styles. The styles in a document can get quite long so sometimes we put the styles into a seperate 
                 file, called a stylesheet, and link to it from the HTML document. This is a good idea because it makes the HTML document easier to read and edit.
@@ -35,8 +38,12 @@
                 </p>
             </div>
         </section>
-        <section>
-            <pre>
+
+        <h2 onclick="toggleSection('html', event);" class="magicInvisible">See the HTML</h2>
+        <section id="html" class="hidden">
+            <pre style="display: flex;">
+                <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;" id="html-numbers-id"></span>
+                <span id="html-code-id">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
     &lt;!-- Copyright 2025 Edmund Mulligan --&gt; 
@@ -45,7 +52,7 @@
     &lt;!-- You may use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. --&gt; 
     &lt;!-- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. --&gt; 
     &lt;head&gt; 
-        &lt;title&gt;Witchcraft and Wizardry Exercise 01&lt;/title&gt;
+        &lt;title&gt;Witchcraft and Wizardry Exercise 6&lt;/title&gt;
         &lt;meta charset="UTF-8"&gt;
         &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
         &lt;link rel="stylesheet" type="text/css" href="/resources/styles/styles-1.css"&gt;
@@ -78,54 +85,139 @@
             &lt;p&gt;&amp;copy; 2025 Edmund Mulligan&lt;/p&gt; 
         &lt;/footer&gt; 
     &lt;/body&gt; 
-&lt;/html&gt; 
+&lt;/html&gt;
+                </span>
             </pre>
         </section>
-        <section>
-            <h2>What you need to know</h2>
-            <ul>
-                <li>The stylesheet is linked to the HTML document using the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> section. The <code>rel</code> 
-                attribute specifies the relationship between the HTML document and the stylesheet. The <code>type</code> attribute specifies the type of the stylesheet. The 
-                <code>href</code> attribute specifies the location of the stylesheet.</li>
 
-                <li>The stylesheet is a CSS file. The file name is <code>styles-1.css</code>. The file is in the <code>resources/styles</code> folder. The <code>href</code> attribute 
-                    specifies the location of the stylesheet. You can change tle look of this page by changing the file name to <code>styles-2.css</code></li>
+        <h2 onclick="toggleSection('css', event);" class="magicInvisible">See the CSS</h2>
+        <section id="css" class="hidden">
+            <pre style="display: flex;">
+                <span style="user-select:none; color: #888; text-align: right; margin-right: 1em;" id="css-numbers-id"></span>
+                <span id="css-code-id">
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    text-align: center;
+}
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 20px;
+}
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+.title, .standout{
+    font-weight: bold;
+    color: #ff0000;
+}
+.highlight {
+    background-color: #ffcccc;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+.large {
+    font-size: 1.5em;
+}
+.small {
+    font-size: 0.5em;
+}
+                </span>
+            </pre>
+        </section>
+
+        <h2 onclick="toggleSection('what-you-need-to-know', event);" class="magicInvisible">What you need to know</h2>
+            <section id="what-you-need-to-know" class="hidden">
+            <ul>
+                <li>In this exercise the style in the <code>&lt;head&gt;</code> section from the previous exercise is now in a separate file called a stylesheet.</li>
+
+                <li>The stylesheet is linked to the HTML document using the <code>&lt;link&gt;</code> tag on line 12 in the <code>&lt;head&gt;</code> section.</li>
+
+                <li>The <code>rel="stylesheet"</code> attribute specifies that the link being loaded is a stylesheet.</li>
+                
+                <li>The <code>type="text/css"</code> attribute specifies the contents of the stylesheet is css code.</li>
+                
+                <li>The <code>href="/resources/styles/styles-1.css"</code> attribute specifies the location and name of the stylesheet.</li>
+
+                <li>You can change the look of your page by changing the file name in the <code>href</code> attribute to <code>/resources/styles/styles-2.css</code></li>
+
+                <li>If you change the <code>href</code> attribute to a non-existant file such as <code>/resources/styles/styles-3.css</code>, the page will still work but none of the styling in your document will work.</li>
             </ul>
         </section>
-        <section>
-            <h2>Exercise 06</h2>
+
+        <h2 onclick="toggleSection('exercise', event);" class="magicInvisible">Exercise</h2>
+        <section id="exercise" class="hidden">
             <p>In this exercise you will create a HTML document and a stylesheet. 
                 You can use everything you have learned so far.
             </p>
             <p>Copy the file <code>template.html</code> and name it <code>exercise-06.html</code>. If you prefer, you can create a new, empty file 
                 called <code>exercise-06.html</code> and copy the code from the template file into it.</p>
+
             <p>Copy the file <code>template.css</code> and name it <code>exercise-06.css</code>. If you prefer, you can create a new, empty file 
                 called <code>exercise-06.css</code> and copy the code from the template file into it.</p>
+
             <p>Add <code>&lt;link rel="stylesheet" type="text/css" href="/exercise-06.css"&gt;</code> to the <code>head</code> section of your HTML document. 
                 This will link your HTML document to your stylesheet.</p>
+
             <p>Write some content in your HTML document. You can use the content from previous exercises or you can write your own new content. Make sure you use the <code>class</code> 
                 attribute to apply styles to your HTML elements. It doesn't matter if you haven't put the style elements in your stylesheet yet. You can add them later. Use 
                 some of the styles defined in exercise 5 so that when you change stylesheet later you will see the difference.</p>
+
             <p>Now edit your style sheet to add some styles. Make sure you define the styles you used when you created the content for your HTML document. Don't forget, if you make a mistake 
                 in the stylesheet you will find that your html page does not display correctly. Tracking down these sorts of mistakes can be quite frustrating but is what real programmers 
                 have to do all the time. It is called debugging your code and you will learn a lot more about HTML and CSS if you can find and fix bugs in your code than if it always works 
                 perfectly first time. Note that you do <strong>not</strong> need to use <code>&lt;style&gt;</code> and <code>&lt;/style&gt;</code> in a stylesheet. Your browser already 
                 knows the shhet contains CSS code rather than HTML because of the <code>type="text/css"</code> in the link attributes that load the stylesheet.</p>
-            <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-02.html">http://localhost:8000/exercise-06.html</a> to 
+
+            <p>When you are finished save your document then in your browser go to <a href="http://localhost:8000/exercise-06.html">http://localhost:8000/exercise-06.html</a> to 
                 see what it looks like. Every time you make a change to a file, you need to save it and refresh the page in your browser to see the changes.</p>
                 <p>Edit the <code>href</code> attribute in the <code>&lt;link&gt;</code> tag to point to "/resourses/styles/style-1.css" and refresh the page.
                 You should see the page change to the style defined in the <code>style-1.css</code> file.</p>
+
                 <p>Now edit the <code>href</code> attribute in the <code>&lt;link&gt;</code> tag to point to "/resourses/styles/style-2.css" and refresh the page to see a different style.</p>
-            <p>If you are using Firefox as your browser you can use the <strong>Developer Tools</strong> to inspect your styles. 
-                To do this, right click on the page and select <strong>Inspect (Q)</strong>. This will open a new window at the bottom of the page where you can explore the CSS styles of your page 
-                in the Style Editor tab. You can even edit the stlyes in this window and see the effect of the original page. The changes you make here are not permenant, though. To make them permenant 
-                you will need to edit them in the stylesheet.</p>
         </section>
-        <section class="highlight">
-            <h2 class="standout">Congratualtions</h2>
-            <p>You now know enough about HTML and CSS to create a simple web page. You can use the skills you have learned in the exercises to create your own web pages. In the next 
-                exercises you will learn how to add some interactivity to your web pages using JavaScript. You will make your web pages more dynamic and responsive to user input. But before you do that,
-                take some time to congratulate yourself on what you have achieved so far. You have learned a lot in a short space of time and you should be proud of yourself.</p>
+        
+        <h2 onclick="toggleSection('advanced-witches-and-wizards', event);" class="magicInvisible">Advanced Witches and Wizards</h2>
+        <section id="advanced-witches-and-wizards" class="hidden">
+            <p>When you browse the web, quite a lot happens in the background. It starts with you typing a URL into your browser's address bar or click on a hyperlink on a web page. 
+                The browser then sends a request to the server that hosts the website. The server processes the request and sends back the HTML, CSS, and JavaScript files that make up the web page.
+                The browser then renders the page, applying styles from the CSS and executing any JavaScript code. This process happens very quickly, often in less than a second.</p>
+
+            <p>One of the ways that is used to make the pages load faster is to use a technique called <strong>caching</strong>. 
+                Caching is when the browser stores a copy of the web page or one of its files in its memory so that it doesn't have to download it again the next time you visit the page. 
+                This can make the page load much faster, especially if you visit the same page multiple times. For example, if you have serveral pages that all use the same CSS stylesheet, it only needs 
+                to be downladed for the first page you view. After that it is already downloaded so can render the page faster.</p>
+
+            <p>But there is a problem with caching. If the page changes, the browser might still use the old cached version instead of the new one. This also applies to stylesheets.
+                If you make changes to your CSS file, the browser might still use the cached version of the stylesheet.
+                This can lead to confusion because you might not see the changes you made to the styles. To avoid this, you can force the browser to reload the page and ignore the cached version by 
+                pressing <strong>Ctrl + F5</strong> on Windows or <strong>Cmd + Shift + R</strong> on Mac.</p>
+
+            <p>You may well need to do this if you make a change to your CSS stylesheet and you don't see the change reflected in your web page.
+                If you are using Firefox as your browser, you can also use the <strong>Developer Tools</strong> to disable caching while you are developing your page. 
+                To do this, right click on the page and select <strong>Inspect (Q)</strong> to open the Developer Tools, go to the Network tab, and check the "Disable Cache" option which is located towards the right
+                of the panel. This will ensure that the browser always loads the latest version of the page and its files.</p>
+
+            <p>If you are using Firefox as your browser you can also use the <strong>Developer Tools</strong> to inspect your styles. 
+                To do this, right click on the page and select <strong>Inspect (Q)</strong> then select the  Style Editor tab. You can even edit the stlyes in this window and see the effect of the original page. 
+                The changes you make here are not permenant, though. To make them permenant you will need to edit them in the stylesheet.</p>
+        </section>
+
+        <h2 onclick="toggleSection('congratulations', event);" class="magicInvisible">Congratulations</h2>
+        <section id="congratulations" class="hidden highlight">
+            <p>You now know enough about HTML and CSS to create your own simple web pages. In the next exercises you will learn how to add some interactivity to your web pages using JavaScript. You 
+                will make your web pages more dynamic and responsive to user input. But before you do that, take some time to congratulate yourself on what you have achieved so far. You have learned 
+                a lot in a short space of time and you should be proud of yourself.</p>
         </section>
     </main>
     <div id="footer"></div>

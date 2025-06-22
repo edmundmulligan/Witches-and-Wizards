@@ -1,11 +1,5 @@
-/* This CSS file is used to style the HTML content of the documentation. */
-
 /* 
- * This is a comment in CSS.
- * Comments in a style sheet are different to those in an HTML document. 
- * Comments begin with a slash followed by a star and end with a star followed by a slash
- * Your browser will ignore everything in the comments section so you use comments to
- * make a note of what you have done or as a reminder of what you still need to do.
+ * This CSS file is used to style the HTML content of exercises in this project.
  */
 
 body {
@@ -13,35 +7,117 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+
 }
+
 header, footer {
     background-color: #f4f4f4;
     padding: 10px 20px;
     text-align: center;
 }
+
 main {
     padding: 20px;
 }
+
 section {
     margin-bottom: 20px;
 }
+
 pre {
+    display: flex;
+    font-family: "Fira Mono", "Consolas", monospace;
     background-color: #f4f4f4;
     padding: 10px;
     border-radius: 5px;
 }
+
+pre span:first-child {
+    user-select: none;
+    color: #888;
+    text-align: right;
+    margin-right: 1em;
+    min-width: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #7c3aed;
+    margin-top: 0;
+}
+
+:where(h1) {
+  margin-block: 0.67em;
+  font-size: 2em;
+}
+
 .title, .standout{
     font-weight: bold;
-    color: #ff0000;
+    color: red;
 }
+
 .highlight {
-    background-color: #ffcccc;
+    background-color: palegreen;
+    color: darkgreen;
     padding: 2px 4px;
     border-radius: 3px;
 }
+
 .large {
     font-size: 1.5em;
 }
+
 .small {
     font-size: 0.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+.magicInvisible:before {
+    font-family: "Font Awesome 6 Sharp";
+    font-weight: 900;
+    content: "\f0d0\f138";
+    margin-right: 0.5em;
+    color: #7c3aed;
+}
+
+.magicVisible:before {
+    font-family: "Font Awesome 6 Sharp";
+    font-weight: 900;
+    content: "\e2ca\f13a";
+    margin-right: 0.5em;
+    color: #7c3aed;
+}
+
+.magicInvisible:hover,
+.magicVisible:hover {
+    cursor: pointer;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;   /* Center the menu horizontally */
+    list-style-type: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    gap: 20px;                 /* Space between menu items */
+}
+
+header ul li {
+    margin: 0;
+    padding: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #333;             /* Change link color as needed */
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+header ul li a:hover {
+    background: #eee;        /* Highlight on hover */
 }

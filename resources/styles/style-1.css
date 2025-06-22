@@ -35,7 +35,8 @@ pre {
     color: #ff0000;
 }
 .highlight {
-    background-color: #ffcccc;
+    background-color: palegreen;
+    color: darkgreen;
     padding: 2px 4px;
     border-radius: 3px;
 }

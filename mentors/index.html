@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Witchcraft and Wizardry Mentors' Home</title>
+    <link rel="stylesheet" type="text/css" href="/resources/styles/style-exercises.css">
+    <script src="/resources/scripts/loadHeaderAndFooter.js" defer></script>
+    <script src="/resources/scripts/toggleSection.js" defer></script>
+    <script src="https://kit.fontawesome.com/be7783bf5b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <h1>Web Witchcraft and Wizardry Mentors' Home</h1>
+        <p>Welcome to the mentors' home page for the Web Witchcraft and Wizardry course. Here you can find resources, guides, and tools to assist you in mentoring 
+            students effectively.</p>
+        <p>You will need to install all the prerequisites before you can run this workshop. If you are at a Code Dojo and are using a club laptop then this will 
+            already be done. But if you are using your own computer you will need to install the following tools.</p>
+        <p>Note that there are many different Linux distributions (distros) and the installation steps below may vary slightly depending on which one you are using. 
+            The instructions below are for Ubuntu, which is one of the most popular distros, but will also work for Debian and Mint.</p>
+
+        <h2 onclick="toggleSection('firefox', event);" class="magicInvisible">Firefox</h2>
+        <section id="firefox" class="hidden">
+            <p>You do not <strong>have</strong> to use Firefox, but in several exercises you are guided to using the Firefox Development tools. Other browsers have 
+                similar tools but work slightly differently so if you are confident go ahead and use whatver browser you like, but if you want to follow the exercises 
+                exactly, you will need Firefox.</p>
+
+            <h3 onclick="toggleSection('firefox-windows', event);" class="magicInvisible">Firefox on Windows</h3>
+            <section id="firefox-windows" class="hidden">
+                <p>To install firefox, browse (using any browser) to https://www.mozilla.org/en-GB/firefox/new/ and click on the Download Firefox Button. This will download 
+                    the Firefox Installer. The exact name of the installer will depend on what operating system your computer is running so just follow the instructions.</p> 
+            </section>
+
+            <h3 onclick="toggleSection('firefox-mac', event);" class="magicInvisible">Firefox on Mac</h3>
+            <section id="firefox-mac" class="hidden">
+                <p>To install firefox, browse (using any browser) to https://www.mozilla.org/en-GB/firefox/new/ and click on the Download Firefox Button. This will download 
+                    the Firefox Installer. The exact name of the installer will depend on what operating system your computer is running so just follow the instructions.</p>
+            </section>
+
+            <h3 onclick="toggleSection('firefox-linux', event);" class="magicInvisible">Firefox on Linux</h3>
+            <section id="firefox-linux" class="hidden">
+                <p>To install firefox, open a terminal window and type.</p>
+<pre>
+<code>sudo apt update
+sudo apt install firefox</code>
+</pre>
+                <p>This will install Firefox on your system.</p>
+            </section>
+
+            <p>Once you have installed Firefox, it may ask if you want to make it your default browser. You do not need to do this, although you can if you want to 
+                use Firefox for your general web browsing.</p>
+        </section>
+
+        <h2 onclick="toggleSection('vsc', event);" class="magicInvisible">Visual Studio Code</h2>
+        <section id="vsc" class="hidden">
+            <p>You will need to use a code editor to write your web pages and programs. A code editor is a bit like a word processor but it differs in several 
+                key ways. Unlike a word processor, a code editor does not let you format your document, but it does understand the syntax of the programs that 
+                you write so can highlight different parts of your program automatically and flag incorrect syntax. There are many excellent code editors and 
+                you can use whichever one you like, but I recommend Microsoft's Visual Studio Code, because it is free and runs on all major operating systems.
+                It comes with an AI assistant called Github Copilot which can help you write code but we will not be using that feature as you are here to 
+                learn how to write web pages, not how to tell an AI to write web pages. And you have to have a GitHub subscription to use it which costs money. 
+                But when you know what you are doing, it is very useful - I use it a lot.</p>
+
+           <h3 onclick="toggleSection('vsc-windows', event);" class="magicInvisible">Visual Studio Code on Windows</h3>
+            <section id="vsc-windows" class="hidden">
+                <p>You can download Visual Studio Code from https://code.visualstudio.com/. 
+                    Click on the Download button and follow the instructions - the details will vary depending on your operating system</p>
+            </section>
+
+            <h3 onclick="toggleSection('vsc-mac', event);" class="magicInvisible">Visual Studio Code on Mac</h3>
+            <section id="vsc-mac" class="hidden">
+                <p>You can download Visual Studio Code from https://code.visualstudio.com/. 
+                    Click on the Download button and follow the instructions - the details will vary depending on your operating system</p>
+            </section>
+
+            <h3 onclick="toggleSection('vsc-linux', event);" class="magicInvisible">Visual Studio Code on Linux</h3>
+            <section id="vsc-linux" class="hidden">
+                <p>To install Visual Studio Code on Linux, open a terminal window and type:</p>
+<pre>
+<code>sudo apt update
+sudo apt install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" &gt; /etc/apt/sources.list.d/vscode.list'
+sudo apt install code</code>
+</pre>
+            </section>
+        </section>
+
+        <h2 onclick="toggleSection('php', event);" class="magicInvisible">PHP</h2>
+        <section id="php" class="hidden">
+            <p>Although browsers can open <strong>HTML</strong> files directly from a local computer, some features of Javascript are blocked for security reasons 
+                when you do this. To get around this, you will need to run a local web server on your computer. There are several ways to do this but this course 
+                recommends using PHP . PHP will be used in later exercises so it makes sense to use PHP as your local web server.</p>
+
+            <h3 onclick="toggleSection('php-windows', event);" class="magicInvisible">PHP on Windows</h3>
+            <section id="php-windows" class="hidden">
+                <p>To install PHP on Windows, you can follow these steps:</p>
+                <ul>
+                    <li>Download PHP from <a href="https://windows.php.net/download" target="_blank">https://windows.php.net/download</a>.</li>
+                    <li>Click on the button 'Select an option for direct access' and choose the version that matches your computer.</li>
+                    <li>You should get the latest version (currently 8.4, but that may go up in the future).</li>
+                    <li>Get either the VS17 x64 Non-Thread Safe or VS17 x64 Thread Safe version.</li>
+                    <li>For what you will be doing there is no difference between Non-Thread Safe and Thread Safe versions, but the Non-Thread Safe version runs a bit 
+                        faster.</li>
+                    <li>DO NOT get the VS17 x86 version - this is for old computers not running Windows 10 or 11.</li>
+                    <li>You will be taken to a new section of the page where you can download a zip file.</li>
+                </ul>
+
+                <p>Extract the ZIP file to a folder (e.g., <code>C:\php</code>).</p>
+                <p>Add the PHP folder to your system PATH:</p>
+                <p>Open System Properties → Environment Variables → Edit PATH → Add C:\php</p>
+            </section>
+            
+            <h3 onclick="toggleSection('php-mac', event);" class="magicInvisible">PHP on Mac</h3>
+            <section id="php-mac" class="hidden">
+                <p>To install PHP on Mac, you can follow these steps:</p>
+                <p>Check if you have homebrew installed on your Mac (homebrew is a program for installing other programs that do not come directly from Apple) by 
+                    opening a terminal window and typing:</p>
+<pre><code>brew --version</code></pre>
+                <p>If you see a version number you have homebrew and can skip the next step</p>
+                <p>If you do not have homebrew installed, open a terminal window and type:</p>
+<pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+                <p>Then check the version number as above and you should now get a version number</p>
+                <p>If you have homebrew installed , open a terminal window and type:</p>
+<pre>
+<code>brew update
+brew install php</code>
+</pre>
+            </section>
+
+            <h3 onclick="toggleSection('php-linux', event);" class="magicInvisible">PHP on Linux</h3>
+            <section id="php-linux" class="hidden">
+                <p>To install PHP on Linux, open a terminal window and type:</p>
+<pre>
+<code>sudo apt update
+sudo apt install php</code>
+</pre>
+            </section>
+
+            <p>To check that PHP has installed correctly, open a terminal or PowerShell window and type:</p>
+<pre><code>php -v</code></pre>
+            <p>If php installed correctly this will tell you the version number.</p>
+        </section>
+
+        <h2 onclick="toggleSection('sqlite', event);" class="magicInvisible">SQLite</h2>
+        <section id="sqlite" class="hidden">
+            <p>Towards the end of the course you will learn how to store data in a database so that your web site can remember data between sessions. There are 
+                (as usual) many ways to do this but one of the easiest is a free database program called SQLite. SQLite is not a single program, but a set of 
+                programs that let you manage a database on the server. You do not need to insall this to start doing the exercises, but you will need it to do the 
+                last few exercises.</p>
+
+            <h3 onclick="toggleSection('sqlite-windows', event);" class="magicInvisible">SQLite on Windows</h3>
+            <section id="sqlite-windows" class="hidden">
+                <p>Download SQLite from <a href="https://www.sqlite.org/download.html" target="_blank">https://www.sqlite.org/download.html</a> and select the Precompiled 
+                    Binaries for Windows, sqlite-tools-win-x64-xxxxxx.zip. (the xxxxxx is a version number and may change over time)</p>
+                <p>Extract the ZIP file to a folder, e.g., <code>C:\sqlite</code>.</p>
+                <p>Add C:\sqlite to your system PATH (System Properties → Environment Variables → Edit PATH).</p>
+            </section>
+
+            <h3 onclick="toggleSection('sqlite-mac', event);" class="magicInvisible">SQLite on Mac</h3>
+            <section id="sqlite-mac" class="hidden">
+                <p>To install SQLite on a Mac, first check if you have homebrew installed by opening a terminal window and typing:</p>
+<pre><code>brew --version</code></pre>
+                <p>If you see a version number you have homebrew and can skip the next step</p>
+                <p>If you do not have homebrew installed, open a terminal window and type:
+<pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+                <p>Then check the version number as above and you should now get a version number</p>
+                <p>If you have homebrew installed , open a terminal window and type:</p>
+<pre>
+<code>brew update
+brew install sqlite</code>
+</pre>
+            </section>
+
+            <h3 onclick="toggleSection('sqlite-linux', event);" class="magicInvisible">SQLite on Linux</h3>
+            <section id="sqlite-linux" class="hidden">
+                <p>To install SQLite on Linux, open a terminal window and type:
+<pre>
+<code>sudo apt update
+sudo apt install sqlite3</code>
+</pre>
+            </section>
+
+            <p>To check that SQLite has installed correctly, open a terminal or PowerShell window and type:</p>
+<pre><code>sqlite3 --version</code></pre>
+            <p>If SQLite installed correctly, this will tell you the version number.</p>
+        </section>
+    </main>
+    <div id="footer"></div>
+</body>
+</html>
