@@ -19,7 +19,7 @@ Welcome *Web Witch or Wizard* to the world of web development! Here, you will le
 3. Select Download ZIP.
 4. When the download is complete copy the zip file (Witches-And-Wizards-main.zip) from your Download folder to a local folder on your computer.
 5. Right click on the copied zip file and extract its contents. This will create a folder called Witches-And-Wizards-main.
-6. Browse to the created folder and open index.php in your web browser. Depending on how your computer is set up, you may not see the .php extension in which case open the index file.
+6. Browse to the created folder and open index.html in your web browser. Depending on how your computer is set up, you may not see the .html extension in which case open the index file.
 7. If a web page opens up in your browser with a picture of a witch and wizard then you are good to go.
 8. If the picture is missing, then you probably opened the zip file instead of extracting its contents. Go back to step 5 and try again.
 9. Some of these instructions may differ slightly depending on what operating system you are using and how it has been set up, so you may need to improvise a bit. Again, if you are at a Code Dojo, you can ask a mentor for help if you get stuck.
